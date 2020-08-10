@@ -1,0 +1,107 @@
+{
+  "engine_version": "4.23.1",
+  "game_name": "Squad",
+  "game_ver": "b21.0.1",
+  "structs": [
+    {
+      "name": "UEnum",
+      "super": [ "UField" ],
+      "vars": [
+        { "CppType": "FString" },
+        { "Names": "TArray" },
+        { "CppForm": "int64" },
+        { "EnumDisplayNameFn": "int" },
+        { "pad": "4"}
+      ],
+      "note": ""
+    },
+    {
+      "name": "UProperty",
+      "super": [ "UField" ],
+      "vars": [
+        { "ArrayDim": "int" },
+        { "ElementSize": "int" },
+        { "PropertyFlags": "int64" },
+        { "RepIndex": "uint16" },
+        { "BlueprintReplicationCondition": "uint8" },
+        { "pad": "1" },
+        { "Offset": "int" },
+        { "RepNotifyFunc": "FName" },
+        { "PropertyLinkNext": "UProperty*" },
+        { "NextRef": "UProperty*" },
+        { "DestructorLinkNext": "UProperty*" },
+        { "PostConstructLinkNext": "UProperty*" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "UStruct",
+      "super": [ "UField", "FStructBaseChain" ],
+      "vars": [
+        { "pad": "4" },
+        { "SuperField": "UStruct*" },
+        { "Children": "UField*" },
+        { "PropertySize": "int" },
+        { "MinAlignment": "int" },
+        { "Script": "TArray" },
+        { "PropertyLink": "UProperty*" },
+        { "RefLink": "UProperty*" },
+        { "DestructorLink": "UProperty*" },
+        { "PostConstructLink": "UProperty*" },
+        { "ScriptAndPropertyObjectReferences": "TArray" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "UScriptStruct",
+      "super": [ "UStruct" ],
+      "vars": [
+        { "StructFlags": "int32" },
+        { "PrepareCppStructOpsCompleted": "bool" },
+        { "pad": "3" },
+        { "CppStructOps": "ICppStructOps*" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "UFunction",
+      "super": [ "UStruct" ],
+      "vars": [
+        { "FunctionFlags": "int32" },
+        { "NumParms": "int8" },
+        { "pad": "1" },
+        { "ParmsSize": "int16" },
+        { "ReturnValueOffset": "uint16" },
+        { "RPCId": "uint16" },
+        { "RPCResponseId": "uint16" },
+        { "pad": "2" },
+        { "FirstPropertyToInit": "UProperty*" },
+        { "EventGraphFunction": "UFunction*" },
+        { "EventGraphCallOffset": "int" },
+        { "pad": "4" },
+        { "Func": "*" }
+      ],
+      "note": "Looks like it's RepOffset removed but it's okay. we need FunctionFlags only"
+    },
+    {
+      "name": "UClass",
+      "super": [ "UStruct" ],
+      "vars": [
+        { "pad": "360" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "UBoolProperty",
+      "super": [ "UProperty" ],
+      "vars": [
+        { "FieldSize": "uint8" },
+        { "ByteOffset": "uint8" },
+        { "ByteMask": "uint8" },
+        { "FieldMask": "uint8" },
+        { "pad": "4"}
+      ],
+      "note": ""
+    }
+  ]
+}

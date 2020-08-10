@@ -1,0 +1,136 @@
+// Name: Sq, Version: b21
+
+#include "../SDK.h"
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x01)
+#endif
+
+/*!!HELPER_DEF!!*/
+
+/*!!DEFINE!!*/
+
+namespace UFT
+{
+//---------------------------------------------------------------------------
+// Functions
+//---------------------------------------------------------------------------
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.GetBodyText
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+struct FText USQNetInfoWidgetSlot_C::GetBodyText()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.GetBodyText");
+
+	USQNetInfoWidgetSlot_C_GetBodyText_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.GetTitleText
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+struct FText USQNetInfoWidgetSlot_C::GetTitleText()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.GetTitleText");
+
+	USQNetInfoWidgetSlot_C_GetTitleText_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.OnFail_9D89973243B31B6470A48FB1F15C4057
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture2DDynamic*       Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+void USQNetInfoWidgetSlot_C::OnFail_9D89973243B31B6470A48FB1F15C4057(class UTexture2DDynamic* Texture)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.OnFail_9D89973243B31B6470A48FB1F15C4057");
+
+	USQNetInfoWidgetSlot_C_OnFail_9D89973243B31B6470A48FB1F15C4057_Params params;
+	params.Texture = Texture;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.OnSuccess_9D89973243B31B6470A48FB1F15C4057
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture2DDynamic*       Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+void USQNetInfoWidgetSlot_C::OnSuccess_9D89973243B31B6470A48FB1F15C4057(class UTexture2DDynamic* Texture)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.OnSuccess_9D89973243B31B6470A48FB1F15C4057");
+
+	USQNetInfoWidgetSlot_C_OnSuccess_9D89973243B31B6470A48FB1F15C4057_Params params;
+	params.Texture = Texture;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+void USQNetInfoWidgetSlot_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.Construct");
+
+	USQNetInfoWidgetSlot_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.ExecuteUbergraph_SQNetInfoWidgetSlot
+// (Final)
+// Parameters:
+// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+void USQNetInfoWidgetSlot_C::ExecuteUbergraph_SQNetInfoWidgetSlot(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.ExecuteUbergraph_SQNetInfoWidgetSlot");
+
+	USQNetInfoWidgetSlot_C_ExecuteUbergraph_SQNetInfoWidgetSlot_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
