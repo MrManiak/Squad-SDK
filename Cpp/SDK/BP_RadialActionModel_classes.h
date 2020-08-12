@@ -21,7 +21,7 @@ namespace UFT
 // 0x0010 (FullSize[0x00A0] - InheritedSize[0x0090])
 // LastOffsetWithSize(0x0090)
 #define PADDING_09CE - 0x0000 // Minimum to subtract -> (0000)
-class UBP_RadialActionModel_C : public UBP_RadialItemModel_C
+class UBP_RadialActionModel_C
 {
 public:
 	union

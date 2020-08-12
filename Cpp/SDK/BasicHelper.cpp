@@ -3,6 +3,7 @@
 #include "../SDK.h"
 #include <iostream>
 #include <sstream>
+#include <stddef.h>
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x01)
@@ -12,8 +13,8 @@
 
 #define FNAME_POOL
 #define UE4
-#define PRINT_SDK_INFO
-#define PRINT_IN_CONSOLE
+//#define PRINT_SDK_INFO
+//#define PRINT_IN_CONSOLE
 
 namespace UFT
 {
@@ -21,6 +22,7 @@ namespace UFT
 
 GNAME_TYPE* FName::GNames = nullptr;
 TUObjectArray* UObject::GObjects = nullptr;
+
 
 //---------------------------------------------------------------------------
 std::string IntToHex(int n)
@@ -119,9 +121,11 @@ UObject* FWeakObjectPtr::Get() const
 	return nullptr;
 }
 #endif
+#ifdef PRINT_SDK_INFO
 //---------------------------------------------------------------------------
 void ClassesMemberAssert()
 {
+	size_t test;
 	// https://stackoverflow.com/questions/48938642/will-the-alignment-of-variables-in-a-c-union-be-the-same-on-all-systems
 	MemberOffsetIsRight("WidgetBlueprintGeneratedClass W_Tooltip_Vehicle.W_Tooltip_Vehicle_C", offsetof(UW_Tooltip_Vehicle_C, UberGraphFrame), 0x0240);
 	MemberOffsetIsRight("WidgetBlueprintGeneratedClass UMG_ApprovalEntryWidget.UMG_ApprovalEntryWidget_C", offsetof(UUMG_ApprovalEntryWidget_C, UberGraphFrame), 0x0248);
@@ -2345,6 +2349,7 @@ void ClassesMemberAssert()
 	MemberOffsetIsRight("WidgetBlueprintGeneratedClass DeployableRadialEntry.DeployableRadialEntry_C", offsetof(UDeployableRadialEntry_C, UberGraphFrame), 0x0498);
 }
 //---------------------------------------------------------------------------
+#endif
 
 }
 

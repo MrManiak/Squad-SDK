@@ -95,6 +95,11 @@ struct FKey
 {
 	struct FName                                       KeyName;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
+	inline FKey() : KeyName() {}
+
+	inline FKey(const FName InName) : KeyName(InName) {}
+
+	inline FKey(const char* InName) : KeyName(FName(InName)) {}
 };
 }
 

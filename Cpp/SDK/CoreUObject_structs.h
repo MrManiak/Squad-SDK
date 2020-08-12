@@ -336,6 +336,46 @@ struct FVector
 	float                                              Y;                                                         // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                              Z;                                                         // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
+	inline FVector() : X(0.f), Y(0.f), Z(0.f) {}
+
+	inline FVector(float x, float y, float z) : X(x), Y(y), Z(z) {}
+
+	inline FVector operator + (const FVector& other) const { return FVector(X + other.X, Y + other.Y, Z + other.Z); }
+
+	inline FVector operator - (const FVector& other) const { return FVector(X - other.X, Y - other.Y, Z - other.Z); }
+
+	inline FVector operator * (float scalar) const { return FVector(X * scalar, Y * scalar, Z * scalar); }
+
+	inline FVector operator * (const FVector& other) const { return FVector(X * other.X, Y * other.Y, Z * other.Z); }
+
+	inline FVector& operator=  (const FVector& other) { X = other.X; Y = other.Y; Z = other.Z; return *this; }
+
+	inline FVector& operator+= (const FVector& other) { X += other.X; Y += other.Y; Z += other.Z; return *this; }
+
+	inline FVector& operator-= (const FVector& other) { X -= other.X; Y -= other.Y; Z -= other.Z; return *this; }
+
+	inline FVector& operator*= (const float other) { X *= other;   Y *= other;   Z *= other;   return *this; }
+
+	inline float dot(const FVector& b) const { return (X * b.X) + (Y * b.Y) + (Z * b.Z); }
+
+	inline float magnitude() const { return std::sqrtf(magnitudeSqr()); }
+
+	inline float magnitudeSqr() const { return dot(*this); }
+
+	inline FVector unit() const {
+		const float fMagnitude = magnitude();
+		return FVector(X / fMagnitude, Y / fMagnitude, Z / fMagnitude);
+	}
+
+	friend bool operator==(const FVector& first, const FVector& second)
+	{
+		return first.X == second.X && first.Y == second.Y && first.Z == second.Z;
+	}
+
+	friend bool operator!=(const FVector& first, const FVector& second)
+	{
+		return !(first == second);
+	}
 };
 // ScriptStruct CoreUObject.Vector2D
 // 0x0008

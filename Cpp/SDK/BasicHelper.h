@@ -5,8 +5,8 @@
 
 #include <vector>
 #include <locale>
-#include <set>
-#include <map>
+#include <unordered_set>
+#include <unordered_map>
 #include <Windows.h>
 
 #ifdef _MSC_VER
@@ -299,8 +299,8 @@ public:
 
 	FNameEntry* GetById(int32_t key) const
 	{
-		int block = key >> 16;
-		int offset = (uint16_t)key;
+		uint32_t block = key >> 16;
+		uint16_t offset = (uint16_t)key;
 
 		if (!IsValidIndex(key, block, offset))
 			return reinterpret_cast<FNameEntry*>(Blocks[0] + 0); // "None"
@@ -328,16 +328,16 @@ public:
 	uint32_t AnsiCount;
 	uint32_t WideCount;
 
-	FNameEntry* GetNext(int& lastFNameId)
+	FNameEntry* GetNext(uint32_t& lastFNameId)
 	{
 		// Key		=> NameID
 		// Value	=> StringLen
-		static std::map<int, int> namesCache;
-
+		static std::unordered_map<int, int> namesCache;
+		const auto initLastFNameId = lastFNameId;
 	RePlay:
-		int block = lastFNameId >> 16;
-		int nameOffset = (uint16_t)lastFNameId;
-		int newOffset = 0;
+		uint16_t block = lastFNameId >> 16;
+		uint16_t nameOffset = (uint16_t)lastFNameId;
+		uint32_t newOffset = 0;
 
 		// We hit last Name in last Block
 		if (block > Allocator.CurrentBlock)
@@ -346,27 +346,21 @@ public:
 		// If found lastId then add 2 to calc offset correct
 		auto it = namesCache.find(lastFNameId);
 		if (it != namesCache.end())
-			newOffset += (nameOffset * 2) + 2 + namesCache.at(lastFNameId);
+			newOffset += (nameOffset * 2) + 2 + it->second;
+
+		if (newOffset >= 65535 * 2 || block == Allocator.CurrentBlock && newOffset >= Allocator.CurrentByteCursor)
+		{
+			lastFNameId = MAKELONG(0, block + 1);
+			goto RePlay;
+		}
+
+		lastFNameId = MAKELONG(((unsigned short)(newOffset / 2)), block);
 
 		uintptr_t entryOffset = reinterpret_cast<uintptr_t>(Allocator.Blocks[block]) + newOffset;
+
 		unsigned short nameEntry = *reinterpret_cast<unsigned short*>(entryOffset);
-
-		// Block end ?
-		if (nameEntry == 0)
-		{
-			lastFNameId = MAKELONG(0, block + 1);
-			goto RePlay;
-		}
-
-		lastFNameId = MAKELONG(((unsigned short)newOffset / 2), (unsigned short)block);
+		
 		int nameLength = nameEntry >> 6;
-
-		// Block end ?
-		if (nameEntry == 0)
-		{
-			lastFNameId = MAKELONG(0, block + 1);
-			goto RePlay;
-		}
 
 		// if odd number (odd numbers are aligned with 0x00)
 		if (nameLength % 2 != 0)
@@ -575,7 +569,7 @@ struct FName
 		: ComparisonIndex(0),
 		Number(0)
 	{
-		static std::set<int> cache;
+		static std::unordered_set<int> cache;
 
 		for (auto i : cache)
 		{
@@ -587,13 +581,13 @@ struct FName
 		}
 
 #ifdef FNAME_POOL
-		int lastId = 0;
+		uint32_t lastId = 0;
 		for (FNameEntry* name = GetGlobalNames().GetNext(lastId); name != nullptr; name = GetGlobalNames().GetNext(lastId))
 		{
 			if (name->GetAnsiName() == nameToFind)
 			{
-				cache.insert(name->Key);
-				ComparisonIndex = name->Key;
+				cache.insert(lastId);
+				ComparisonIndex = lastId;
 				return;
 			}
 		}

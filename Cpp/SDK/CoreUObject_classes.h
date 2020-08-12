@@ -149,7 +149,7 @@ public:
 
 	inline void ProcessEvent(class UFunction* function, void* parms)
 	{
-		GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 66)(this, function, parms);
+		GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 66)(this, function, parms); //55 up to 79 is wrong
 	}
 
 
@@ -476,12 +476,12 @@ public:
 		DEFINE_MEMBER_NNN(0x0018 PADDING_00AD, class UField*,                                                         Children);                                                 // 0x0048(0x0008) NOT AUTO-GENERATED PROPERTY
 		DEFINE_MEMBER_NNN(0x0020 PADDING_00AD, int,                                                                   PropertySize);                                             // 0x0050(0x0004) NOT AUTO-GENERATED PROPERTY
 		DEFINE_MEMBER_NNN(0x0024 PADDING_00AD, int,                                                                   MinAlignment);                                             // 0x0054(0x0004) NOT AUTO-GENERATED PROPERTY
-		DEFINE_MEMBER_NNN(0x0028 PADDING_00AD, TArray,                                                                Script);                                                   // 0x0058(0x0010) NOT AUTO-GENERATED PROPERTY
+		DEFINE_MEMBER_NNN(0x0028 PADDING_00AD, TArray<unsigned char>,                                                                Script);                                                   // 0x0058(0x0010) NOT AUTO-GENERATED PROPERTY
 		DEFINE_MEMBER_NNN(0x0038 PADDING_00AD, class UProperty*,                                                      PropertyLink);                                             // 0x0068(0x0008) NOT AUTO-GENERATED PROPERTY
 		DEFINE_MEMBER_NNN(0x0040 PADDING_00AD, class UProperty*,                                                      RefLink);                                                  // 0x0070(0x0008) NOT AUTO-GENERATED PROPERTY
 		DEFINE_MEMBER_NNN(0x0048 PADDING_00AD, class UProperty*,                                                      DestructorLink);                                           // 0x0078(0x0008) NOT AUTO-GENERATED PROPERTY
 		DEFINE_MEMBER_NNN(0x0050 PADDING_00AD, class UProperty*,                                                      PostConstructLink);                                        // 0x0080(0x0008) NOT AUTO-GENERATED PROPERTY
-		DEFINE_MEMBER_NNN(0x0058 PADDING_00AD, TArray,                                                                ScriptAndPropertyObjectReferences);                        // 0x0088(0x0010) NOT AUTO-GENERATED PROPERTY
+		DEFINE_MEMBER_NNN(0x0058 PADDING_00AD, TArray<class UProperty*>,                                                                ScriptAndPropertyObjectReferences);                        // 0x0088(0x0010) NOT AUTO-GENERATED PROPERTY
 	};
 
 	static UClass* StaticClass()
@@ -540,11 +540,15 @@ public:
 	//union
 	//{
 	//};
-
-template<typename T>
+	template<typename T>
 	inline T* CreateDefaultObject()
 	{
 		return static_cast<T*>(CreateDefaultObject());
+	}
+
+	inline UObject* CreateDefaultObject()
+	{
+		return GetVFunction<UObject * (*)(UClass*)>(this, 107)(this);
 	}
 
 	static UClass* StaticClass()

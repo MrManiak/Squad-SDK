@@ -9563,7 +9563,7 @@ struct FPhysicsConstraintProfileHandle
 struct FChaosPhysicsSettings
 {
 	EChaosThreadingMode                                DefaultThreadingModel;                                     // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EChaosSolverTickMode                               DedicatedThreadTickMode;                                   // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EChaosThreadingMode                               DedicatedThreadTickMode;                                   // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EChaosBufferMode                                   DedicatedThreadBufferMode;                                 // 0x0002(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 };

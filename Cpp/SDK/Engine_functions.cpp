@@ -3427,6 +3427,8 @@ bool APlayerController::WasInputKeyJustPressed(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.WasInputKeyJustPressed");
 
+	std::string name = fn->GetFullName();
+
 	APlayerController_WasInputKeyJustPressed_Params params;
 	params.Key = Key;
 

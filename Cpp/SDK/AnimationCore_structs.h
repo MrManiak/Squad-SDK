@@ -125,7 +125,7 @@ struct FEulerTransform
 };
 // ScriptStruct AnimationCore.AimConstraintDescription
 // 0x0030 (0x0040 - 0x0010)
-struct FAimConstraintDescription : public FConstraintDescriptionEx
+struct FAimConstraintDescription
 {
 	struct FAxis                                       LookAt_Axis;                                               // 0x0010(0x0010) (Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAxis                                       LookUp_Axis;                                               // 0x0020(0x0010) (Edit, NoDestructor, NativeAccessSpecifierPublic)
@@ -164,7 +164,7 @@ struct FTransformConstraint
 };
 // ScriptStruct AnimationCore.TransformConstraintDescription
 // 0x0008 (0x0018 - 0x0010)
-struct FTransformConstraintDescription : public FConstraintDescriptionEx
+struct FTransformConstraintDescription
 {
 	ETransformConstraintType                           TransformType;                                             // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
