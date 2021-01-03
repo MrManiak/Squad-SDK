@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,11 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function FOBStatusWidget.FOBStatusWidget_C.UpdateProgressBarColor
+struct UFOBStatusWidget_C_UpdateProgressBarColor_Params
+{
+};
 
 // Function FOBStatusWidget.FOBStatusWidget_C.Refresh Data
 struct UFOBStatusWidget_C_Refresh_Data_Params

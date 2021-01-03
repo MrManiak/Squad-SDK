@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CameraShake_HelicopterEngine.CameraShake_HelicopterEngine_C
-// 0x0008 (FullSize[0x0160] - InheritedSize[0x0158])
-// LastOffsetWithSize(0x0158)
+// 0x0000 (FullSize[0x0160] - InheritedSize[0x0160])
 class UCameraShake_HelicopterEngine_C : public UCameraShake
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass CameraShake_HelicopterEngine.CameraShake_HelicopterEngine_C");
 		return ptr;
 	}
+
 
 
 };

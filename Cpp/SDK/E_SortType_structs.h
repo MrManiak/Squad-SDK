@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,13 +20,13 @@ namespace UFT
 // UserDefinedEnum E_SortType.E_SortType
 enum class E_SortType : uint8_t
 {
-	E_SortType__NewEnumerator0     = 0,
-	E_SortType__NewEnumerator1     = 1,
-	E_SortType__NewEnumerator2     = 2,
-	E_SortType__NewEnumerator3     = 3,
-	E_SortType__NewEnumerator4     = 4,
-	E_SortType__NewEnumerator5     = 5,
-	E_SortType__E_MAX              = 6,
+	NewEnumerator0                 = 0,
+	NewEnumerator1                 = 1,
+	NewEnumerator2                 = 2,
+	NewEnumerator3                 = 3,
+	NewEnumerator4                 = 4,
+	NewEnumerator5                 = 5,
+	E_MAX                          = 6,
 
 };
 

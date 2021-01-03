@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -17,133 +17,54 @@ namespace UFT
 // Classes
 //---------------------------------------------------------------------------
 
-// Class ChaosSolverEngine.ChaosEventListenerComponent
-// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
-// LastOffsetWithSize(0x00C8)
-class UChaosEventListenerComponent : public UActorComponent
+// Class ChaosSolverEngine.ChaosSolverSettings
+// 0x0020 (FullSize[0x0058] - InheritedSize[0x0038])
+class UChaosSolverSettings : public UDeveloperSettings
 {
 public:
-	//union
-	//{
-	//};
+	unsigned char                                      UnknownData_Q2XL[0x8];                                     // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FSoftClassPath                              DefaultChaosSolverActorClass;                              // 0x0040(0x0018) (Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosEventListenerComponent");
+		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverSettings");
 		return ptr;
 	}
 
-
-};
-
-// Class ChaosSolverEngine.ChaosGameplayEventDispatcher
-// 0x0168 (FullSize[0x0240] - InheritedSize[0x00D8])
-// LastOffsetWithSize(0x00C8)
-#define PADDING_001E - 0x0000 // Minimum to subtract -> (00D8)
-class UChaosGameplayEventDispatcher : public UChaosEventListenerComponent
-{
-public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x00D8 PADDING_001E, TMap<class UPrimitiveComponent* COMMA struct FChaosHandlerSet>,        CollisionEventRegistrations);                              // 0x01A0(0x0050)  (ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-		DEFINE_MEMBER_NNN(0x0128 PADDING_001E, TMap<class UPrimitiveComponent* COMMA struct FBreakEventCallbackWrapper>, BreakEventRegistrations);                                  // 0x01F0(0x0050)  (ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	};
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosGameplayEventDispatcher");
-		return ptr;
-	}
-
-
-};
-
-// Class ChaosSolverEngine.ChaosNotifyHandlerInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-class UChaosNotifyHandlerInterface : public UInterface
-{
-public:
-	//union
-	//{
-	//};
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosNotifyHandlerInterface");
-		return ptr;
-	}
-
-
-};
-
-// Class ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-class UChaosSolverEngineBlueprintLibrary : public UBlueprintFunctionLibrary
-{
-public:
-	//union
-	//{
-	//};
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary");
-		return ptr;
-	}
-
-
-	static struct FHitResult STATIC_ConvertPhysicsCollisionToHitResult(const struct FChaosPhysicsCollisionInfo& PhysicsCollision);
-};
-
-// Class ChaosSolverEngine.ChaosSolver
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-class UChaosSolver : public UObject
-{
-public:
-	//union
-	//{
-	//};
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolver");
-		return ptr;
-	}
 
 
 };
 
 // Class ChaosSolverEngine.ChaosSolverActor
-// 0x0080 (FullSize[0x02B8] - InheritedSize[0x0238])
-// LastOffsetWithSize(0x0238)
-#define PADDING_0023 - 0x0000 // Minimum to subtract -> (0010)
+// 0x0070 (FullSize[0x02B8] - InheritedSize[0x0248])
 class AChaosSolverActor : public AActor
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0010 PADDING_0023, float,                                                                 TimeStepMultiplier);                                       // 0x0248(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0014 PADDING_0023, int,                                                                   CollisionIterations);                                      // 0x024C(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0018 PADDING_0023, int,                                                                   PushOutIterations);                                        // 0x0250(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x001C PADDING_0023, int,                                                                   PushOutPairIterations);                                    // 0x0254(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0020 PADDING_0023, float,                                                                 ClusterConnectionFactor);                                  // 0x0258(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0024 PADDING_0023, EClusterConnectionTypeEnum,                                            ClusterUnionConnectionType);                               // 0x025C(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0025 PADDING_0023, bool,                                                                  DoGenerateCollisionData);                                  // 0x025D(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0028 PADDING_0023, struct FSolverCollisionFilterSettings,                                 CollisionFilterSettings);                                  // 0x0260(0x0010)  (Edit, NoDestructor, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0038 PADDING_0023, bool,                                                                  DoGenerateBreakingData);                                   // 0x0270(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x003C PADDING_0023, struct FSolverBreakingFilterSettings,                                  BreakingFilterSettings);                                   // 0x0274(0x0010)  (Edit, NoDestructor, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x004C PADDING_0023, bool,                                                                  DoGenerateTrailingData);                                   // 0x0284(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0050 PADDING_0023, struct FSolverTrailingFilterSettings,                                  TrailingFilterSettings);                                   // 0x0288(0x0010)  (Edit, NoDestructor, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0060 PADDING_0023, bool,                                                                  bHasFloor);                                                // 0x0298(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0064 PADDING_0023, float,                                                                 FloorHeight);                                              // 0x029C(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0068 PADDING_0023, float,                                                                 MassScale);                                                // 0x02A0(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x006C PADDING_0023, struct FChaosDebugSubstepControl,                                      ChaosDebugSubstepControl);                                 // 0x02A4(0x0003)  (Edit, NoDestructor, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0070 PADDING_0023, class UBillboardComponent*,                                            SpriteComponent);                                          // 0x02A8(0x0008)  (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0078 PADDING_0023, class UChaosGameplayEventDispatcher*,                                  GameplayEventDispatcherComponent);                         // 0x02B0(0x0008)  (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	};
+	float                                              TimeStepMultiplier;                                        // 0x0248(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                CollisionIterations;                                       // 0x024C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                PushOutIterations;                                         // 0x0250(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                PushOutPairIterations;                                     // 0x0254(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              ClusterConnectionFactor;                                   // 0x0258(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EClusterConnectionTypeEnum                         ClusterUnionConnectionType;                                // 0x025C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               DoGenerateCollisionData;                                   // 0x025D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_A6WI[0x2];                                     // 0x025E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FSolverCollisionFilterSettings              CollisionFilterSettings;                                   // 0x0260(0x0010) (Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                               DoGenerateBreakingData;                                    // 0x0270(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_KFF9[0x3];                                     // 0x0271(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FSolverBreakingFilterSettings               BreakingFilterSettings;                                    // 0x0274(0x0010) (Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                               DoGenerateTrailingData;                                    // 0x0284(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_1JWN[0x3];                                     // 0x0285(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FSolverTrailingFilterSettings               TrailingFilterSettings;                                    // 0x0288(0x0010) (Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                               bHasFloor;                                                 // 0x0298(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_45OY[0x3];                                     // 0x0299(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              FloorHeight;                                               // 0x029C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              MassScale;                                                 // 0x02A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FChaosDebugSubstepControl                   ChaosDebugSubstepControl;                                  // 0x02A4(0x0003) (Edit, NoDestructor, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_DH4R[0x1];                                     // 0x02A7(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UBillboardComponent*                         SpriteComponent;                                           // 0x02A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UChaosGameplayEventDispatcher*               GameplayEventDispatcherComponent;                          // 0x02B0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
 
 	static UClass* StaticClass()
 	{
@@ -152,27 +73,98 @@ public:
 	}
 
 
+
 	void SetSolverActive(bool bActive);
 	void SetAsCurrentWorldSolver();
 };
 
-// Class ChaosSolverEngine.ChaosSolverSettings
-// 0x0030 (FullSize[0x0058] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_0025 - 0x0000 // Minimum to subtract -> (0018)
-class UChaosSolverSettings : public UDeveloperSettings
+// Class ChaosSolverEngine.ChaosSolver
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UChaosSolver : public UObject
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0018 PADDING_0025, struct FSoftClassPath,                                                 DefaultChaosSolverActorClass);                             // 0x0040(0x0018)  (Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	};
+
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverSettings");
+		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolver");
 		return ptr;
 	}
+
+
+
+};
+
+// Class ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UChaosSolverEngineBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary");
+		return ptr;
+	}
+
+
+
+	struct FHitResult STATIC_ConvertPhysicsCollisionToHitResult(const struct FChaosPhysicsCollisionInfo& PhysicsCollision);
+};
+
+// Class ChaosSolverEngine.ChaosNotifyHandlerInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UChaosNotifyHandlerInterface : public UInterface
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosNotifyHandlerInterface");
+		return ptr;
+	}
+
+
+
+};
+
+// Class ChaosSolverEngine.ChaosEventListenerComponent
+// 0x0008 (FullSize[0x00E0] - InheritedSize[0x00D8])
+class UChaosEventListenerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData_KSQ0[0x8];                                     // 0x00D8(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosEventListenerComponent");
+		return ptr;
+	}
+
+
+
+};
+
+// Class ChaosSolverEngine.ChaosGameplayEventDispatcher
+// 0x0168 (FullSize[0x0248] - InheritedSize[0x00E0])
+class UChaosGameplayEventDispatcher : public UChaosEventListenerComponent
+{
+public:
+	unsigned char                                      UnknownData_2VYF[0xC0];                                    // 0x00E0(0x00C0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TMap<class UPrimitiveComponent*, struct FChaosHandlerSet> CollisionEventRegistrations;                               // 0x01A0(0x0050) (ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TMap<class UPrimitiveComponent*, struct FBreakEventCallbackWrapper> BreakEventRegistrations;                                   // 0x01F0(0x0050) (ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	unsigned char                                      UnknownData_FVK0[0x8];                                     // 0x0240(0x0008) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ChaosSolverEngine.ChaosGameplayEventDispatcher");
+		return ptr;
+	}
+
 
 
 };

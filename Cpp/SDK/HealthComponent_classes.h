@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,28 +18,25 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass HealthComponent.HealthComponent_C
-// 0x0060 (FullSize[0x0128] - InheritedSize[0x00C8])
-// LastOffsetWithSize(0x00C8)
-#define PADDING_08F4 - 0x0000 // Minimum to subtract -> (0010)
+// 0x0050 (FullSize[0x0128] - InheritedSize[0x00D8])
 class UHealthComponent_C : public UActorComponent
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0010 PADDING_08F4, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x00D8(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0018 PADDING_08F4, float,                                                                 Health);                                                   // 0x00E0(0x0004)  (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x001C PADDING_08F4, float,                                                                 Max_Health);                                               // 0x00E4(0x0004)  (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0020 PADDING_08F4, struct FScriptMulticastDelegate,                                       Health_Gained);                                            // 0x00E8(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-		DEFINE_MEMBER_NNN(0x0030 PADDING_08F4, struct FScriptMulticastDelegate,                                       Health_Lost);                                              // 0x00F8(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-		DEFINE_MEMBER_NNN(0x0040 PADDING_08F4, struct FScriptMulticastDelegate,                                       Health_Zero);                                              // 0x0108(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-		DEFINE_MEMBER_NNN(0x0050 PADDING_08F4, struct FScriptMulticastDelegate,                                       Health_Max);                                               // 0x0118(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x00D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	float                                              Health;                                                    // 0x00E0(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Max_Health;                                                // 0x00E4(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScriptMulticastDelegate                    Health_Gained;                                             // 0x00E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FScriptMulticastDelegate                    Health_Lost;                                               // 0x00F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FScriptMulticastDelegate                    Health_Zero;                                               // 0x0108(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FScriptMulticastDelegate                    Health_Max;                                                // 0x0118(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass HealthComponent.HealthComponent_C");
 		return ptr;
 	}
+
 
 
 	void Can_Damage(const struct FVector& Location);

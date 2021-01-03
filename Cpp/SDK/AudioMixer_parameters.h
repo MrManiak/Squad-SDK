@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -18,33 +18,44 @@ namespace UFT
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function AudioMixer.SynthComponent.Stop
-struct USynthComponent_Stop_Params
+// Function AudioMixer.SubmixEffectReverbFastPreset.SetSettingsWithReverbEffect
+struct USubmixEffectReverbFastPreset_SetSettingsWithReverbEffect_Params
 {
+	class UReverbEffect*                               InReverbEffect;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              WetLevel;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              DryLevel;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function AudioMixer.SynthComponent.Start
-struct USynthComponent_Start_Params
+// Function AudioMixer.SubmixEffectReverbFastPreset.SetSettings
+struct USubmixEffectReverbFastPreset_SetSettings_Params
 {
+	struct FSubmixEffectReverbFastSettings             InSettings;                                                // (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 
-// Function AudioMixer.SynthComponent.SetVolumeMultiplier
-struct USynthComponent_SetVolumeMultiplier_Params
+// Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect
+struct USubmixEffectReverbPreset_SetSettingsWithReverbEffect_Params
 {
-	float                                              VolumeMultiplier;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UReverbEffect*                               InReverbEffect;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              WetLevel;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              DryLevel;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function AudioMixer.SynthComponent.SetSubmixSend
-struct USynthComponent_SetSubmixSend_Params
+// Function AudioMixer.SubmixEffectReverbPreset.SetSettings
+struct USubmixEffectReverbPreset_SetSettings_Params
 {
-	class USoundSubmix*                                Submix;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              SendLevel;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSubmixEffectReverbSettings                 InSettings;                                                // (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 
-// Function AudioMixer.SynthComponent.IsPlaying
-struct USynthComponent_IsPlaying_Params
+// Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings
+struct USubmixEffectSubmixEQPreset_SetSettings_Params
 {
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSubmixEffectSubmixEQSettings               InSettings;                                                // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
+struct USubmixEffectDynamicsProcessorPreset_SetSettings_Params
+{
+	struct FSubmixEffectDynamicsProcessorSettings      InSettings;                                                // (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput
@@ -170,44 +181,33 @@ struct UAudioMixerBlueprintLibrary_AddMasterSubmixEffect_Params
 	class USoundEffectSubmixPreset*                    SubmixEffectPreset;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
-struct USubmixEffectDynamicsProcessorPreset_SetSettings_Params
+// Function AudioMixer.SynthComponent.Stop
+struct USynthComponent_Stop_Params
 {
-	struct FSubmixEffectDynamicsProcessorSettings      InSettings;                                                // (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 
-// Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings
-struct USubmixEffectSubmixEQPreset_SetSettings_Params
+// Function AudioMixer.SynthComponent.Start
+struct USynthComponent_Start_Params
 {
-	struct FSubmixEffectSubmixEQSettings               InSettings;                                                // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 
-// Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect
-struct USubmixEffectReverbPreset_SetSettingsWithReverbEffect_Params
+// Function AudioMixer.SynthComponent.SetVolumeMultiplier
+struct USynthComponent_SetVolumeMultiplier_Params
 {
-	class UReverbEffect*                               InReverbEffect;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              WetLevel;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              DryLevel;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              VolumeMultiplier;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function AudioMixer.SubmixEffectReverbPreset.SetSettings
-struct USubmixEffectReverbPreset_SetSettings_Params
+// Function AudioMixer.SynthComponent.SetSubmixSend
+struct USynthComponent_SetSubmixSend_Params
 {
-	struct FSubmixEffectReverbSettings                 InSettings;                                                // (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class USoundSubmix*                                Submix;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              SendLevel;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function AudioMixer.SubmixEffectReverbFastPreset.SetSettingsWithReverbEffect
-struct USubmixEffectReverbFastPreset_SetSettingsWithReverbEffect_Params
+// Function AudioMixer.SynthComponent.IsPlaying
+struct USynthComponent_IsPlaying_Params
 {
-	class UReverbEffect*                               InReverbEffect;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              WetLevel;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              DryLevel;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AudioMixer.SubmixEffectReverbFastPreset.SetSettings
-struct USubmixEffectReverbFastPreset_SetSettings_Params
-{
-	struct FSubmixEffectReverbFastSettings             InSettings;                                                // (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

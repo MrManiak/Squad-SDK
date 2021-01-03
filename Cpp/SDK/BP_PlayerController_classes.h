@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,56 +18,58 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PlayerController.BP_PlayerController_C
-// 0x01E8 (FullSize[0x0B80] - InheritedSize[0x0998])
-// LastOffsetWithSize(0x0998)
-#define PADDING_0CC2 - 0x0000 // Minimum to subtract -> (0000)
+// 0x01E8 (FullSize[0x0B90] - InheritedSize[0x09A8])
 class ABP_PlayerController_C : public ASQPlayerController
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_0CC2, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x0998(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0008 PADDING_0CC2, class UComp_VehicleBayHandler_C*,                                      Comp_VehicleBayHandler);                                   // 0x09A0(0x0008)  (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0010 PADDING_0CC2, class UComp_ResourceControl_C*,                                        Comp_ResourceControl);                                     // 0x09A8(0x0008)  (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0018 PADDING_0CC2, class UPostProcessComponent*,                                          MapPostProcess);                                           // 0x09B0(0x0008)  (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0020 PADDING_0CC2, class UPostProcessComponent*,                                          UIBlurPostProcess);                                        // 0x09B8(0x0008)  (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0028 PADDING_0CC2, float,                                                                 TraceInterestRadius);                                      // 0x09C0(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0030 PADDING_0CC2, TArray<class ASQSoldier*>,                                             PawnsWithinRadius);                                        // 0x09C8(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-		DEFINE_MEMBER_NNN(0x0040 PADDING_0CC2, struct FName,                                                          RoleCategory);                                             // 0x09D8(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0048 PADDING_0CC2, struct FLinearColor,                                                   InvalidPlacementColor);                                    // 0x09E0(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0058 PADDING_0CC2, bool,                                                                  PawnHidden);                                               // 0x09F0(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x0068 PADDING_0CC2, struct FTransform,                                                     SavedActorTransform);                                      // 0x0A00(0x0030)  (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x0098 PADDING_0CC2, struct FTimerHandle,                                                   TimerCheckValidGhost);                                     // 0x0A30(0x0008)  (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00A0 PADDING_0CC2, class UPhysicsHandleComponent*,                                        DraggingPhysicsHandle);                                    // 0x0A38(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00A8 PADDING_0CC2, class USQMapWidgetMapMarkerSelectable*,                                LastSQMarker);                                             // 0x0A40(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B0 PADDING_0CC2, int,                                                                   Max_Spot_Markers);                                         // 0x0A48(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B4 PADDING_0CC2, int,                                                                   Max_Action_Markers);                                       // 0x0A4C(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B8 PADDING_0CC2, int,                                                                   Max_POI_Markers);                                          // 0x0A50(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00BC PADDING_0CC2, int,                                                                   Max_Fireteam_Markers);                                     // 0x0A54(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00C0 PADDING_0CC2, int,                                                                   Max_Request_Markers);                                      // 0x0A58(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00C8 PADDING_0CC2, TArray<class UClass*>,                                                 FireteamMarkers);                                          // 0x0A60(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-		DEFINE_MEMBER_NNN(0x00D8 PADDING_0CC2, struct FScriptMulticastDelegate,                                       Opened_Chat);                                              // 0x0A70(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-		DEFINE_MEMBER_NNN(0x00E8 PADDING_0CC2, class ABP_MapMarker_CommandMaster_C*,                                  Last_Command_Request_Marker);                              // 0x0A80(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00F0 PADDING_0CC2, int,                                                                   Max_Command_Spot_Markers);                                 // 0x0A88(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00F4 PADDING_0CC2, int,                                                                   Max_Command_Request_Markers);                              // 0x0A8C(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00F8 PADDING_0CC2, TArray<class ABP_MapMarker_DirectorMaster_C*>,                         Director_Markers);                                         // 0x0A90(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-		DEFINE_MEMBER_NNN(0x0108 PADDING_0CC2, int,                                                                   Max_Director_Markers);                                     // 0x0AA0(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0110 PADDING_0CC2, struct FScriptMulticastDelegate,                                       Marker_Created);                                           // 0x0AA8(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-		DEFINE_MEMBER_NNN(0x0120 PADDING_0CC2, bool,                                                                  bAllowAdminCam);                                           // 0x0AB8(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x0128 PADDING_0CC2, struct FTimerHandle,                                                   Out_of_Bounds_Timer);                                      // 0x0AC0(0x0008)  (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0130 PADDING_0CC2, class UClass*,                                                         Command_Action_Conditions);                                // 0x0AC8(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0138 PADDING_0CC2, float,                                                                 Last_Command_Request_Time);                                // 0x0AD0(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x013C PADDING_0CC2, float,                                                                 Command_Request_Interval);                                 // 0x0AD4(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0140 PADDING_0CC2, class UBP_MapMarker_Selectable_C*,                                     SelectedMapMarker);                                        // 0x0AD8(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0148 PADDING_0CC2, TMap<class UClass* COMMA class USQMapMarkerDataAsset*>,                SL_TraceMarkerMapping);                                    // 0x0AE0(0x0050)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-		DEFINE_MEMBER_NNN(0x0198 PADDING_0CC2, TMap<class UClass* COMMA class USQMapMarkerDataAsset*>,                FTL_TraceMarkerMapping);                                   // 0x0B30(0x0050)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x09A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UComp_VehicleBayHandler_C*                   Comp_VehicleBayHandler;                                    // 0x09B0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UComp_ResourceControl_C*                     Comp_ResourceControl;                                      // 0x09B8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                       MapPostProcess;                                            // 0x09C0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                       UIBlurPostProcess;                                         // 0x09C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                              TraceInterestRadius;                                       // 0x09D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_RK12[0x4];                                     // 0x09D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class ASQSoldier*>                          PawnsWithinRadius;                                         // 0x09D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FName                                       RoleCategory;                                              // 0x09E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                                InvalidPlacementColor;                                     // 0x09F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               PawnHidden;                                                // 0x0A00(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_8PL6[0xF];                                     // 0x0A01(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FTransform                                  SavedActorTransform;                                       // 0x0A10(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FTimerHandle                                TimerCheckValidGhost;                                      // 0x0A40(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UPhysicsHandleComponent*                     DraggingPhysicsHandle;                                     // 0x0A48(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USQMapWidgetMapMarkerSelectable*             LastSQMarker;                                              // 0x0A50(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Max_Spot_Markers;                                          // 0x0A58(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Max_Action_Markers;                                        // 0x0A5C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Max_POI_Markers;                                           // 0x0A60(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Max_Fireteam_Markers;                                      // 0x0A64(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Max_Request_Markers;                                       // 0x0A68(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_CWI0[0x4];                                     // 0x0A6C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class UClass*>                              FireteamMarkers;                                           // 0x0A70(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FScriptMulticastDelegate                    Opened_Chat;                                               // 0x0A80(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class ABP_MapMarker_CommandMaster_C*               Last_Command_Request_Marker;                               // 0x0A90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Max_Command_Spot_Markers;                                  // 0x0A98(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                Max_Command_Request_Markers;                               // 0x0A9C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_MapMarker_DirectorMaster_C*>      Director_Markers;                                          // 0x0AA0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	int                                                Max_Director_Markers;                                      // 0x0AB0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_DM7Y[0x4];                                     // 0x0AB4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FScriptMulticastDelegate                    Marker_Created;                                            // 0x0AB8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                               bAllowAdminCam;                                            // 0x0AC8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_VLGF[0x7];                                     // 0x0AC9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FTimerHandle                                Out_of_Bounds_Timer;                                       // 0x0AD0(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                      Command_Action_Conditions;                                 // 0x0AD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Last_Command_Request_Time;                                 // 0x0AE0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Command_Request_Interval;                                  // 0x0AE4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_MapMarker_Selectable_C*                  SelectedMapMarker;                                         // 0x0AE8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class UClass*, class USQMapMarkerDataAsset*>  SL_TraceMarkerMapping;                                     // 0x0AF0(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TMap<class UClass*, class USQMapMarkerDataAsset*>  FTL_TraceMarkerMapping;                                    // 0x0B40(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_PlayerController.BP_PlayerController_C");
 		return ptr;
 	}
+
 
 
 	void bCanRemoveMapMarkerNew(class UBP_MapMarker_Selectable_C* Map_Marker, bool* Can_Remove);
@@ -153,6 +155,7 @@ public:
 	void Set_Last_Command_Request_Time();
 	void Server_Remove_Map_Marker(unsigned char MapMarkerID);
 	void Remove_Map_Marker_New(unsigned char MapMarkerID);
+	void PickUpRally(class ABP_SquadRallyPoint_C* Rally);
 	void ExecuteUbergraph_BP_PlayerController(int EntryPoint);
 	void Marker_Created__DelegateSignature(int Squad_ID, class ASQMapMarker* Marker);
 	void Opened_Chat__DelegateSignature(ESQChat Channel);

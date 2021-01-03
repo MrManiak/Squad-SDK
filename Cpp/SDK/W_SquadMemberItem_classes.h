@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,38 +18,35 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass W_SquadMemberItem.W_SquadMemberItem_C
-// 0x007D (FullSize[0x0332] - InheritedSize[0x02B5])
-// LastOffsetWithSize(0x02B5)
-#define PADDING_040E - 0x0000 // Minimum to subtract -> (0003)
+// 0x007A (FullSize[0x0332] - InheritedSize[0x02B8])
 class UW_SquadMemberItem_C : public USQCoreStateSquadMemberWidget
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0003 PADDING_040E, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x02B8(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x000B PADDING_040E, class UBorder*,                                                        Border_1);                                                 // 0x02C0(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0013 PADDING_040E, class UScaleBox*,                                                      Box_Weapon);                                               // 0x02C8(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x001B PADDING_040E, class UButton*,                                                        Button_Mute);                                              // 0x02D0(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0023 PADDING_040E, class UImage*,                                                         IconBadge);                                                // 0x02D8(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x002B PADDING_040E, class UImage*,                                                         IconHealthState);                                          // 0x02E0(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0033 PADDING_040E, class UImage*,                                                         IconMute);                                                 // 0x02E8(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x003B PADDING_040E, class UImage*,                                                         IconRole);                                                 // 0x02F0(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0043 PADDING_040E, class UImage*,                                                         IconVehicle);                                              // 0x02F8(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x004B PADDING_040E, class UImage*,                                                         Image_tick);                                               // 0x0300(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0053 PADDING_040E, class UImage*,                                                         Image_Weapon);                                             // 0x0308(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x005B PADDING_040E, class UButton*,                                                        SelectButton);                                             // 0x0310(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0063 PADDING_040E, class UTextBlock*,                                                     TBName);                                                   // 0x0318(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x006B PADDING_040E, class ASQPlayerController*,                                            My_PC);                                                    // 0x0320(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0073 PADDING_040E, class UW_PopupOptionBox_C*,                                            Current_Popup);                                            // 0x0328(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x007B PADDING_040E, bool,                                                                  bIsInVehicle);                                             // 0x0330(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x007C PADDING_040E, bool,                                                                  selected);                                                 // 0x0331(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x02B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UBorder*                                     Border_1;                                                  // 0x02C0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                                   Box_Weapon;                                                // 0x02C8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                     Button_Mute;                                               // 0x02D0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      IconBadge;                                                 // 0x02D8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      IconHealthState;                                           // 0x02E0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      IconMute;                                                  // 0x02E8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      IconRole;                                                  // 0x02F0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      IconVehicle;                                               // 0x02F8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      Image_tick;                                                // 0x0300(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      Image_Weapon;                                              // 0x0308(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                     SelectButton;                                              // 0x0310(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                                  TBName;                                                    // 0x0318(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ASQPlayerController*                         My_PC;                                                     // 0x0320(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UW_PopupOptionBox_C*                         Current_Popup;                                             // 0x0328(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               bIsInVehicle;                                              // 0x0330(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               selected;                                                  // 0x0331(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_SquadMemberItem.W_SquadMemberItem_C");
 		return ptr;
 	}
+
 
 
 	void Self_Squad(bool* Is_SelfSquad);

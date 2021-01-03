@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,14 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function EditableMesh.EditableMeshFactory.MakeEditableMesh
+struct UEditableMeshFactory_MakeEditableMesh_Params
+{
+	class UPrimitiveComponent*                         PrimitiveComponent;                                        // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                LODIndex;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEditableMesh*                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function EditableMesh.EditableMesh.WeldVertices
 struct UEditableMesh_WeldVertices_Params
@@ -958,14 +966,6 @@ struct UEditableMesh_AssignPolygonsToPolygonGroups_Params
 struct UEditableMesh_AnyChangesToUndo_Params
 {
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function EditableMesh.EditableMeshFactory.MakeEditableMesh
-struct UEditableMeshFactory_MakeEditableMesh_Params
-{
-	class UPrimitiveComponent*                         PrimitiveComponent;                                        // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                LODIndex;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UEditableMesh*                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

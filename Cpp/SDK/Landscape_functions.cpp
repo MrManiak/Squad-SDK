@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -242,6 +242,50 @@ void ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections(float InComponen
 }
 
 
+// Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<class USplineMeshComponent*> ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+TArray<class USplineMeshComponent*> ULandscapeSplinesComponent::GetSplineMeshComponents()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents");
+
+	ULandscapeSplinesComponent_GetSplineMeshComponents_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            InIndex                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInstanceDynamic* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(int InIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic");
+
+	ULandscapeComponent_GetMaterialInstanceDynamic_Params params;
+	params.InIndex = InIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
 // Function Landscape.LandscapeBlueprintBrushBase.RequestLandscapeUpdate
 // (Final, Native, Public, BlueprintCallable)
 void ALandscapeBlueprintBrushBase::RequestLandscapeUpdate()
@@ -305,50 +349,6 @@ void ALandscapeBlueprintBrushBase::Initialize(const struct FTransform& InLandsca
 	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
-}
-
-
-// Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            InIndex                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialInstanceDynamic* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(int InIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic");
-
-	ULandscapeComponent_GetMaterialInstanceDynamic_Params params;
-	params.InIndex = InIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<class USplineMeshComponent*> ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-TArray<class USplineMeshComponent*> ULandscapeSplinesComponent::GetSplineMeshComponents()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents");
-
-	ULandscapeSplinesComponent_GetSplineMeshComponents_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
 }
 
 

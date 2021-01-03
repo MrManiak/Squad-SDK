@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -18,10 +18,20 @@ namespace UFT
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function AnimationSharing.AnimSharingStateInstance.GetInstancedActors
-struct UAnimSharingStateInstance_GetInstancedActors_Params
+// Function AnimationSharing.AnimationSharingStateProcessor.ProcessActorState
+struct UAnimationSharingStateProcessor_ProcessActorState_Params
 {
-	TArray<class AActor*>                              Actors;                                                    // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int                                                OutState;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                      InActor;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      CurrentState;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      OnDemandState;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               bShouldProcess;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum
+struct UAnimationSharingStateProcessor_GetAnimationStateEnum_Params
+{
+	class UEnum*                                       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function AnimationSharing.AnimationSharingManager.RegisterActorWithSkeletonBP
@@ -52,20 +62,10 @@ struct UAnimationSharingManager_AnimationSharingEnabled_Params
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function AnimationSharing.AnimationSharingStateProcessor.ProcessActorState
-struct UAnimationSharingStateProcessor_ProcessActorState_Params
+// Function AnimationSharing.AnimSharingStateInstance.GetInstancedActors
+struct UAnimSharingStateInstance_GetInstancedActors_Params
 {
-	int                                                OutState;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                      InActor;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      CurrentState;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      OnDemandState;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               bShouldProcess;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum
-struct UAnimationSharingStateProcessor_GetAnimationStateEnum_Params
-{
-	class UEnum*                                       ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                              Actors;                                                    // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 
 }

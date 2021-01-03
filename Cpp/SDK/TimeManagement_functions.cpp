@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -35,8 +35,7 @@ struct FFrameTime UTimeManagementBlueprintLibrary::STATIC_TransformTime(const st
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -61,8 +60,7 @@ struct FFrameNumber UTimeManagementBlueprintLibrary::STATIC_Subtract_FrameNumber
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -87,8 +85,7 @@ struct FFrameNumber UTimeManagementBlueprintLibrary::STATIC_Subtract_FrameNumber
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -115,8 +112,7 @@ struct FFrameTime UTimeManagementBlueprintLibrary::STATIC_SnapFrameTimeToRate(co
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -141,8 +137,7 @@ struct FFrameTime UTimeManagementBlueprintLibrary::STATIC_Multiply_SecondsFrameR
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -167,8 +162,7 @@ struct FFrameNumber UTimeManagementBlueprintLibrary::STATIC_Multiply_FrameNumber
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -193,8 +187,7 @@ bool UTimeManagementBlueprintLibrary::STATIC_IsValid_MultipleOf(const struct FFr
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -217,8 +210,7 @@ bool UTimeManagementBlueprintLibrary::STATIC_IsValid_Framerate(const struct FFra
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -239,8 +231,7 @@ struct FTimecode UTimeManagementBlueprintLibrary::STATIC_GetTimecode()
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -265,8 +256,7 @@ struct FFrameNumber UTimeManagementBlueprintLibrary::STATIC_Divide_FrameNumberIn
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -291,8 +281,7 @@ struct FString UTimeManagementBlueprintLibrary::STATIC_Conv_TimecodeToString(con
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -315,8 +304,7 @@ float UTimeManagementBlueprintLibrary::STATIC_Conv_QualifiedFrameTimeToSeconds(c
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -339,8 +327,7 @@ float UTimeManagementBlueprintLibrary::STATIC_Conv_FrameRateToSeconds(const stru
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -363,8 +350,7 @@ int UTimeManagementBlueprintLibrary::STATIC_Conv_FrameNumberToInteger(const stru
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -389,8 +375,7 @@ struct FFrameNumber UTimeManagementBlueprintLibrary::STATIC_Add_FrameNumberInteg
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -415,8 +400,7 @@ struct FFrameNumber UTimeManagementBlueprintLibrary::STATIC_Add_FrameNumberFrame
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 

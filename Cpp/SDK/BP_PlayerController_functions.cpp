@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -1648,6 +1648,25 @@ void ABP_PlayerController_C::Remove_Map_Marker_New(unsigned char MapMarkerID)
 
 	ABP_PlayerController_C_Remove_Map_Marker_New_Params params;
 	params.MapMarkerID = MapMarkerID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function BP_PlayerController.BP_PlayerController_C.PickUpRally
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_SquadRallyPoint_C*   Rally                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+void ABP_PlayerController_C::PickUpRally(class ABP_SquadRallyPoint_C* Rally)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerController.BP_PlayerController_C.PickUpRally");
+
+	ABP_PlayerController_C_PickUpRally_Params params;
+	params.Rally = Rally;
 
 	auto flags = fn->FunctionFlags;
 

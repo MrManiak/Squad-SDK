@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // Class InputCore.InputCoreTypes
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class UInputCoreTypes : public UObject
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class InputCore.InputCoreTypes");
 		return ptr;
 	}
+
 
 
 };

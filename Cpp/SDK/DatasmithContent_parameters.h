@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,12 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence
+struct ADatasmithImportedSequencesActor_PlayLevelSequence_Params
+{
+	class ULevelSequence*                              SequenceToPlay;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey
 struct UDatasmithContentBlueprintLibrary_GetDatasmithUserDataValueForKey_Params
@@ -40,12 +46,6 @@ struct UDatasmithContentBlueprintLibrary_GetDatasmithUserData_Params
 {
 	class UObject*                                     Object;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDatasmithAssetUserData*                     ReturnValue;                                               // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence
-struct ADatasmithImportedSequencesActor_PlayLevelSequence_Params
-{
-	class ULevelSequence*                              SequenceToPlay;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

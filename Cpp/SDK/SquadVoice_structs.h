@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,21 +20,21 @@ namespace UFT
 // Enum SquadVoice.ESQVoiceChannel
 enum class ESQVoiceChannel : uint8_t
 {
-	ESQVoiceChannel__None          = 0,
-	ESQVoiceChannel__Local         = 1,
-	ESQVoiceChannel__Squad         = 2,
-	ESQVoiceChannel__Command       = 3,
-	ESQVoiceChannel__ToCommander   = 4,
-	ESQVoiceChannel__CommandSQ1    = 5,
-	ESQVoiceChannel__CommandSQ2    = 6,
-	ESQVoiceChannel__CommandSQ3    = 7,
-	ESQVoiceChannel__CommandSQ4    = 8,
-	ESQVoiceChannel__CommandSQ5    = 9,
-	ESQVoiceChannel__CommandSQ6    = 10,
-	ESQVoiceChannel__CommandSQ7    = 11,
-	ESQVoiceChannel__CommandSQ8    = 12,
-	ESQVoiceChannel__CommandSQ9    = 13,
-	ESQVoiceChannel__MAX           = 14,
+	None                           = 0,
+	Local                          = 1,
+	Squad                          = 2,
+	Command                        = 3,
+	ToCommander                    = 4,
+	CommandSQ1                     = 5,
+	CommandSQ2                     = 6,
+	CommandSQ3                     = 7,
+	CommandSQ4                     = 8,
+	CommandSQ5                     = 9,
+	CommandSQ6                     = 10,
+	CommandSQ7                     = 11,
+	CommandSQ8                     = 12,
+	CommandSQ9                     = 13,
+	MAX                            = 14,
 
 };
 

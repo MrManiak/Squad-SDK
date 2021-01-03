@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,19 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function PrefabAsset.PrefabFunctionLibrary.SpawnPrefab
+struct UPrefabFunctionLibrary_SpawnPrefab_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPrefabAsset*                                PrefabAsset;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                                  SpawnTransform;                                            // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                              OutSpawnPrefabInstances;                                   // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                               bSpawnInstancesOnly;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESpawnActorCollisionHandlingMethod                 CollisionHandlingOverride;                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                      Owner;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APrefabActor*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function PrefabAsset.PrefabActor.SetPrefab
 struct APrefabActor_SetPrefab_Params
@@ -41,19 +54,6 @@ struct APrefabActor_GetPrefab_Params
 struct APrefabActor_DestroyPrefabActor_Params
 {
 	bool                                               bDestroyAttachedChildren;                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PrefabAsset.PrefabFunctionLibrary.SpawnPrefab
-struct UPrefabFunctionLibrary_SpawnPrefab_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPrefabAsset*                                PrefabAsset;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                                  SpawnTransform;                                            // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                              OutSpawnPrefabInstances;                                   // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                               bSpawnInstancesOnly;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESpawnActorCollisionHandlingMethod                 CollisionHandlingOverride;                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                      Owner;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APrefabActor*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_M2Emplaced_StaticInfo_Child.BP_M2Emplaced_StaticInfo_Child_C
 // 0x0000 (FullSize[0x0930] - InheritedSize[0x0930])
-// LastOffsetWithSize(0x0929)
 class UBP_M2Emplaced_StaticInfo_Child_C : public UBP_GenericEmplaced_StaticInfo_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_M2Emplaced_StaticInfo_Child.BP_M2Emplaced_StaticInfo_Child_C");
 		return ptr;
 	}
+
 
 
 };

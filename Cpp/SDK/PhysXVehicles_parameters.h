@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -155,6 +155,57 @@ struct UWheeledVehicleMovementComponent_GetCurrentGear_Params
 	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
+// Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetSteerAngle
+struct USimpleWheeledVehicleMovementComponent_SetSteerAngle_Params
+{
+	float                                              SteerAngle;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                WheelIndex;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetDriveTorque
+struct USimpleWheeledVehicleMovementComponent_SetDriveTorque_Params
+{
+	float                                              DriveTorque;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                WheelIndex;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetBrakeTorque
+struct USimpleWheeledVehicleMovementComponent_SetBrakeTorque_Params
+{
+	float                                              BrakeTorque;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                WheelIndex;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function PhysXVehicles.VehicleWheel.IsInAir
+struct UVehicleWheel_IsInAir_Params
+{
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function PhysXVehicles.VehicleWheel.GetSuspensionOffset
+struct UVehicleWheel_GetSuspensionOffset_Params
+{
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function PhysXVehicles.VehicleWheel.GetSteerAngle
+struct UVehicleWheel_GetSteerAngle_Params
+{
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function PhysXVehicles.VehicleWheel.GetRotationAngle
+struct UVehicleWheel_GetRotationAngle_Params
+{
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function PhysXVehicles.VehicleAnimInstance.GetVehicle
+struct UVehicleAnimInstance_GetVehicle_Params
+{
+	class AWheeledVehicle*                             ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
 // Function PhysXVehicles.WheeledVehicleMovementComponentTank.SetRightTrackThrottleInput
 struct UWheeledVehicleMovementComponentTank_SetRightTrackThrottleInput_Params
 {
@@ -183,57 +234,6 @@ struct UWheeledVehicleMovementComponentTank_GetRightTrackSpeed_Params
 struct UWheeledVehicleMovementComponentTank_GetLeftTrackSpeed_Params
 {
 	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhysXVehicles.VehicleAnimInstance.GetVehicle
-struct UVehicleAnimInstance_GetVehicle_Params
-{
-	class AWheeledVehicle*                             ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhysXVehicles.VehicleWheel.IsInAir
-struct UVehicleWheel_IsInAir_Params
-{
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhysXVehicles.VehicleWheel.GetSuspensionOffset
-struct UVehicleWheel_GetSuspensionOffset_Params
-{
-	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhysXVehicles.VehicleWheel.GetSteerAngle
-struct UVehicleWheel_GetSteerAngle_Params
-{
-	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhysXVehicles.VehicleWheel.GetRotationAngle
-struct UVehicleWheel_GetRotationAngle_Params
-{
-	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetSteerAngle
-struct USimpleWheeledVehicleMovementComponent_SetSteerAngle_Params
-{
-	float                                              SteerAngle;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                WheelIndex;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetDriveTorque
-struct USimpleWheeledVehicleMovementComponent_SetDriveTorque_Params
-{
-	float                                              DriveTorque;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                WheelIndex;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetBrakeTorque
-struct USimpleWheeledVehicleMovementComponent_SetBrakeTorque_Params
-{
-	float                                              BrakeTorque;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                WheelIndex;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

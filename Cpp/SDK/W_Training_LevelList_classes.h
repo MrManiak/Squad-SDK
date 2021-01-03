@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,36 +18,33 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass W_Training_LevelList.W_Training_LevelList_C
-// 0x00D8 (FullSize[0x02B8] - InheritedSize[0x01E0])
-// LastOffsetWithSize(0x01E0)
-#define PADDING_0042 - 0x0000 // Minimum to subtract -> (0050)
+// 0x0088 (FullSize[0x02B8] - InheritedSize[0x0230])
 class UW_Training_LevelList_C : public UUserWidget
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0050 PADDING_0042, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x0230(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0058 PADDING_0042, class UHorizontalBox*,                                                 HorizontalBox_1);                                          // 0x0238(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0060 PADDING_0042, class UHorizontalBox*,                                                 HorizontalBox_3);                                          // 0x0240(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0068 PADDING_0042, class UHorizontalBox*,                                                 HorizontalBox_4);                                          // 0x0248(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0070 PADDING_0042, class UHorizontalBox*,                                                 LevelList);                                                // 0x0250(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0078 PADDING_0042, class ULevelSelector_C*,                                               LevelSelector);                                            // 0x0258(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0080 PADDING_0042, class ULevelSelector_C*,                                               LevelSelector_3);                                          // 0x0260(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0088 PADDING_0042, class ULevelSelector_C*,                                               LevelSelector_C_1);                                        // 0x0268(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0090 PADDING_0042, class ULevelSelector_C*,                                               LevelSelector_C_2);                                        // 0x0270(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0098 PADDING_0042, class ULevelSelector_C*,                                               LevelSelector_C_3);                                        // 0x0278(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00A0 PADDING_0042, class UChallengeWindow_C*,                                             PopupTraining);                                            // 0x0280(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00A8 PADDING_0042, class ULevelSelector_C*,                                               Tutorial_LevelSelector);                                   // 0x0288(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B0 PADDING_0042, class UWidgetSwitcher*,                                                WidgetSwitcher_1);                                         // 0x0290(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B8 PADDING_0042, struct FString,                                                        Current_Level_Selection);                                  // 0x0298(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00C8 PADDING_0042, struct FString,                                                        Current_Mode_Selection);                                   // 0x02A8(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0230(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                              HorizontalBox_1;                                           // 0x0238(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                              HorizontalBox_3;                                           // 0x0240(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                              HorizontalBox_4;                                           // 0x0248(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                              LevelList;                                                 // 0x0250(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULevelSelector_C*                            LevelSelector;                                             // 0x0258(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULevelSelector_C*                            LevelSelector_3;                                           // 0x0260(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULevelSelector_C*                            LevelSelector_C_1;                                         // 0x0268(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULevelSelector_C*                            LevelSelector_C_2;                                         // 0x0270(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULevelSelector_C*                            LevelSelector_C_3;                                         // 0x0278(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UChallengeWindow_C*                          PopupTraining;                                             // 0x0280(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULevelSelector_C*                            Tutorial_LevelSelector;                                    // 0x0288(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                             WidgetSwitcher_1;                                          // 0x0290(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FString                                     Current_Level_Selection;                                   // 0x0298(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FString                                     Current_Mode_Selection;                                    // 0x02A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_Training_LevelList.W_Training_LevelList_C");
 		return ptr;
 	}
+
 
 
 	void BndEvt__PopupTraining_K2Node_ComponentBoundEvent_0_OnRightButtonClicked__DelegateSignature();

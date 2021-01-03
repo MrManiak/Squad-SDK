@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -18,53 +18,32 @@ namespace UFT
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function NavigationSystem.NavigationPath.IsValid
-struct UNavigationPath_IsValid_Params
+// Function NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
+struct ARecastNavMesh_K2_ReplaceAreaInTileBounds_Params
 {
+	struct FBox                                        Bounds;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class UClass*                                      OldArea;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                      NewArea;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReplaceLinks;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function NavigationSystem.NavigationPath.IsStringPulled
-struct UNavigationPath_IsStringPulled_Params
+// Function NavigationSystem.NavModifierVolume.SetAreaClass
+struct ANavModifierVolume_SetAreaClass_Params
 {
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                      NewAreaClass;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function NavigationSystem.NavigationPath.IsPartial
-struct UNavigationPath_IsPartial_Params
+// Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
+struct UNavRelevantComponent_SetNavigationRelevancy_Params
 {
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               bRelevant;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function NavigationSystem.NavigationPath.GetPathLength
-struct UNavigationPath_GetPathLength_Params
+// Function NavigationSystem.NavModifierComponent.SetAreaClass
+struct UNavModifierComponent_SetAreaClass_Params
 {
-	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function NavigationSystem.NavigationPath.GetPathCost
-struct UNavigationPath_GetPathCost_Params
-{
-	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function NavigationSystem.NavigationPath.GetDebugString
-struct UNavigationPath_GetDebugString_Params
-{
-	struct FString                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function NavigationSystem.NavigationPath.EnableRecalculationOnInvalidation
-struct UNavigationPath_EnableRecalculationOnInvalidation_Params
-{
-	TEnumAsByte<ENavigationOptionFlag>                 DoRecalculation;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function NavigationSystem.NavigationPath.EnableDebugDrawing
-struct UNavigationPath_EnableDebugDrawing_Params
-{
-	bool                                               bShouldDrawDebugData;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                                PathColor;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                      NewAreaClass;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function NavigationSystem.NavigationSystemV1.UnregisterNavigationInvoker
@@ -288,32 +267,53 @@ struct UNavigationSystemV1_FindPathToActorSynchronously_Params
 	class UNavigationPath*                             ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
-struct UNavRelevantComponent_SetNavigationRelevancy_Params
+// Function NavigationSystem.NavigationPath.IsValid
+struct UNavigationPath_IsValid_Params
 {
-	bool                                               bRelevant;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function NavigationSystem.NavModifierComponent.SetAreaClass
-struct UNavModifierComponent_SetAreaClass_Params
-{
-	class UClass*                                      NewAreaClass;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function NavigationSystem.NavModifierVolume.SetAreaClass
-struct ANavModifierVolume_SetAreaClass_Params
-{
-	class UClass*                                      NewAreaClass;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
-struct ARecastNavMesh_K2_ReplaceAreaInTileBounds_Params
-{
-	struct FBox                                        Bounds;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class UClass*                                      OldArea;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                      NewArea;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReplaceLinks;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function NavigationSystem.NavigationPath.IsStringPulled
+struct UNavigationPath_IsStringPulled_Params
+{
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function NavigationSystem.NavigationPath.IsPartial
+struct UNavigationPath_IsPartial_Params
+{
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function NavigationSystem.NavigationPath.GetPathLength
+struct UNavigationPath_GetPathLength_Params
+{
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function NavigationSystem.NavigationPath.GetPathCost
+struct UNavigationPath_GetPathCost_Params
+{
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function NavigationSystem.NavigationPath.GetDebugString
+struct UNavigationPath_GetDebugString_Params
+{
+	struct FString                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function NavigationSystem.NavigationPath.EnableRecalculationOnInvalidation
+struct UNavigationPath_EnableRecalculationOnInvalidation_Params
+{
+	TEnumAsByte<ENavigationOptionFlag>                 DoRecalculation;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function NavigationSystem.NavigationPath.EnableDebugDrawing
+struct UNavigationPath_EnableDebugDrawing_Params
+{
+	bool                                               bShouldDrawDebugData;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                                PathColor;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

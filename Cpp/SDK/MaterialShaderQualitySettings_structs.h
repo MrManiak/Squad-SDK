@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,10 +20,10 @@ namespace UFT
 // Enum MaterialShaderQualitySettings.EMobileCSMQuality
 enum class EMobileCSMQuality : uint8_t
 {
-	EMobileCSMQuality__NoFiltering = 0,
-	EMobileCSMQuality__PCF_1x1     = 1,
-	EMobileCSMQuality__PCF_2x2     = 2,
-	EMobileCSMQuality__EMobileCSMQuality_MAX = 3,
+	NoFiltering                    = 0,
+	PCF_1x1                        = 1,
+	PCF_2x2                        = 2,
+	MAX                            = 3,
 
 };
 

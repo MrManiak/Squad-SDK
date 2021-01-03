@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_RadialAction_PickupConstruction.BP_RadialAction_PickupConstruction_C
 // 0x0000 (FullSize[0x00AA] - InheritedSize[0x00AA])
-// LastOffsetWithSize(0x00AA)
 class UBP_RadialAction_PickupConstruction_C : public UBP_RadialActionModel_ControlSupplies_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_RadialAction_PickupConstruction.BP_RadialAction_PickupConstruction_C");
 		return ptr;
 	}
+
 
 
 };

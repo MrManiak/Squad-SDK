@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -17,34 +17,32 @@ namespace UFT
 // Classes
 //---------------------------------------------------------------------------
 
-// Class OnlineSubsystemSteam.SteamAuthComponentModuleInterface
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-class USteamAuthComponentModuleInterface : public UHandlerComponentFactory
+// Class OnlineSubsystemSteam.SteamNetConnection
+// 0x0008 (FullSize[0x1A08] - InheritedSize[0x1A00])
+class USteamNetConnection : public UIpConnection
 {
 public:
-	//union
-	//{
-	//};
+	bool                                               bIsPassthrough;                                            // 0x1A00(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_7EC1[0x7];                                     // 0x1A01(0x0007) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamAuthComponentModuleInterface");
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamNetConnection");
 		return ptr;
 	}
+
 
 
 };
 
 // Class OnlineSubsystemSteam.SteamNetDriver
-// 0x0014 (FullSize[0x0790] - InheritedSize[0x077C])
-// LastOffsetWithSize(0x077C)
+// 0x0008 (FullSize[0x0798] - InheritedSize[0x0790])
 class USteamNetDriver : public UIpNetDriver
 {
 public:
-	//union
-	//{
-	//};
+	unsigned char                                      UnknownData_RI6P[0x8];                                     // 0x0790(0x0008) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
@@ -53,25 +51,22 @@ public:
 	}
 
 
+
 };
 
-// Class OnlineSubsystemSteam.SteamNetConnection
-// 0x000D (FullSize[0x1A01] - InheritedSize[0x19F4])
-// LastOffsetWithSize(0x19F4)
-#define PADDING_04F5 - 0x0000 // Minimum to subtract -> (000C)
-class USteamNetConnection : public UIpConnection
+// Class OnlineSubsystemSteam.SteamAuthComponentModuleInterface
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class USteamAuthComponentModuleInterface : public UHandlerComponentFactory
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x000C PADDING_04F5, bool,                                                                  bIsPassthrough);                                           // 0x1A00(0x0001)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	};
+
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamNetConnection");
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamAuthComponentModuleInterface");
 		return ptr;
 	}
+
 
 
 };

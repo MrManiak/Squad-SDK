@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -198,6 +198,22 @@ void UMusicPlayer_C::OnLoaded_64894CBD4CB9747691437E9B69432F5B(class UObject* Lo
 }
 
 
+// Function MusicPlayer.MusicPlayer_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+void UMusicPlayer_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MusicPlayer.MusicPlayer_C.Construct");
+
+	UMusicPlayer_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
 // Function MusicPlayer.MusicPlayer_C.BndEvt__ButtonPlayPause_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -289,22 +305,6 @@ void UMusicPlayer_C::BndEvt__MainMenu_Button_K2Node_ComponentBoundEvent_133_OnCl
 	UMusicPlayer_C_BndEvt__MainMenu_Button_K2Node_ComponentBoundEvent_133_OnClicked__DelegateSignature_Params params;
 	params.bSelected = bSelected;
 	params.Button = Button;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function MusicPlayer.MusicPlayer_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-void UMusicPlayer_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MusicPlayer.MusicPlayer_C.Construct");
-
-	UMusicPlayer_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

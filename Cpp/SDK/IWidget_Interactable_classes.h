@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass IWidget_Interactable.IWidget_Interactable_C
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class UIWidget_Interactable_C : public UInterface
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass IWidget_Interactable.IWidget_Interactable_C");
 		return ptr;
 	}
+
 
 
 	void Clear_Interactable();

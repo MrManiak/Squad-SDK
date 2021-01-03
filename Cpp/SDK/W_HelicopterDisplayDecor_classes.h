@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass W_HelicopterDisplayDecor.W_HelicopterDisplayDecor_C
-// 0x0050 (FullSize[0x0230] - InheritedSize[0x01E0])
-// LastOffsetWithSize(0x01E0)
+// 0x0000 (FullSize[0x0230] - InheritedSize[0x0230])
 class UW_HelicopterDisplayDecor_C : public UUserWidget
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_HelicopterDisplayDecor.W_HelicopterDisplayDecor_C");
 		return ptr;
 	}
+
 
 
 };

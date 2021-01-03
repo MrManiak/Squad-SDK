@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,22 +19,19 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_GoToTowingMenu.BP_GoToTowingMenu_C
 // 0x0009 (FullSize[0x00B9] - InheritedSize[0x00B0])
-// LastOffsetWithSize(0x00B0)
-#define PADDING_0393 - 0x0000 // Minimum to subtract -> (0000)
 class UBP_GoToTowingMenu_C : public UBP_GotoMenuActionModel_C
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_0393, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x00B0(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0008 PADDING_0393, bool,                                                                  ActiveButton);                                             // 0x00B8(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x00B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	bool                                               ActiveButton;                                              // 0x00B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_GoToTowingMenu.BP_GoToTowingMenu_C");
 		return ptr;
 	}
+
 
 
 	void IsInteractingWithHelicopter(class UBaseRadialMenu_C* Menu, bool* Return);

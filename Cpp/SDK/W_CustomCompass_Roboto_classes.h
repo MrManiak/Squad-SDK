@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,27 +19,24 @@ namespace UFT
 
 // WidgetBlueprintGeneratedClass W_CustomCompass_Roboto.W_CustomCompass_Roboto_C
 // 0x0038 (FullSize[0x0320] - InheritedSize[0x02E8])
-// LastOffsetWithSize(0x02E8)
-#define PADDING_0007 - 0x0000 // Minimum to subtract -> (0000)
 class UW_CustomCompass_Roboto_C : public USQCompassMK2
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_0007, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x02E8(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0008 PADDING_0007, class UImage*,                                                         BPCompass_IMG);                                            // 0x02F0(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0010 PADDING_0007, class UImage*,                                                         BPLeftArrow);                                              // 0x02F8(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0018 PADDING_0007, class UCanvasPanel*,                                                   BPMain_P);                                                 // 0x0300(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0020 PADDING_0007, class UImage*,                                                         BPRightArrow);                                             // 0x0308(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0028 PADDING_0007, class UTextBlock*,                                                     CompassBearing);                                           // 0x0310(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0030 PADDING_0007, class UImage*,                                                         Image_1);                                                  // 0x0318(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x02E8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                      BPCompass_IMG;                                             // 0x02F0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      BPLeftArrow;                                               // 0x02F8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                                BPMain_P;                                                  // 0x0300(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      BPRightArrow;                                              // 0x0308(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                                  CompassBearing;                                            // 0x0310(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                      Image_1;                                                   // 0x0318(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_CustomCompass_Roboto.W_CustomCompass_Roboto_C");
 		return ptr;
 	}
+
 
 
 	void Construct();

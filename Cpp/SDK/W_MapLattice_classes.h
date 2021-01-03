@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,21 +19,18 @@ namespace UFT
 
 // WidgetBlueprintGeneratedClass W_MapLattice.W_MapLattice_C
 // 0x0008 (FullSize[0x0298] - InheritedSize[0x0290])
-// LastOffsetWithSize(0x0290)
-#define PADDING_0313 - 0x0000 // Minimum to subtract -> (0000)
 class UW_MapLattice_C : public USQAASGraphLattice
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_0313, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x0290(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0290(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_MapLattice.W_MapLattice_C");
 		return ptr;
 	}
+
 
 
 	void Initialize();

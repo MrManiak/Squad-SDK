@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,33 +19,33 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_HighlightsSubsystem.BP_HighlightsSubsystem_C
 // 0x0128 (FullSize[0x0168] - InheritedSize[0x0040])
-// LastOffsetWithSize(0x0040)
-#define PADDING_014F - 0x0000 // Minimum to subtract -> (0000)
 class UBP_HighlightsSubsystem_C : public USQBaseGameSubsystem
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_014F, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x0040(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0008 PADDING_014F, bool,                                                                  HighlightsInitialized);                                    // 0x0048(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x0010 PADDING_014F, struct FGfeSDKHighlightOpenGroupParams,                                HighlightOpenGroupParams);                                 // 0x0050(0x0060)  (Edit, BlueprintVisible, DisableEditOnInstance)
-		DEFINE_MEMBER_NNN(0x0070 PADDING_014F, struct FGfeSDKHighlightSummaryParams,                                  HighlightsSummaryParams);                                  // 0x00B0(0x0010)  (Edit, BlueprintVisible, DisableEditOnInstance)
-		DEFINE_MEMBER_NNN(0x0080 PADDING_014F, struct FGfeSDKHighlightConfigParams,                                   HighlightsConfigParams);                                   // 0x00C0(0x0020)  (Edit, BlueprintVisible, DisableEditOnInstance)
-		DEFINE_MEMBER_NNN(0x00A0 PADDING_014F, int,                                                                   ActiveGroupId);                                            // 0x00E0(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00A4 PADDING_014F, bool,                                                                  DestroyHighlights);                                        // 0x00E4(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x00A8 PADDING_014F, struct FHighlightEventStruct,                                          VehicleDestroyedEventParams);                              // 0x00E8(0x0028)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00D0 PADDING_014F, struct FHighlightEventStruct,                                          PlayerKilledEventParams);                                  // 0x0110(0x0028)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00F8 PADDING_014F, struct FHighlightEventStruct,                                          IED_DetonatedEventParams);                                 // 0x0138(0x0028)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0120 PADDING_014F, EGfeSDKHighlightSignificance,                                          EventSignificance);                                        // 0x0160(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0121 PADDING_014F, EGfeSDKHighlightType,                                                  HighlightType);                                            // 0x0161(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0124 PADDING_014F, int,                                                                   NumberOfHighlights);                                       // 0x0164(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0040(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	bool                                               HighlightsInitialized;                                     // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_G4BP[0x7];                                     // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FGfeSDKHighlightOpenGroupParams             HighlightOpenGroupParams;                                  // 0x0050(0x0060) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGfeSDKHighlightSummaryParams               HighlightsSummaryParams;                                   // 0x00B0(0x0010) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGfeSDKHighlightConfigParams                HighlightsConfigParams;                                    // 0x00C0(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	int                                                ActiveGroupId;                                             // 0x00E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               DestroyHighlights;                                         // 0x00E4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_GGPG[0x3];                                     // 0x00E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FHighlightEventStruct                       VehicleDestroyedEventParams;                               // 0x00E8(0x0028) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FHighlightEventStruct                       PlayerKilledEventParams;                                   // 0x0110(0x0028) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FHighlightEventStruct                       IED_DetonatedEventParams;                                  // 0x0138(0x0028) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	EGfeSDKHighlightSignificance                       EventSignificance;                                         // 0x0160(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGfeSDKHighlightType                               HighlightType;                                             // 0x0161(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_3B5L[0x2];                                     // 0x0162(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	int                                                NumberOfHighlights;                                        // 0x0164(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_HighlightsSubsystem.BP_HighlightsSubsystem_C");
 		return ptr;
 	}
+
 
 
 	void ExplosiveDetonated(class ASQPlayerController* Instigator, bool* RecordEvent);

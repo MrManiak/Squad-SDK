@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -15,6 +15,31 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function EditableMesh.EditableMeshFactory.MakeEditableMesh
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPrimitiveComponent*     PrimitiveComponent             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int                            LODIndex                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UEditableMesh*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class UEditableMesh* UEditableMeshFactory::STATIC_MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int LODIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMeshFactory.MakeEditableMesh");
+
+	UEditableMeshFactory_MakeEditableMesh_Params params;
+	params.PrimitiveComponent = PrimitiveComponent;
+	params.LODIndex = LODIndex;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
 
 // Function EditableMesh.EditableMesh.WeldVertices
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
@@ -763,8 +788,7 @@ struct FVertexID UEditableMesh::STATIC_MakeVertexID(int VertexIndex)
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -787,8 +811,7 @@ struct FPolygonID UEditableMesh::STATIC_MakePolygonID(int PolygonIndex)
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -811,8 +834,7 @@ struct FPolygonGroupID UEditableMesh::STATIC_MakePolygonGroupID(int PolygonGroup
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -835,8 +857,7 @@ struct FEdgeID UEditableMesh::STATIC_MakeEdgeID(int EdgeIndex)
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -1119,8 +1140,7 @@ struct FVertexID UEditableMesh::STATIC_InvalidVertexID()
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -1141,8 +1161,7 @@ struct FPolygonID UEditableMesh::STATIC_InvalidPolygonID()
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -1163,8 +1182,7 @@ struct FPolygonGroupID UEditableMesh::STATIC_InvalidPolygonGroupID()
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -1185,8 +1203,7 @@ struct FEdgeID UEditableMesh::STATIC_InvalidEdgeID()
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -3124,32 +3141,6 @@ bool UEditableMesh::AnyChangesToUndo()
 	fn->FunctionFlags |= 0x00000400;
 
 	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function EditableMesh.EditableMeshFactory.MakeEditableMesh
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UPrimitiveComponent*     PrimitiveComponent             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int                            LODIndex                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UEditableMesh*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class UEditableMesh* UEditableMeshFactory::STATIC_MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int LODIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function EditableMesh.EditableMeshFactory.MakeEditableMesh");
-
-	UEditableMeshFactory_MakeEditableMesh_Params params;
-	params.PrimitiveComponent = PrimitiveComponent;
-	params.LODIndex = LODIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -91,6 +91,19 @@ struct ALandscapeProxy_ChangeComponentScreenSizeToUseSubSections_Params
 	float                                              InComponentScreenSizeToUseSubSections;                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
+// Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
+struct ULandscapeSplinesComponent_GetSplineMeshComponents_Params
+{
+	TArray<class USplineMeshComponent*>                ReturnValue;                                               // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+
+// Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic
+struct ULandscapeComponent_GetMaterialInstanceDynamic_Params
+{
+	int                                                InIndex;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*                    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
 // Function Landscape.LandscapeBlueprintBrushBase.RequestLandscapeUpdate
 struct ALandscapeBlueprintBrushBase_RequestLandscapeUpdate_Params
 {
@@ -111,19 +124,6 @@ struct ALandscapeBlueprintBrushBase_Initialize_Params
 	struct FTransform                                  InLandscapeTransform;                                      // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FIntPoint                                   InLandscapeSize;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntPoint                                   InLandscapeRenderTargetSize;                               // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic
-struct ULandscapeComponent_GetMaterialInstanceDynamic_Params
-{
-	int                                                InIndex;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*                    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
-struct ULandscapeSplinesComponent_GetSplineMeshComponents_Params
-{
-	TArray<class USplineMeshComponent*>                ReturnValue;                                               // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 
 }

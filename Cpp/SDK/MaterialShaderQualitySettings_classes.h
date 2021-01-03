@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -17,17 +17,32 @@ namespace UFT
 // Classes
 //---------------------------------------------------------------------------
 
+// Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
+// 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
+class UShaderPlatformQualitySettings : public UObject
+{
+public:
+	struct FMaterialQualityOverrides                   QualityOverrides[0x3];                                     // 0x0028(0x0018) (Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_ZZLJ[0x10];                                    // 0x0040(0x0010) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings");
+		return ptr;
+	}
+
+
+
+};
+
 // Class MaterialShaderQualitySettings.MaterialShaderQualitySettings
 // 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_039B - 0x0000 // Minimum to subtract -> (0000)
 class UMaterialShaderQualitySettings : public UObject
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_039B, TMap<struct FName COMMA class UShaderPlatformQualitySettings*>,        ForwardSettingMap);                                        // 0x0028(0x0050)  (ZeroConstructor, NativeAccessSpecifierPrivate)
-	};
+	TMap<struct FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                                         // 0x0028(0x0050) (ZeroConstructor, NativeAccessSpecifierPrivate)
+
 
 	static UClass* StaticClass()
 	{
@@ -35,26 +50,6 @@ public:
 		return ptr;
 	}
 
-
-};
-
-// Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
-// 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_039D - 0x0000 // Minimum to subtract -> (0000)
-class UShaderPlatformQualitySettings : public UObject
-{
-public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_039D, struct FMaterialQualityOverrides,                                      QualityOverrides[0x3]);                                    // 0x0028(0x0008)  (Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	};
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings");
-		return ptr;
-	}
 
 
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,23 +20,34 @@ namespace UFT
 // Enum PhysicsCore.EChaosBufferMode
 enum class EChaosBufferMode : uint8_t
 {
-	EChaosBufferMode__Double       = 0,
-	EChaosBufferMode__Triple       = 1,
-	EChaosBufferMode__Num          = 2,
-	EChaosBufferMode__Invalid      = 3,
-	EChaosBufferMode__EChaosBufferMode_MAX = 4,
+	Double                         = 0,
+	Triple                         = 1,
+	Num                            = 2,
+	Invalid                        = 3,
+	MAX                            = 4,
+
+};
+
+// Enum PhysicsCore.EChaosSolverTickMode
+enum class EChaosSolverTickMode : uint8_t
+{
+	Fixed                          = 0,
+	Variable                       = 1,
+	VariableCapped                 = 2,
+	VariableCappedWithTarget       = 3,
+	MAX                            = 4,
 
 };
 
 // Enum PhysicsCore.EChaosThreadingMode
 enum class EChaosThreadingMode : uint8_t
 {
-	EChaosThreadingMode__DedicatedThread = 0,
-	EChaosThreadingMode__TaskGraph = 1,
-	EChaosThreadingMode__SingleThread = 2,
-	EChaosThreadingMode__Num       = 3,
-	EChaosThreadingMode__Invalid   = 4,
-	EChaosThreadingMode__EChaosThreadingMode_MAX = 5,
+	DedicatedThread                = 0,
+	TaskGraph                      = 1,
+	SingleThread                   = 2,
+	Num                            = 3,
+	Invalid                        = 4,
+	MAX                            = 5,
 
 };
 

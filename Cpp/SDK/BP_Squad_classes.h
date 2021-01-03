@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,22 +18,19 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Squad.BP_Squad_C
-// 0x0028 (FullSize[0x06D8] - InheritedSize[0x06B0])
-// LastOffsetWithSize(0x06B0)
-#define PADDING_0007 - 0x0000 // Minimum to subtract -> (0020)
+// 0x0008 (FullSize[0x06D8] - InheritedSize[0x06D0])
 class ABP_Squad_C : public ASQSquad
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0020 PADDING_0007, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x06D0(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x06D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Squad.BP_Squad_C");
 		return ptr;
 	}
+
 
 
 	void On_Leave_Event(class ASQSquad* Squad, class AController* Joining_State);

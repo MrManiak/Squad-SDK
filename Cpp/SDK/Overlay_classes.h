@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,13 +19,10 @@ namespace UFT
 
 // Class Overlay.Overlays
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class UOverlays : public UObject
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
@@ -34,20 +31,17 @@ public:
 	}
 
 
+
 };
 
 // Class Overlay.LocalizedOverlays
 // 0x0058 (FullSize[0x0080] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_0C93 - 0x0000 // Minimum to subtract -> (0000)
 class ULocalizedOverlays : public UOverlays
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_0C93, class UBasicOverlays*,                                                 DefaultOverlays);                                          // 0x0028(0x0008)  (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0008 PADDING_0C93, TMap<struct FString COMMA class UBasicOverlays*>,                      LocaleToOverlaysMap);                                      // 0x0030(0x0050)  (Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	};
+	class UBasicOverlays*                              DefaultOverlays;                                           // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<struct FString, class UBasicOverlays*>        LocaleToOverlaysMap;                                       // 0x0030(0x0050) (Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+
 
 	static UClass* StaticClass()
 	{
@@ -56,25 +50,23 @@ public:
 	}
 
 
+
 };
 
 // Class Overlay.BasicOverlays
 // 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_0C94 - 0x0000 // Minimum to subtract -> (0000)
 class UBasicOverlays : public UOverlays
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_0C94, TArray<struct FOverlayItem>,                                           Overlays);                                                 // 0x0028(0x0010)  (Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	};
+	TArray<struct FOverlayItem>                        Overlays;                                                  // 0x0028(0x0010) (Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Overlay.BasicOverlays");
 		return ptr;
 	}
+
 
 
 };

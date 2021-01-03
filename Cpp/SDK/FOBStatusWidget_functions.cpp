@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -15,6 +15,22 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function FOBStatusWidget.FOBStatusWidget_C.UpdateProgressBarColor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+void UFOBStatusWidget_C::UpdateProgressBarColor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FOBStatusWidget.FOBStatusWidget_C.UpdateProgressBarColor");
+
+	UFOBStatusWidget_C_UpdateProgressBarColor_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
 
 // Function FOBStatusWidget.FOBStatusWidget_C.Refresh Data
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)

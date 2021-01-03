@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_GenericBinoculars_StaticInfo.BP_GenericBinoculars_StaticInfo_C
 // 0x0000 (FullSize[0x0930] - InheritedSize[0x0930])
-// LastOffsetWithSize(0x0929)
 class UBP_GenericBinoculars_StaticInfo_C : public UBP_GenericWeapon_StaticInfo_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_GenericBinoculars_StaticInfo.BP_GenericBinoculars_StaticInfo_C");
 		return ptr;
 	}
+
 
 
 };

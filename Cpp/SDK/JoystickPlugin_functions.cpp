@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -15,189 +15,6 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
-
-// Function JoystickPlugin.JoystickFunctions.RegisterForJoystickEvents
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 Listener                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void UJoystickFunctions::STATIC_RegisterForJoystickEvents(class UObject* Listener)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.RegisterForJoystickEvents");
-
-	UJoystickFunctions_RegisterForJoystickEvents_Params params;
-	params.Listener = Listener;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function JoystickPlugin.JoystickFunctions.POVAxis
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// EJoystickPOVDirection          Direction                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-struct FVector2D UJoystickFunctions::STATIC_POVAxis(EJoystickPOVDirection Direction)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.POVAxis");
-
-	UJoystickFunctions_POVAxis_Params params;
-	params.Direction = Direction;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function JoystickPlugin.JoystickFunctions.MapJoystickDeviceToPlayer
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// int                            DeviceID                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int                            Player                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void UJoystickFunctions::STATIC_MapJoystickDeviceToPlayer(int DeviceID, int Player)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.MapJoystickDeviceToPlayer");
-
-	UJoystickFunctions_MapJoystickDeviceToPlayer_Params params;
-	params.DeviceID = DeviceID;
-	params.Player = Player;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function JoystickPlugin.JoystickFunctions.JoystickCount
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-int UJoystickFunctions::STATIC_JoystickCount()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.JoystickCount");
-
-	UJoystickFunctions_JoystickCount_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function JoystickPlugin.JoystickFunctions.IgnoreGameControllers
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// bool                           bIgnore                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void UJoystickFunctions::STATIC_IgnoreGameControllers(bool bIgnore)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.IgnoreGameControllers");
-
-	UJoystickFunctions_IgnoreGameControllers_Params params;
-	params.bIgnore = bIgnore;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function JoystickPlugin.JoystickFunctions.GetPreviousJoystickState
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            DeviceID                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FJoystickState          ReturnValue                    (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-struct FJoystickState UJoystickFunctions::STATIC_GetPreviousJoystickState(int DeviceID)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.GetPreviousJoystickState");
-
-	UJoystickFunctions_GetPreviousJoystickState_Params params;
-	params.DeviceID = DeviceID;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function JoystickPlugin.JoystickFunctions.GetJoystickState
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            DeviceID                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FJoystickState          ReturnValue                    (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-struct FJoystickState UJoystickFunctions::STATIC_GetJoystickState(int DeviceID)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.GetJoystickState");
-
-	UJoystickFunctions_GetJoystickState_Params params;
-	params.DeviceID = DeviceID;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function JoystickPlugin.JoystickFunctions.GetJoystick
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            DeviceID                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FJoystickInfo           ReturnValue                    (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-struct FJoystickInfo UJoystickFunctions::STATIC_GetJoystick(int DeviceID)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.GetJoystick");
-
-	UJoystickFunctions_GetJoystick_Params params;
-	params.DeviceID = DeviceID;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
 
 // Function JoystickPlugin.JoystickInterface.JoystickUnplugged
 // (Event, Public, BlueprintEvent)
@@ -349,6 +166,181 @@ void UJoystickInterface::JoystickAxisChanged(int Axis, float Value, float valueP
 	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
+}
+
+
+// Function JoystickPlugin.JoystickFunctions.RegisterForJoystickEvents
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 Listener                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void UJoystickFunctions::STATIC_RegisterForJoystickEvents(class UObject* Listener)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.RegisterForJoystickEvents");
+
+	UJoystickFunctions_RegisterForJoystickEvents_Params params;
+	params.Listener = Listener;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function JoystickPlugin.JoystickFunctions.POVAxis
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// EJoystickPOVDirection          Direction                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+struct FVector2D UJoystickFunctions::STATIC_POVAxis(EJoystickPOVDirection Direction)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.POVAxis");
+
+	UJoystickFunctions_POVAxis_Params params;
+	params.Direction = Direction;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function JoystickPlugin.JoystickFunctions.MapJoystickDeviceToPlayer
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int                            DeviceID                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int                            Player                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void UJoystickFunctions::STATIC_MapJoystickDeviceToPlayer(int DeviceID, int Player)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.MapJoystickDeviceToPlayer");
+
+	UJoystickFunctions_MapJoystickDeviceToPlayer_Params params;
+	params.DeviceID = DeviceID;
+	params.Player = Player;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function JoystickPlugin.JoystickFunctions.JoystickCount
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+int UJoystickFunctions::STATIC_JoystickCount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.JoystickCount");
+
+	UJoystickFunctions_JoystickCount_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function JoystickPlugin.JoystickFunctions.IgnoreGameControllers
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                           bIgnore                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void UJoystickFunctions::STATIC_IgnoreGameControllers(bool bIgnore)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.IgnoreGameControllers");
+
+	UJoystickFunctions_IgnoreGameControllers_Params params;
+	params.bIgnore = bIgnore;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function JoystickPlugin.JoystickFunctions.GetPreviousJoystickState
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            DeviceID                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FJoystickState          ReturnValue                    (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+struct FJoystickState UJoystickFunctions::STATIC_GetPreviousJoystickState(int DeviceID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.GetPreviousJoystickState");
+
+	UJoystickFunctions_GetPreviousJoystickState_Params params;
+	params.DeviceID = DeviceID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function JoystickPlugin.JoystickFunctions.GetJoystickState
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            DeviceID                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FJoystickState          ReturnValue                    (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+struct FJoystickState UJoystickFunctions::STATIC_GetJoystickState(int DeviceID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.GetJoystickState");
+
+	UJoystickFunctions_GetJoystickState_Params params;
+	params.DeviceID = DeviceID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function JoystickPlugin.JoystickFunctions.GetJoystick
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            DeviceID                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FJoystickInfo           ReturnValue                    (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+struct FJoystickInfo UJoystickFunctions::STATIC_GetJoystick(int DeviceID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function JoystickPlugin.JoystickFunctions.GetJoystick");
+
+	UJoystickFunctions_GetJoystick_Params params;
+	params.DeviceID = DeviceID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
 }
 
 

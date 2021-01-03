@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -15,6 +15,91 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function Lobby.LobbyBeaconState.OnRep_WaitForPlayersTimeRemaining
+// (Final, Native, Protected)
+void ALobbyBeaconState::OnRep_WaitForPlayersTimeRemaining()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconState.OnRep_WaitForPlayersTimeRemaining");
+
+	ALobbyBeaconState_OnRep_WaitForPlayersTimeRemaining_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function Lobby.LobbyBeaconState.OnRep_LobbyStarted
+// (Final, Native, Protected)
+void ALobbyBeaconState::OnRep_LobbyStarted()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconState.OnRep_LobbyStarted");
+
+	ALobbyBeaconState_OnRep_LobbyStarted_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function Lobby.LobbyBeaconPlayerState.OnRep_UniqueId
+// (Final, Native, Protected)
+void ALobbyBeaconPlayerState::OnRep_UniqueId()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconPlayerState.OnRep_UniqueId");
+
+	ALobbyBeaconPlayerState_OnRep_UniqueId_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function Lobby.LobbyBeaconPlayerState.OnRep_PartyOwner
+// (Final, Native, Protected)
+void ALobbyBeaconPlayerState::OnRep_PartyOwner()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconPlayerState.OnRep_PartyOwner");
+
+	ALobbyBeaconPlayerState_OnRep_PartyOwner_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function Lobby.LobbyBeaconPlayerState.OnRep_InLobby
+// (Final, Native, Protected)
+void ALobbyBeaconPlayerState::OnRep_InLobby()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconPlayerState.OnRep_InLobby");
+
+	ALobbyBeaconPlayerState_OnRep_InLobby_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
 
 // Function Lobby.LobbyBeaconClient.ServerSetPartyOwner
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
@@ -266,91 +351,6 @@ void ALobbyBeaconClient::ClientAckJoiningServer()
 	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconClient.ClientAckJoiningServer");
 
 	ALobbyBeaconClient_ClientAckJoiningServer_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function Lobby.LobbyBeaconPlayerState.OnRep_UniqueId
-// (Final, Native, Protected)
-void ALobbyBeaconPlayerState::OnRep_UniqueId()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconPlayerState.OnRep_UniqueId");
-
-	ALobbyBeaconPlayerState_OnRep_UniqueId_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function Lobby.LobbyBeaconPlayerState.OnRep_PartyOwner
-// (Final, Native, Protected)
-void ALobbyBeaconPlayerState::OnRep_PartyOwner()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconPlayerState.OnRep_PartyOwner");
-
-	ALobbyBeaconPlayerState_OnRep_PartyOwner_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function Lobby.LobbyBeaconPlayerState.OnRep_InLobby
-// (Final, Native, Protected)
-void ALobbyBeaconPlayerState::OnRep_InLobby()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconPlayerState.OnRep_InLobby");
-
-	ALobbyBeaconPlayerState_OnRep_InLobby_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function Lobby.LobbyBeaconState.OnRep_WaitForPlayersTimeRemaining
-// (Final, Native, Protected)
-void ALobbyBeaconState::OnRep_WaitForPlayersTimeRemaining()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconState.OnRep_WaitForPlayersTimeRemaining");
-
-	ALobbyBeaconState_OnRep_WaitForPlayersTimeRemaining_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function Lobby.LobbyBeaconState.OnRep_LobbyStarted
-// (Final, Native, Protected)
-void ALobbyBeaconState::OnRep_LobbyStarted()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Lobby.LobbyBeaconState.OnRep_LobbyStarted");
-
-	ALobbyBeaconState_OnRep_LobbyStarted_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;

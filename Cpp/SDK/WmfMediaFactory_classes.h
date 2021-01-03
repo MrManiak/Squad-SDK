@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,25 +18,23 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // Class WmfMediaFactory.WmfMediaSettings
-// 0x0004 (FullSize[0x002C] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_0139 - 0x0000 // Minimum to subtract -> (0000)
+// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
 class UWmfMediaSettings : public UObject
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_0139, bool,                                                                  AllowNonStandardCodecs);                                   // 0x0028(0x0001)  (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0001 PADDING_0139, bool,                                                                  LowLatency);                                               // 0x0029(0x0001)  (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0002 PADDING_0139, bool,                                                                  NativeAudioOut);                                           // 0x002A(0x0001)  (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0003 PADDING_0139, bool,                                                                  HardwareAcceleratedVideoDecoding);                         // 0x002B(0x0001)  (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	};
+	bool                                               AllowNonStandardCodecs;                                    // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               LowLatency;                                                // 0x0029(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               NativeAudioOut;                                            // 0x002A(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               HardwareAcceleratedVideoDecoding;                          // 0x002B(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_RX6V[0x4];                                     // 0x002C(0x0004) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class WmfMediaFactory.WmfMediaSettings");
 		return ptr;
 	}
+
 
 
 };

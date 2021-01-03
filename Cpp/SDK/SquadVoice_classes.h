@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,13 +19,10 @@ namespace UFT
 
 // Class SquadVoice.SquadVoiceTalkerInterface
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class USquadVoiceTalkerInterface : public UInterface
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
@@ -34,17 +31,16 @@ public:
 	}
 
 
+
 };
 
 // Class SquadVoice.SquadVoiceOutput
-// 0x0118 (FullSize[0x02C0] - InheritedSize[0x01A8])
-// LastOffsetWithSize(0x01A8)
+// 0x0188 (FullSize[0x0448] - InheritedSize[0x02C0])
 class USquadVoiceOutput : public USoundWave
 {
 public:
-	//union
-	//{
-	//};
+	unsigned char                                      UnknownData_7DEK[0x188];                                   // 0x02C0(0x0188) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
@@ -53,23 +49,23 @@ public:
 	}
 
 
+
 };
 
 // Class SquadVoice.SquadVoiceChannel
-// 0x0010 (FullSize[0x0080] - InheritedSize[0x0070])
-// LastOffsetWithSize(0x0030)
+// 0x0088 (FullSize[0x0108] - InheritedSize[0x0080])
 class USquadVoiceChannel : public UVoiceChannel
 {
 public:
-	//union
-	//{
-	//};
+	unsigned char                                      UnknownData_LW99[0x88];                                    // 0x0080(0x0088) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class SquadVoice.SquadVoiceChannel");
 		return ptr;
 	}
+
 
 
 };

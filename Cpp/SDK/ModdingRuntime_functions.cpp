@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -31,8 +31,7 @@ bool UModdingRuntimeBlueprintLibrary::STATIC_VerifyModIntegrity(const struct FSQ
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -55,8 +54,7 @@ struct FString UModdingRuntimeBlueprintLibrary::STATIC_ToIDString(const struct F
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -79,8 +77,7 @@ void UModdingRuntimeBlueprintLibrary::STATIC_GetModInfo(const struct FSQModLoadP
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (OutModInfo != nullptr)
@@ -102,8 +99,7 @@ void UModdingRuntimeBlueprintLibrary::STATIC_DownloadMissingMods(TArray<struct F
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (MissingModData != nullptr)
@@ -123,8 +119,7 @@ void UModdingRuntimeBlueprintLibrary::STATIC_CancelDownloads()
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 }

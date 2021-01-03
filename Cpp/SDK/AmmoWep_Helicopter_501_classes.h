@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass AmmoWep_Helicopter_501.AmmoWep_Helicopter_500_C
 // 0x0000 (FullSize[0x0288] - InheritedSize[0x0288])
-// LastOffsetWithSize(0x0288)
 class AAmmoWep_Helicopter_500_C : public AAmmoResourceWeapon_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass AmmoWep_Helicopter_501.AmmoWep_Helicopter_500_C");
 		return ptr;
 	}
+
 
 
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -18,10 +18,23 @@ namespace UFT
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
-struct AGeometryCacheActor_GetGeometryCacheComponent_Params
+// Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
+struct UGeometryCacheTrack_TransformGroupAnimation_SetMesh_Params
 {
-	class UGeometryCacheComponent*                     ReturnValue;                                               // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryCacheMeshData                      NewMeshData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
+struct UGeometryCacheTrack_TransformAnimation_SetMesh_Params
+{
+	struct FGeometryCacheMeshData                      NewMeshData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
+struct UGeometryCacheTrack_FlipbookAnimation_AddMeshSample_Params
+{
+	struct FGeometryCacheMeshData                      MeshData;                                                  // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                              SampleTime;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function GeometryCache.GeometryCacheComponent.TickAtThisTime
@@ -142,23 +155,10 @@ struct UGeometryCacheComponent_GetAnimationTime_Params
 	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
-struct UGeometryCacheTrack_FlipbookAnimation_AddMeshSample_Params
+// Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
+struct AGeometryCacheActor_GetGeometryCacheComponent_Params
 {
-	struct FGeometryCacheMeshData                      MeshData;                                                  // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	float                                              SampleTime;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
-struct UGeometryCacheTrack_TransformAnimation_SetMesh_Params
-{
-	struct FGeometryCacheMeshData                      NewMeshData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
-struct UGeometryCacheTrack_TransformGroupAnimation_SetMesh_Params
-{
-	struct FGeometryCacheMeshData                      NewMeshData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UGeometryCacheComponent*                     ReturnValue;                                               // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

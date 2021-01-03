@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Smoke_Launcher.Smoke_Launcher_C
-// 0x0003 (FullSize[0x09B8] - InheritedSize[0x09B5])
-// LastOffsetWithSize(0x09B5)
+// 0x0000 (FullSize[0x09B8] - InheritedSize[0x09B8])
 class ASmoke_Launcher_C : public ASQVehicleWeapon
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Smoke_Launcher.Smoke_Launcher_C");
 		return ptr;
 	}
+
 
 
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SaveDataUIWrapper.SaveDataUIWrapper_C
-// 0x0008 (FullSize[0x0058] - InheritedSize[0x0050])
-// LastOffsetWithSize(0x0050)
+// 0x0000 (FullSize[0x0058] - InheritedSize[0x0058])
 class USaveDataUIWrapper_C : public USQSaveGameWrapper
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass SaveDataUIWrapper.SaveDataUIWrapper_C");
 		return ptr;
 	}
+
 
 
 };

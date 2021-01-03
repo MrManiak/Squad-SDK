@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // WidgetBlueprintGeneratedClass DrawChatWidget.DrawChatWidget_C
 // 0x0000 (FullSize[0x0240] - InheritedSize[0x0240])
-// LastOffsetWithSize(0x0240)
 class UDrawChatWidget_C : public USQDrawChatWidget
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass DrawChatWidget.DrawChatWidget_C");
 		return ptr;
 	}
+
 
 
 	void OnPaint(struct FPaintContext* Context);

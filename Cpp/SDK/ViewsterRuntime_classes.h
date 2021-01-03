@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,17 +18,14 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // Class ViewsterRuntime.ViewsterRequestIssuesAction
-// 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_04DB - 0x0000 // Minimum to subtract -> (0008)
+// 0x0028 (FullSize[0x0058] - InheritedSize[0x0030])
 class UViewsterRequestIssuesAction : public UBlueprintAsyncActionBase
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0008 PADDING_04DB, struct FScriptMulticastDelegate,                                       OnSuccess);                                                // 0x0030(0x0010)  (ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0018 PADDING_04DB, struct FScriptMulticastDelegate,                                       OnFailure);                                                // 0x0040(0x0010)  (ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	};
+	struct FScriptMulticastDelegate                    OnSuccess;                                                 // 0x0030(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	struct FScriptMulticastDelegate                    OnFailure;                                                 // 0x0040(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_D4HO[0x8];                                     // 0x0050(0x0008) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
@@ -37,7 +34,8 @@ public:
 	}
 
 
-	static class UViewsterRequestIssuesAction* STATIC_RequestIssues(class UObject* WorldContextObject);
+
+	class UViewsterRequestIssuesAction* STATIC_RequestIssues(class UObject* WorldContextObject);
 };
 
 }

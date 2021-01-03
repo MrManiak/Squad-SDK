@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,45 +18,45 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass SettingsItem_Slider_LR.SettingsItem_Slider_LR_C
-// 0x0134 (FullSize[0x0314] - InheritedSize[0x01E0])
-// LastOffsetWithSize(0x01E0)
-#define PADDING_0132 - 0x0000 // Minimum to subtract -> (0050)
+// 0x00E4 (FullSize[0x0314] - InheritedSize[0x0230])
 class USettingsItem_Slider_LR_C : public UUserWidget
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0050 PADDING_0132, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x0230(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0058 PADDING_0132, class UButton*,                                                        Button_1);                                                 // 0x0238(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0060 PADDING_0132, class UHorizontalBox*,                                                 HorizontalBox_1);                                          // 0x0240(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0068 PADDING_0132, class USizeBox*,                                                       SizeBox_5);                                                // 0x0248(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0070 PADDING_0132, class USlider*,                                                        Slider);                                                   // 0x0250(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0078 PADDING_0132, class UEditableText*,                                                  SliderText);                                               // 0x0258(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0080 PADDING_0132, class UTextBlock*,                                                     TB_Title);                                                 // 0x0260(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0088 PADDING_0132, struct FText,                                                          SettingName);                                              // 0x0268(0x0018)  (Edit, BlueprintVisible)
-		DEFINE_MEMBER_NNN(0x00A0 PADDING_0132, float,                                                                 SliderMin);                                                // 0x0280(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00A4 PADDING_0132, float,                                                                 SliderMax);                                                // 0x0284(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00A8 PADDING_0132, float,                                                                 MinValue);                                                 // 0x0288(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00AC PADDING_0132, float,                                                                 MaxValue);                                                 // 0x028C(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B0 PADDING_0132, float,                                                                 Value);                                                    // 0x0290(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B4 PADDING_0132, int,                                                                   MinFractionDigits);                                        // 0x0294(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B8 PADDING_0132, int,                                                                   MaxFractionDigits);                                        // 0x0298(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00C0 PADDING_0132, struct FText,                                                          CachedSliderText);                                         // 0x02A0(0x0018)  (Edit, BlueprintVisible, DisableEditOnInstance)
-		DEFINE_MEMBER_NNN(0x00D8 PADDING_0132, struct FScriptMulticastDelegate,                                       OnValueChanged);                                           // 0x02B8(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-		DEFINE_MEMBER_NNN(0x00E8 PADDING_0132, bool,                                                                  bConstructed);                                             // 0x02C8(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x00E9 PADDING_0132, bool,                                                                  bIsPercentage);                                            // 0x02C9(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x00EC PADDING_0132, struct FLinearColor,                                                   Regular_Color);                                            // 0x02CC(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00FC PADDING_0132, struct FLinearColor,                                                   Hovered_Color);                                            // 0x02DC(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x010C PADDING_0132, struct FLinearColor,                                                   Pressed_Color);                                            // 0x02EC(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0120 PADDING_0132, struct FScriptMulticastDelegate,                                       OnCaptureEnd);                                             // 0x0300(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-		DEFINE_MEMBER_NNN(0x0130 PADDING_0132, float,                                                                 TextBoxSize);                                              // 0x0310(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0230(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UButton*                                     Button_1;                                                  // 0x0238(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                              HorizontalBox_1;                                           // 0x0240(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                                    SizeBox_5;                                                 // 0x0248(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USlider*                                     Slider;                                                    // 0x0250(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableText*                               SliderText;                                                // 0x0258(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                                  TB_Title;                                                  // 0x0260(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FText                                       SettingName;                                               // 0x0268(0x0018) (Edit, BlueprintVisible)
+	float                                              SliderMin;                                                 // 0x0280(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              SliderMax;                                                 // 0x0284(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MinValue;                                                  // 0x0288(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              MaxValue;                                                  // 0x028C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                              Value;                                                     // 0x0290(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                MinFractionDigits;                                         // 0x0294(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int                                                MaxFractionDigits;                                         // 0x0298(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_WAJK[0x4];                                     // 0x029C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FText                                       CachedSliderText;                                          // 0x02A0(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScriptMulticastDelegate                    OnValueChanged;                                            // 0x02B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                               bConstructed;                                              // 0x02C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               bIsPercentage;                                             // 0x02C9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_M8CF[0x2];                                     // 0x02CA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FLinearColor                                Regular_Color;                                             // 0x02CC(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                                Hovered_Color;                                             // 0x02DC(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                                Pressed_Color;                                             // 0x02EC(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      UnknownData_PIIP[0x4];                                     // 0x02FC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	struct FScriptMulticastDelegate                    OnCaptureEnd;                                              // 0x0300(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	float                                              TextBoxSize;                                               // 0x0310(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass SettingsItem_Slider_LR.SettingsItem_Slider_LR_C");
 		return ptr;
 	}
+
 
 
 	void RemovePercentage(const struct FText& InText, struct FText* OutText);

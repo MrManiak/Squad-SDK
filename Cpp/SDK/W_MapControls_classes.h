@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,51 +18,49 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass W_MapControls.W_MapControls_C
-// 0x0148 (FullSize[0x0328] - InheritedSize[0x01E0])
-// LastOffsetWithSize(0x01E0)
-#define PADDING_0352 - 0x0000 // Minimum to subtract -> (0050)
+// 0x00F8 (FullSize[0x0328] - InheritedSize[0x0230])
 class UW_MapControls_C : public UUserWidget
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0050 PADDING_0352, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x0230(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0058 PADDING_0352, class UMainMenu_Button_C*,                                             Button_ChatToggle);                                        // 0x0238(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0060 PADDING_0352, class UMainMenu_Button_C*,                                             Button_DirectorLines);                                     // 0x0240(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0068 PADDING_0352, class UMainMenu_Button_C*,                                             Button_FobRadius);                                         // 0x0248(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0070 PADDING_0352, class UMainMenu_Button_C*,                                             Button_GridOpacity);                                       // 0x0250(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0078 PADDING_0352, class UMainMenu_Button_C*,                                             Button_Icon_Legend);                                       // 0x0258(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0080 PADDING_0352, class UMainMenu_Button_C*,                                             Button_IconScale);                                         // 0x0260(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0088 PADDING_0352, class UMainMenu_Button_C*,                                             Button_LatticeOpacity);                                    // 0x0268(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0090 PADDING_0352, class UMainMenu_Button_C*,                                             Button_Role);                                              // 0x0270(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0098 PADDING_0352, class UMainMenu_Button_C*,                                             Button_Spawns);                                            // 0x0278(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00A0 PADDING_0352, class UMainMenu_Button_C*,                                             Button_Supplies);                                          // 0x0280(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00A8 PADDING_0352, class UMainMenu_Button_C*,                                             Button_TCZones);                                           // 0x0288(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B0 PADDING_0352, class UMainMenu_Button_C*,                                             Button_Tix_Legend);                                        // 0x0290(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00B8 PADDING_0352, class UMainMenu_Button_C*,                                             Button_Vehicles_Legend);                                   // 0x0298(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00C0 PADDING_0352, class UMainMenu_Button_C*,                                             Button_Waypoints);                                         // 0x02A0(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00C8 PADDING_0352, class UMainMenu_Button_C*,                                             MainMenu_Button_C_12);                                     // 0x02A8(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00D0 PADDING_0352, class UVerticalBox*,                                                   Options);                                                  // 0x02B0(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00D8 PADDING_0352, class USizeBox*,                                                       SizeBox_18);                                               // 0x02B8(0x0008)  (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00E0 PADDING_0352, class UW_Slider_GridOpacity_C*,                                        W_GridOpacity);                                            // 0x02C0(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00E8 PADDING_0352, class UW_Slider_LatticeOpacity_C*,                                     W_LatticeOpacity);                                         // 0x02C8(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00F0 PADDING_0352, class UW_Slider_UIScale_C*,                                            W_UIScaleSlider);                                          // 0x02D0(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x00F8 PADDING_0352, class USaveData_UI_C*,                                                 Current_Save_Data);                                        // 0x02D8(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0100 PADDING_0352, class UW_PopupGeneric_C*,                                              Popup_Legend_Tickets);                                     // 0x02E0(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0108 PADDING_0352, class UW_PopupGeneric_C*,                                              Popup_Legend_Icons);                                       // 0x02E8(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0110 PADDING_0352, class ASQPlayerController*,                                            My_PC);                                                    // 0x02F0(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0118 PADDING_0352, bool,                                                                  Cached_SL_Value);                                          // 0x02F8(0x0001)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x011C PADDING_0352, float,                                                                 Options_Top_Padding);                                      // 0x02FC(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0120 PADDING_0352, class UW_PopupGeneric_C*,                                              Popup_Legend_Vehicles);                                    // 0x0300(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0128 PADDING_0352, struct FScriptMulticastDelegate,                                       ToggleFOBRadiusVisibility);                                // 0x0308(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-		DEFINE_MEMBER_NNN(0x0138 PADDING_0352, struct FScriptMulticastDelegate,                                       ToggleDirectorLinesVisibility);                            // 0x0318(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0230(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UMainMenu_Button_C*                          Button_ChatToggle;                                         // 0x0238(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_DirectorLines;                                      // 0x0240(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_FobRadius;                                          // 0x0248(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_GridOpacity;                                        // 0x0250(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_Icon_Legend;                                        // 0x0258(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_IconScale;                                          // 0x0260(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_LatticeOpacity;                                     // 0x0268(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_Role;                                               // 0x0270(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_Spawns;                                             // 0x0278(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_Supplies;                                           // 0x0280(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_TCZones;                                            // 0x0288(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_Tix_Legend;                                         // 0x0290(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_Vehicles_Legend;                                    // 0x0298(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          Button_Waypoints;                                          // 0x02A0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainMenu_Button_C*                          MainMenu_Button_C_12;                                      // 0x02A8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                                Options;                                                   // 0x02B0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                                    SizeBox_18;                                                // 0x02B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Slider_GridOpacity_C*                     W_GridOpacity;                                             // 0x02C0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Slider_LatticeOpacity_C*                  W_LatticeOpacity;                                          // 0x02C8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Slider_UIScale_C*                         W_UIScaleSlider;                                           // 0x02D0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USaveData_UI_C*                              Current_Save_Data;                                         // 0x02D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UW_PopupGeneric_C*                           Popup_Legend_Tickets;                                      // 0x02E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UW_PopupGeneric_C*                           Popup_Legend_Icons;                                        // 0x02E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASQPlayerController*                         My_PC;                                                     // 0x02F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               Cached_SL_Value;                                           // 0x02F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_1ZEG[0x3];                                     // 0x02F9(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              Options_Top_Padding;                                       // 0x02FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UW_PopupGeneric_C*                           Popup_Legend_Vehicles;                                     // 0x0300(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScriptMulticastDelegate                    ToggleFOBRadiusVisibility;                                 // 0x0308(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FScriptMulticastDelegate                    ToggleDirectorLinesVisibility;                             // 0x0318(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_MapControls.W_MapControls_C");
 		return ptr;
 	}
+
 
 
 	void Refresh_Director_Lines();

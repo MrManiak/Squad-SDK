@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VehicleWheel_minsk_rear.BP_VehicleWheel_minsk_rear_C
-// 0x000C (FullSize[0x00F8] - InheritedSize[0x00EC])
-// LastOffsetWithSize(0x00EC)
+// 0x0000 (FullSize[0x00F8] - InheritedSize[0x00F8])
 class UBP_VehicleWheel_minsk_rear_C : public UVehicleWheel
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_VehicleWheel_minsk_rear.BP_VehicleWheel_minsk_rear_C");
 		return ptr;
 	}
+
 
 
 };

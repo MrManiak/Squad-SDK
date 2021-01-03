@@ -1,7 +1,7 @@
 #pragma once
 #pragma warning(disable: 4267)
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include <vector>
 #include <locale>
@@ -13,12 +13,7 @@
 	#pragma pack(push, 0x01)
 #endif
 
-#define COMMA ,
-#define STR_MERGE_IMPL(a, b) a##b
-#define STR_MERGE(a, b) STR_MERGE_IMPL(a, b)
-#define MAKE_PAD(size) STR_MERGE(_pad, __COUNTER__)[size]
-#define DEFINE_MEMBER_NNN(offset, type, name) struct { unsigned char MAKE_PAD(offset); type name; }
-#define DEFINE_MEMBER_000(offset, type, name) struct { type name; }
+/*!!HELPER_DEF!!*/
 
 #define GOBJECTS_CHUNKS
 #define FNAME_POOL
@@ -28,7 +23,6 @@ namespace UFT
 {
 
 
-void ClassesMemberAssert();
 bool InitSdk(const std::string& moduleName, size_t gObjectsOffset, size_t gNamesOffset);
 bool InitSdk();
 
@@ -55,23 +49,24 @@ public:
 	TArray()
 	{
 		Data = nullptr;
-		Count = Max = 0;
-	};
+		Max = 0;
+		Count = 0;
+	}
 
 	int Num() const
 	{
 		return Count;
-	};
+	}
 
 	T& operator[](int i)
 	{
 		return Data[i];
-	};
+	}
 
 	const T& operator[](int i) const
 	{
 		return Data[i];
-	};
+	}
 
 	bool IsValidIndex(int i) const
 	{
@@ -79,7 +74,7 @@ public:
 	}
 };
 
-struct FString : private TArray<wchar_t>
+struct FString : public TArray<wchar_t>
 {
 	FString() = default;
 
@@ -98,33 +93,40 @@ struct FString : private TArray<wchar_t>
 		return Data != nullptr;
 	}
 
-	inline const wchar_t* c_str() const
+	inline const wchar_t* cw_str() const
 	{
 		return Data;
 	}
 
+	inline const char* c_str() const
+	{
+		return (const char*)Data;
+	}
+
 	std::string ToString() const
 	{
-		auto length = std::wcslen(Data);
-
+		size_t length = std::wcslen(Data);
 		std::string str(length, '\0');
-
 		std::use_facet<std::ctype<wchar_t>>(std::locale()).narrow(Data, Data + length, '?', &str[0]);
 
 		return str;
 	}
-};
 
+	std::wstring ToWString() const
+	{
+		std::wstring str(Data);
+		return str;
+	}
+};
 
 class FUObjectItem
 {
 public:
-	UObject* Object;
+	class UObject* Object;
 	int Flags;
-	int ClusterIndex;
-	int SerialNumber;
-	unsigned char pad_SU669KZMLB [4];
-
+	int32_t ClusterIndex;
+	int32_t SerialNumber;
+	unsigned char pad_UDG1FZ2STA[0x04];
 	enum class ObjectFlags : int32_t
 	{
 		None = 0,
@@ -238,10 +240,25 @@ public:
 #endif // GOBJECTS_CHUNKS
 
 #ifdef FNAME_POOL
+struct FNameEntryHeader
+{
+	uint16_t bIsWide : 1;
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+	uint16_t Len : 15;
+#else
+	static constexpr uint32_t ProbeHashBits = 5;
+	uint16_t LowercaseProbeHash : ProbeHashBits;
+	uint16_t Len : 10;
+#endif
+};
+
 class FNameEntry
 {
 public:
-	int16_t Key;
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+	uint32_t ComparisonId; /*FNameEntryId*/
+#endif
+	FNameEntryHeader Header;
 
 	union
 	{
@@ -249,25 +266,32 @@ public:
 		wchar_t WideName[1024];
 	};
 
-	uint32_t GetLength() const
+	inline int32_t GetLength() const
 	{
-		return Key >> 6;
+		return Header.Len;
 	}
-
-	bool IsWide() const
+	inline bool IsWide() const
 	{
-		return Key & 1;
+		return Header.bIsWide;
 	}
-	std::string GetAnsiName() const
+	inline int32_t GetId() const
 	{
-		auto len = GetLength();
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+		return ComparisonId;
+#else
+		return *(uint16_t*)&Header;
+#endif
+	}
+	inline std::string GetAnsiName() const
+	{
+		uint32_t len = GetLength();
 		if (len > 1024) return "[Error: Overflow]";
 
 		return std::string((const char*)AnsiName, len);
 	}
-	std::wstring GetWideName() const
+	inline std::wstring GetWideName() const
 	{
-		auto len = GetLength();
+		uint32_t len = GetLength();
 		return std::wstring((const wchar_t*)WideName, len);
 	}
 #ifdef UNI_NAMES
@@ -285,39 +309,45 @@ public:
 
 class FNameEntryAllocator
 {
+	/*
+	enum { Stride = alignof(FNameEntry) };
+	enum { BlockSizeBytes = Stride * FNameBlockOffsets };
+	*/
 private:
-	char frwLock[0x8];
+	unsigned char frwLock[0x8];
 public:
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+	static const int Stride = 0x04;
+#else
+	static const int Stride = 0x02;
+#endif
 	int32_t CurrentBlock;
 	int32_t CurrentByteCursor;
 	uint8_t* Blocks[8192];
 
-	int32_t NumBlocks() const
+	inline int32_t NumBlocks() const
 	{
 		return CurrentBlock + 1;
 	}
-
-	FNameEntry* GetById(int32_t key) const
+	inline FNameEntry* GetById(int32_t key) const
 	{
-		uint32_t block = key >> 16;
-		uint16_t offset = (uint16_t)key;
+		int block = key >> 16;
+		int offset = (uint16_t)key;
 
 		if (!IsValidIndex(key, block, offset))
 			return reinterpret_cast<FNameEntry*>(Blocks[0] + 0); // "None"
 
-		return reinterpret_cast<FNameEntry*>(Blocks[block] + (offset * 2));
+		return reinterpret_cast<FNameEntry*>(Blocks[block] + ((uint64_t)offset * Stride));
 	}
-
-	bool IsValidIndex(int32_t key) const
+	inline bool IsValidIndex(int32_t key) const
 	{
 		uint32_t block = key >> 16;
 		uint16_t offset = key;
 		return IsValidIndex(key, block, offset);
 	}
-
-	bool IsValidIndex(int32_t key, uint32_t block, uint16_t offset) const
+	inline bool IsValidIndex(int32_t key, uint32_t block, uint16_t offset) const
 	{
-		return (key >= 0 && block < NumBlocks() && offset * 2 < 0x1FFFE);
+		return (key >= 0 && block < NumBlocks() && offset* Stride < 0x1FFFE);
 	}
 };
 
@@ -328,48 +358,73 @@ public:
 	uint32_t AnsiCount;
 	uint32_t WideCount;
 
-	FNameEntry* GetNext(uint32_t& lastFNameId)
+	inline FNameEntry* GetNext(uintptr_t& nextFNameAddress)
 	{
-		// Key		=> NameID
-		// Value	=> StringLen
-		static std::unordered_map<int, int> namesCache;
-		const auto initLastFNameId = lastFNameId;
-	RePlay:
-		uint16_t block = lastFNameId >> 16;
-		uint16_t nameOffset = (uint16_t)lastFNameId;
-		uint32_t newOffset = 0;
-
-		// We hit last Name in last Block
-		if (block > Allocator.CurrentBlock)
-			return nullptr;
-
-		// If found lastId then add 2 to calc offset correct
-		auto it = namesCache.find(lastFNameId);
-		if (it != namesCache.end())
-			newOffset += (nameOffset * 2) + 2 + it->second;
-
-		if (newOffset >= 65535 * 2 || block == Allocator.CurrentBlock && newOffset >= Allocator.CurrentByteCursor)
+		static int lastBlock = 0;
+		if (nextFNameAddress == NULL)
 		{
-			lastFNameId = MAKELONG(0, block + 1);
+			lastBlock = 0;
+			nextFNameAddress = reinterpret_cast<uintptr_t>(Allocator.Blocks[0]);
+		}
+
+	RePlay:
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+		int32_t nextFNameComparisonId = *reinterpret_cast<int32_t*>(nextFNameAddress);
+#else
+		int32_t nextFNameComparisonId = MAKELONG((uint16_t)((nextFNameAddress - reinterpret_cast<uintptr_t>(Allocator.Blocks[lastBlock])) / 2), (uint16_t)lastBlock);
+#endif
+		int32_t block = nextFNameComparisonId >> 16;
+		int32_t offset = (uint16_t)nextFNameComparisonId;
+		int32_t offsetFromBlock = (nextFNameAddress - reinterpret_cast<uintptr_t>(Allocator.Blocks[lastBlock]));
+
+		// Get entry information
+		const uintptr_t entryOffset = nextFNameAddress;
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+		const int toAdd = 0x04 + 0x02; // HeaderOffset + HeaderSize
+		const uint16_t nameHeader = *reinterpret_cast<uint16_t*>(entryOffset + 0x04);
+		int nameLength = nameHeader >> 1;
+#else
+		const int toAdd = 0x00 + 0x02; // HeaderOffset + HeaderSize
+		const uint16_t nameHeader = *reinterpret_cast<uint16_t*>(entryOffset);
+		int nameLength = nameHeader >> 6;
+#endif
+		bool isWide = (nameHeader & 1) != 0;
+
+		if (isWide)
+			nameLength += nameLength;
+
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+		int aligne = (entryOffset + toAdd + nameLength) % 4;
+		if (aligne != 0)
+			nameLength += 4 - aligne;
+#else
+		// if odd number (odd numbers are aligned with 0x00)
+		if (!isWide && nameLength % 2 != 0)
+			nameLength += 1;
+#endif
+
+		// Block end ?
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+		if (offsetFromBlock + toAdd + nameLength >= 0xFFFF * FNameEntryAllocator::Stride || nameHeader == 0x00 || (block == Allocator.CurrentBlock && offset >= Allocator.CurrentByteCursor))
+#else
+		if (offsetFromBlock + toAdd + (nameLength * 2) >= 0xFFFF * FNameEntryAllocator::Stride || nameHeader == 0x00 || block == Allocator.CurrentBlock && offset >= Allocator.CurrentByteCursor)
+#endif
+		{
+			nextFNameAddress = reinterpret_cast<uintptr_t>(Allocator.Blocks[++lastBlock]);
 			goto RePlay;
 		}
 
-		lastFNameId = MAKELONG(((unsigned short)(newOffset / 2)), block);
+		// We hit last Name in last Block
+		if (lastBlock > Allocator.CurrentBlock)
+			return nullptr;
 
-		uintptr_t entryOffset = reinterpret_cast<uintptr_t>(Allocator.Blocks[block]) + newOffset;
+		// Get next name address
+		nextFNameAddress = entryOffset + toAdd + nameLength;
 
-		unsigned short nameEntry = *reinterpret_cast<unsigned short*>(entryOffset);
-		
-		int nameLength = nameEntry >> 6;
+		// Get name
+		FNameEntry* ret = Allocator.GetById(nextFNameComparisonId);
 
-		// if odd number (odd numbers are aligned with 0x00)
-		if (nameLength % 2 != 0)
-			nameLength += 1;
-
-		// Cache
-		namesCache.emplace(lastFNameId, nameLength);
-
-		return Allocator.GetById(lastFNameId);
+		return ret;
 	}
 
 	inline size_t Num() const
@@ -394,8 +449,7 @@ public:
 };
 
 using GNAME_TYPE = FNamePool;
-
-#elif UE4
+#elif defined UE4
 
 class FNameEntry
 {
@@ -403,9 +457,8 @@ public:
 	static const auto NAME_WIDE_MASK = 0x1;
 	static const auto NAME_INDEX_SHIFT = 1;
 
+	class FNameEntry* HashNext;
 	int32_t Index;
-	char UnknownData00[0x04];
-	FNameEntry* HashNext;
 	union
 	{
 		char AnsiName[1024];
@@ -489,7 +542,7 @@ private:
 using TNameEntryArray = TStaticIndirectArrayThreadSafeRead<FNameEntry, 4 * 1024 * 1024, 16384>;
 using GNAME_TYPE = TNameEntryArray;
 
-#elif #UE3
+#elif defined UE3
 
 class FNameEntry
 {
@@ -542,31 +595,33 @@ using GNAME_TYPE = TArray<FNameEntry*>;
 struct FName
 {
 	static GNAME_TYPE* GNames;
-	union
-	{
-		struct
-		{
-			int32_t ComparisonIndex;
-			int32_t Number;
-		};
+	int32_t ComparisonIndex;
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+	uint32_t DisplayIndex; // FNameEntryId
+#endif
+	int32_t Number;
 
-		uint64_t CompositeComparisonValue;
-	};
-
-	inline FName()
-		: ComparisonIndex(0),
+	FName() :
+		ComparisonIndex(0),
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+		DisplayIndex(0), // FNameEntryId
+#endif
 		Number(0)
-	{
-	};
+	{ }
 
-	inline FName(int32_t i)
-		: ComparisonIndex(i),
+	FName(int32_t i) :
+		ComparisonIndex(i),
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+		DisplayIndex(i), // FNameEntryId
+#endif
 		Number(0)
-	{
-	};
+	{ }
 
-	FName(const char* nameToFind)
-		: ComparisonIndex(0),
+	FName(const char* nameToFind) :
+		ComparisonIndex(0),
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+		DisplayIndex(0), // FNameEntryId
+#endif
 		Number(0)
 	{
 		static std::unordered_set<int> cache;
@@ -576,18 +631,25 @@ struct FName
 			if (GetGlobalNames()[i]->GetAnsiName() == nameToFind)
 			{
 				ComparisonIndex = i;
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+				DisplayIndex = i;
+#endif
 				return;
 			}
 		}
 
 #ifdef FNAME_POOL
-		uint32_t lastId = 0;
-		for (FNameEntry* name = GetGlobalNames().GetNext(lastId); name != nullptr; name = GetGlobalNames().GetNext(lastId))
+		uintptr_t lastFNameAddress = NULL;
+
+		for (FNameEntry* name = GetGlobalNames().GetNext(lastFNameAddress); name != nullptr; name = GetGlobalNames().GetNext(lastFNameAddress))
 		{
 			if (name->GetAnsiName() == nameToFind)
 			{
-				cache.insert(lastId);
-				ComparisonIndex = lastId;
+				cache.insert(name->GetId());
+				ComparisonIndex = name->GetId();
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+				DisplayIndex = name->GetId();
+#endif
 				return;
 			}
 		}
@@ -602,23 +664,68 @@ struct FName
 			}
 		}
 #endif
-	};
+	}
+
+	FName(const wchar_t* nameToFind) :
+		ComparisonIndex(0),
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+		DisplayIndex(0), // FNameEntryId
+#endif
+		Number(0)
+	{
+		static std::unordered_set<int> cache;
+
+		for (auto i : cache)
+		{
+			if (GetGlobalNames()[i]->GetWideName() == nameToFind)
+			{
+				ComparisonIndex = i;
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+				DisplayIndex = i;
+#endif
+				return;
+	}
+}
+
+#ifdef FNAME_POOL
+		uintptr_t lastFNameAddress = NULL;
+		for (FNameEntry* name = GetGlobalNames().GetNext(lastFNameAddress); name != nullptr; name = GetGlobalNames().GetNext(lastFNameAddress))
+		{
+			if (name->GetWideName() == nameToFind)
+			{
+				cache.insert(name->GetId());
+				ComparisonIndex = name->GetId();
+#ifdef FNamePool_WITH_CASE_PRESERVING_NAME
+				DisplayIndex = name->GetId();
+#endif
+				return;
+			}
+		}
+#else
+		for (size_t i = 0; i < GetGlobalNames().Num(); ++i)
+		{
+			if (GetGlobalNames()[i]->GetWideName() == nameToFind)
+			{
+				cache.insert(i);
+				ComparisonIndex = i;
+				return;
+			}
+		}
+#endif
+	}
 
 	static inline GNAME_TYPE& GetGlobalNames()
 	{
 		return *GNames;
-	};
-
+	}
 	inline std::string GetNameA() const
 	{
 		return GetGlobalNames()[ComparisonIndex]->GetAnsiName();
-	};
-
+	}
 	inline std::wstring GetNameW() const
 	{
 		return GetGlobalNames()[ComparisonIndex]->GetWideName();
-	};
-
+	}
 #ifdef UNI_NAMES
 	inline std::wstring GetName() const
 	{
@@ -630,11 +737,11 @@ struct FName
 		return GetNameA();
 	}
 #endif
-	
+
 	inline bool operator==(const FName& other) const
 	{
 		return ComparisonIndex == other.ComparisonIndex;
-	};
+	}
 };
 
 template<class TEnum>
@@ -685,12 +792,10 @@ public:
 	{
 		return ObjectPointer;
 	}
-
 	inline UObject*& GetObjectRef()
 	{
 		return ObjectPointer;
 	}
-
 	inline void* GetInterface() const
 	{
 		return ObjectPointer != nullptr ? InterfacePointer : nullptr;
@@ -705,12 +810,10 @@ public:
 	{
 		return (InterfaceType*)GetInterface();
 	}
-
 	inline InterfaceType& operator*() const
 	{
 		return *((InterfaceType*)GetInterface());
 	}
-
 	inline operator bool() const
 	{
 		return GetInterface() != nullptr;
@@ -730,6 +833,18 @@ struct FScriptDelegate
 struct FScriptMulticastDelegate
 {
 	char UnknownData[0x10];
+};
+
+struct FMulticastSparseDelegate
+{
+	char UnknownData[0x1];
+};
+
+struct FStructBaseChain
+{
+	class FStructBaseChain** StructBaseChainArray;
+	int32_t NumStructBasesInChainMinusOne;
+	unsigned char pad_S0TL2RDLKS[0x04];
 };
 
 template<typename Key, typename Value>
@@ -827,24 +942,20 @@ struct FUniqueObjectGuid_
 
 class FLazyObjectPtr : public TPersistentObjectPtr<FUniqueObjectGuid_>
 {
-
 };
 
 class FAssetPtr : public TPersistentObjectPtr<FStringAssetReference_>
 {
-
 };
 
 template<typename ObjectType>
 class TAssetPtr : FAssetPtr
 {
-
 };
 
 template<typename ObjectType>
 class TLazyObjectPtr : FLazyObjectPtr
 {
-
 };
 #endif
 

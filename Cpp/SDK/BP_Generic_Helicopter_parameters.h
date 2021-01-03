@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -403,6 +403,12 @@ struct ABP_Generic_Helicopter_C_InpAxisEvt_MoveAileron_K2Node_InputAxisEvent_3_P
 struct ABP_Generic_Helicopter_C_InpAxisEvt_MoveElevator_K2Node_InputAxisEvent_4_Params
 {
 	float                                              AxisValue;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function BP_Generic_Helicopter.BP_Generic_Helicopter_C.HandleInput
+struct ABP_Generic_Helicopter_C_HandleInput_Params
+{
+	float                                              DeltaTimeRatio;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function BP_Generic_Helicopter.BP_Generic_Helicopter_C.ReceiveBeginPlay

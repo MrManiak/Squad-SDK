@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,22 +18,20 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // Class AvfMediaFactory.AvfMediaSettings
-// 0x0001 (FullSize[0x0029] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_0291 - 0x0000 // Minimum to subtract -> (0000)
+// 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
 class UAvfMediaSettings : public UObject
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_0291, bool,                                                                  NativeAudioOut);                                           // 0x0028(0x0001)  (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	};
+	bool                                               NativeAudioOut;                                            // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_WXC6[0x7];                                     // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AvfMediaFactory.AvfMediaSettings");
 		return ptr;
 	}
+
 
 
 };

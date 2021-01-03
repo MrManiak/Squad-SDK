@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,22 +18,19 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass minsk_Burn.minsk_Burn_C
-// 0x000C (FullSize[0x0318] - InheritedSize[0x030C])
-// LastOffsetWithSize(0x030C)
-#define PADDING_0254 - 0x0000 // Minimum to subtract -> (0004)
+// 0x0008 (FullSize[0x0318] - InheritedSize[0x0310])
 class Aminsk_Burn_C : public ASQDestroyedVehicle
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0004 PADDING_0254, class UParticleSystemComponent*,                                       explosion);                                                // 0x0310(0x0008)  (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	};
+	class UParticleSystemComponent*                    explosion;                                                 // 0x0310(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass minsk_Burn.minsk_Burn_C");
 		return ptr;
 	}
+
 
 
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,22 +19,19 @@ namespace UFT
 
 // WidgetBlueprintGeneratedClass W_GridButton_SquadOrders.W_GridButton_SquadOrders_C
 // 0x0018 (FullSize[0x02F0] - InheritedSize[0x02D8])
-// LastOffsetWithSize(0x02D8)
-#define PADDING_0399 - 0x0000 // Minimum to subtract -> (0000)
 class UW_GridButton_SquadOrders_C : public UW_GridButton_C
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_0399, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x02D8(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0008 PADDING_0399, TArray<class UClass*>,                                                 FT_Action_List);                                           // 0x02E0(0x0010)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x02D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UClass*>                              FT_Action_List;                                            // 0x02E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_GridButton_SquadOrders.W_GridButton_SquadOrders_C");
 		return ptr;
 	}
+
 
 
 	void Get_Color(struct FLinearColor* Icon_Color);

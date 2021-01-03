@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -21,6 +21,7 @@ namespace UFT
 // 0x0028
 struct FMapName_Image
 {
+	unsigned char                                      MapImage_10_1BEE6FDA412C2969B010E3AABD50535C[0x28];        // 0x0000(0x0028) UNKNOWN PROPERTY: SoftObjectProperty MapName_Image.MapName_Image.MapImage_10_1BEE6FDA412C2969B010E3AABD50535C
 
 };
 }

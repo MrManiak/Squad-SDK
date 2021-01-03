@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -15,6 +15,43 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function PrefabAsset.PrefabFunctionLibrary.SpawnPrefab
+// (Final, Native, Static, Private, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPrefabAsset*            PrefabAsset                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform              SpawnTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// TArray<class AActor*>          OutSpawnPrefabInstances        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// bool                           bSpawnInstancesOnly            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESpawnActorCollisionHandlingMethod CollisionHandlingOverride      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APrefabActor*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class APrefabActor* UPrefabFunctionLibrary::STATIC_SpawnPrefab(class UObject* WorldContextObject, class UPrefabAsset* PrefabAsset, const struct FTransform& SpawnTransform, TArray<class AActor*>* OutSpawnPrefabInstances, bool bSpawnInstancesOnly, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrefabAsset.PrefabFunctionLibrary.SpawnPrefab");
+
+	UPrefabFunctionLibrary_SpawnPrefab_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.PrefabAsset = PrefabAsset;
+	params.SpawnTransform = SpawnTransform;
+	params.bSpawnInstancesOnly = bSpawnInstancesOnly;
+	params.CollisionHandlingOverride = CollisionHandlingOverride;
+	params.Owner = Owner;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+	if (OutSpawnPrefabInstances != nullptr)
+		*OutSpawnPrefabInstances = params.OutSpawnPrefabInstances;
+
+
+	return params.ReturnValue;
+}
+
 
 // Function PrefabAsset.PrefabActor.SetPrefab
 // (Final, Native, Public, BlueprintCallable)
@@ -96,44 +133,6 @@ void APrefabActor::DestroyPrefabActor(bool bDestroyAttachedChildren)
 	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
-}
-
-
-// Function PrefabAsset.PrefabFunctionLibrary.SpawnPrefab
-// (Final, Native, Static, Private, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPrefabAsset*            PrefabAsset                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform              SpawnTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// TArray<class AActor*>          OutSpawnPrefabInstances        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// bool                           bSpawnInstancesOnly            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ESpawnActorCollisionHandlingMethod CollisionHandlingOverride      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APrefabActor*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class APrefabActor* UPrefabFunctionLibrary::STATIC_SpawnPrefab(class UObject* WorldContextObject, class UPrefabAsset* PrefabAsset, const struct FTransform& SpawnTransform, TArray<class AActor*>* OutSpawnPrefabInstances, bool bSpawnInstancesOnly, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function PrefabAsset.PrefabFunctionLibrary.SpawnPrefab");
-
-	UPrefabFunctionLibrary_SpawnPrefab_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.PrefabAsset = PrefabAsset;
-	params.SpawnTransform = SpawnTransform;
-	params.bSpawnInstancesOnly = bSpawnInstancesOnly;
-	params.CollisionHandlingOverride = CollisionHandlingOverride;
-	params.Owner = Owner;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-	if (OutSpawnPrefabInstances != nullptr)
-		*OutSpawnPrefabInstances = params.OutSpawnPrefabInstances;
-
-
-	return params.ReturnValue;
 }
 
 

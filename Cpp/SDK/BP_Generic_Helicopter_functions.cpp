@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -1267,6 +1267,25 @@ void ABP_Generic_Helicopter_C::InpAxisEvt_MoveElevator_K2Node_InputAxisEvent_4(f
 
 	ABP_Generic_Helicopter_C_InpAxisEvt_MoveElevator_K2Node_InputAxisEvent_4_Params params;
 	params.AxisValue = AxisValue;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function BP_Generic_Helicopter.BP_Generic_Helicopter_C.HandleInput
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          DeltaTimeRatio                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+void ABP_Generic_Helicopter_C::HandleInput(float DeltaTimeRatio)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Generic_Helicopter.BP_Generic_Helicopter_C.HandleInput");
+
+	ABP_Generic_Helicopter_C_HandleInput_Params params;
+	params.DeltaTimeRatio = DeltaTimeRatio;
 
 	auto flags = fn->FunctionFlags;
 

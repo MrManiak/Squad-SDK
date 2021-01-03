@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,13 +19,10 @@ namespace UFT
 
 // Class EyeTracker.EyeTrackerFunctionLibrary
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class UEyeTrackerFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
@@ -34,11 +31,12 @@ public:
 	}
 
 
-	static void STATIC_SetEyeTrackedPlayer(class APlayerController* PlayerController);
-	static bool STATIC_IsStereoGazeDataAvailable();
-	static bool STATIC_IsEyeTrackerConnected();
-	static bool STATIC_GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData);
-	static bool STATIC_GetGazeData(struct FEyeTrackerGazeData* OutGazeData);
+
+	void STATIC_SetEyeTrackedPlayer(class APlayerController* PlayerController);
+	bool STATIC_IsStereoGazeDataAvailable();
+	bool STATIC_IsEyeTrackerConnected();
+	bool STATIC_GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData);
+	bool STATIC_GetGazeData(struct FEyeTrackerGazeData* OutGazeData);
 };
 
 }

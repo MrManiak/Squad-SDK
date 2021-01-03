@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -16,15 +16,16 @@ namespace UFT
 // Functions
 //---------------------------------------------------------------------------
 
-// Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
+// (Final, Native, Public, HasOutParms)
 // Parameters:
-// class UGeometryCacheComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class UGeometryCacheComponent* AGeometryCacheActor::GetGeometryCacheComponent()
+// struct FGeometryCacheMeshData  NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent");
+	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh");
 
-	AGeometryCacheActor_GetGeometryCacheComponent_Params params;
+	UGeometryCacheTrack_TransformGroupAnimation_SetMesh_Params params;
+	params.NewMeshData = NewMeshData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -32,8 +33,48 @@ class UGeometryCacheComponent* AGeometryCacheActor::GetGeometryCacheComponent()
 	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
+}
 
-	return params.ReturnValue;
+
+// Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// struct FGeometryCacheMeshData  NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+void UGeometryCacheTrack_TransformAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh");
+
+	UGeometryCacheTrack_TransformAnimation_SetMesh_Params params;
+	params.NewMeshData = NewMeshData;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// struct FGeometryCacheMeshData  MeshData                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// float                          SampleTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometryCacheMeshData& MeshData, float SampleTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample");
+
+	UGeometryCacheTrack_FlipbookAnimation_AddMeshSample_Params params;
+	params.MeshData = MeshData;
+	params.SampleTime = SampleTime;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
 }
 
 
@@ -437,18 +478,15 @@ float UGeometryCacheComponent::GetAnimationTime()
 }
 
 
-// Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
-// (Final, Native, Public, HasOutParms)
+// Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FGeometryCacheMeshData  MeshData                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// float                          SampleTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometryCacheMeshData& MeshData, float SampleTime)
+// class UGeometryCacheComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class UGeometryCacheComponent* AGeometryCacheActor::GetGeometryCacheComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample");
+	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent");
 
-	UGeometryCacheTrack_FlipbookAnimation_AddMeshSample_Params params;
-	params.MeshData = MeshData;
-	params.SampleTime = SampleTime;
+	AGeometryCacheActor_GetGeometryCacheComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -456,46 +494,8 @@ void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometry
 	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
-}
 
-
-// Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// struct FGeometryCacheMeshData  NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-void UGeometryCacheTrack_TransformAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh");
-
-	UGeometryCacheTrack_TransformAnimation_SetMesh_Params params;
-	params.NewMeshData = NewMeshData;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// struct FGeometryCacheMeshData  NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh");
-
-	UGeometryCacheTrack_TransformGroupAnimation_SetMesh_Params params;
-	params.NewMeshData = NewMeshData;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
+	return params.ReturnValue;
 }
 
 

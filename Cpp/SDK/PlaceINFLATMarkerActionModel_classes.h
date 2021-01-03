@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass PlaceINFLATMarkerActionModel.PlaceINFLATMarkerActionModel_C
 // 0x0000 (FullSize[0x00B8] - InheritedSize[0x00B8])
-// LastOffsetWithSize(0x00B8)
 class UPlaceINFLATMarkerActionModel_C : public UBP_PlaceMarkerActionModel_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass PlaceINFLATMarkerActionModel.PlaceINFLATMarkerActionModel_C");
 		return ptr;
 	}
+
 
 
 };

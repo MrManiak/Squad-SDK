@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,56 +20,56 @@ namespace UFT
 // Enum AudioMixer.EFFTWindowType
 enum class EFFTWindowType : uint8_t
 {
-	EFFTWindowType__None           = 0,
-	EFFTWindowType__Hamming        = 1,
-	EFFTWindowType__Hann           = 2,
-	EFFTWindowType__Blackman       = 3,
-	EFFTWindowType__EFFTWindowType_MAX = 4,
+	None                           = 0,
+	Hamming                        = 1,
+	Hann                           = 2,
+	Blackman                       = 3,
+	MAX                            = 4,
 
 };
 
 // Enum AudioMixer.EFFTPeakInterpolationMethod
 enum class EFFTPeakInterpolationMethod : uint8_t
 {
-	EFFTPeakInterpolationMethod__NearestNeighbor = 0,
-	EFFTPeakInterpolationMethod__Linear = 1,
-	EFFTPeakInterpolationMethod__Quadratic = 2,
-	EFFTPeakInterpolationMethod__EFFTPeakInterpolationMethod_MAX = 3,
+	NearestNeighbor                = 0,
+	Linear                         = 1,
+	Quadratic                      = 2,
+	MAX                            = 3,
 
 };
 
 // Enum AudioMixer.EFFTSize
 enum class EFFTSize : uint8_t
 {
-	EFFTSize__DefaultSize          = 0,
-	EFFTSize__Min                  = 1,
-	EFFTSize__Small                = 2,
-	EFFTSize__Medium               = 3,
-	EFFTSize__Large                = 4,
-	EFFTSize__Max                  = 5,
+	DefaultSize                    = 0,
+	Min                            = 1,
+	Small                          = 2,
+	Medium                         = 3,
+	Large                          = 4,
+	Max                            = 5,
 
 };
 
 // Enum AudioMixer.ESubmixEffectDynamicsPeakMode
 enum class ESubmixEffectDynamicsPeakMode : uint8_t
 {
-	ESubmixEffectDynamicsPeakMode__MeanSquared = 0,
-	ESubmixEffectDynamicsPeakMode__RootMeanSquared = 1,
-	ESubmixEffectDynamicsPeakMode__Peak = 2,
-	ESubmixEffectDynamicsPeakMode__Count = 3,
-	ESubmixEffectDynamicsPeakMode__ESubmixEffectDynamicsPeakMode_MAX = 4,
+	MeanSquared                    = 0,
+	RootMeanSquared                = 1,
+	Peak                           = 2,
+	Count                          = 3,
+	MAX                            = 4,
 
 };
 
 // Enum AudioMixer.ESubmixEffectDynamicsProcessorType
 enum class ESubmixEffectDynamicsProcessorType : uint8_t
 {
-	ESubmixEffectDynamicsProcessorType__Compressor = 0,
-	ESubmixEffectDynamicsProcessorType__Limiter = 1,
-	ESubmixEffectDynamicsProcessorType__Expander = 2,
-	ESubmixEffectDynamicsProcessorType__Gate = 3,
-	ESubmixEffectDynamicsProcessorType__Count = 4,
-	ESubmixEffectDynamicsProcessorType__ESubmixEffectDynamicsProcessorType_MAX = 5,
+	Compressor                     = 0,
+	Limiter                        = 1,
+	Expander                       = 2,
+	Gate                           = 3,
+	Count                          = 4,
+	MAX                            = 5,
 
 };
 
@@ -77,21 +77,24 @@ enum class ESubmixEffectDynamicsProcessorType : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct AudioMixer.SubmixEffectEQBand
-// 0x0010
-struct FSubmixEffectEQBand
+// ScriptStruct AudioMixer.SubmixEffectDynamicsProcessorSettings
+// 0x0028
+struct FSubmixEffectDynamicsProcessorSettings
 {
-	float                                              Frequency;                                                 // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              Bandwidth;                                                 // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              GainDb;                                                    // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bEnabled;                                                  // 0x000C(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-};
-// ScriptStruct AudioMixer.SubmixEffectSubmixEQSettings
-// 0x0010
-struct FSubmixEffectSubmixEQSettings
-{
-	TArray<struct FSubmixEffectEQBand>                 EQBands;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	ESubmixEffectDynamicsProcessorType                 DynamicsProcessorType;                                     // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESubmixEffectDynamicsPeakMode                      PeakMode;                                                  // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_SDDF[0x2];                                     // 0x0002(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              LookAheadMsec;                                             // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              AttackTimeMsec;                                            // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              ReleaseTimeMsec;                                           // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              ThresholdDb;                                               // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              Ratio;                                                     // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              KneeBandwidthDb;                                           // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              InputGainDb;                                               // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              OutputGainDb;                                              // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bChannelLinked : 1;                                        // 0x0024(0x0001) BIT_FIELD  (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bAnalogMode : 1;                                           // 0x0024(0x0001) BIT_FIELD  (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_PPC5[0x3];                                     // 0x0025(0x0003) MISSED OFFSET (PADDING)
 
 };
 // ScriptStruct AudioMixer.SubmixEffectReverbFastSettings
@@ -132,22 +135,22 @@ struct FSubmixEffectReverbSettings
 	float                                              DryLevel;                                                  // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 };
-// ScriptStruct AudioMixer.SubmixEffectDynamicsProcessorSettings
-// 0x0028
-struct FSubmixEffectDynamicsProcessorSettings
+// ScriptStruct AudioMixer.SubmixEffectSubmixEQSettings
+// 0x0010
+struct FSubmixEffectSubmixEQSettings
 {
-	ESubmixEffectDynamicsProcessorType                 DynamicsProcessorType;                                     // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESubmixEffectDynamicsPeakMode                      PeakMode;                                                  // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              LookAheadMsec;                                             // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              AttackTimeMsec;                                            // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              ReleaseTimeMsec;                                           // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              ThresholdDb;                                               // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              Ratio;                                                     // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              KneeBandwidthDb;                                           // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              InputGainDb;                                               // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              OutputGainDb;                                              // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bChannelLinked;                                            // 0x0024(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bAnalogMode;                                               // 0x0024(0x0001) BIT_FIELD (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FSubmixEffectEQBand>                 EQBands;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+
+};
+// ScriptStruct AudioMixer.SubmixEffectEQBand
+// 0x0010
+struct FSubmixEffectEQBand
+{
+	float                                              Frequency;                                                 // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              Bandwidth;                                                 // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              GainDb;                                                    // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bEnabled : 1;                                              // 0x000C(0x0001) BIT_FIELD  (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_W2VH[0x3];                                     // 0x000D(0x0003) MISSED OFFSET (PADDING)
 
 };
 }

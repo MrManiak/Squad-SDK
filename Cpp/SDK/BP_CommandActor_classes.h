@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,26 +18,24 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CommandActor.BP_CommandActor_C
-// 0x002C (FullSize[0x0288] - InheritedSize[0x025C])
-// LastOffsetWithSize(0x025C)
-#define PADDING_04F0 - 0x0000 // Minimum to subtract -> (000C)
+// 0x0020 (FullSize[0x0288] - InheritedSize[0x0268])
 class ABP_CommandActor_C : public ASQCommandActor
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x000C PADDING_04F0, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x0268(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0014 PADDING_04F0, class UArrowComponent*,                                                Arrow);                                                    // 0x0270(0x0008)  (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x001C PADDING_04F0, class USceneComponent*,                                                DefaultSceneRoot);                                         // 0x0278(0x0008)  (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0024 PADDING_04F0, bool,                                                                  Action_Destroyed);                                         // 0x0280(0x0001)  (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-		DEFINE_MEMBER_NNN(0x0028 PADDING_04F0, float,                                                                 Destroy_Delay_after_Action_Destroyed);                     // 0x0284(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0268(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UArrowComponent*                             Arrow;                                                     // 0x0270(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                             DefaultSceneRoot;                                          // 0x0278(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                               Action_Destroyed;                                          // 0x0280(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	unsigned char                                      UnknownData_YLE9[0x3];                                     // 0x0281(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	float                                              Destroy_Delay_after_Action_Destroyed;                      // 0x0284(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_CommandActor.BP_CommandActor_C");
 		return ptr;
 	}
+
 
 
 	void Server_Start_Active_Duration();

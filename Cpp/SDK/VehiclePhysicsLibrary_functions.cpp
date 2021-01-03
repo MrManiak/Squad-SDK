@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -33,8 +33,7 @@ void UVehiclePhysicsLibrary_C::STATIC_ApplyPhysicsFeedback(class AActor* Target,
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 }

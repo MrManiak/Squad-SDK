@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,23 +18,21 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // Class StaticCableComponent.StaticCableComponent
-// 0x0020 (FullSize[0x04C8] - InheritedSize[0x04A8])
-// LastOffsetWithSize(0x04A8)
-#define PADDING_02E9 - 0x0000 // Minimum to subtract -> (0018)
+// 0x0010 (FullSize[0x04D0] - InheritedSize[0x04C0])
 class UStaticCableComponent : public UCableComponent
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0018 PADDING_02E9, float,                                                                 SleepMoveSensitivity);                                     // 0x04C0(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-		DEFINE_MEMBER_NNN(0x001C PADDING_02E9, float,                                                                 SleepTimeSensitivity);                                     // 0x04C4(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	};
+	float                                              SleepMoveSensitivity;                                      // 0x04C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                              SleepTimeSensitivity;                                      // 0x04C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	unsigned char                                      UnknownData_Z4DS[0x8];                                     // 0x04C8(0x0008) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class StaticCableComponent.StaticCableComponent");
 		return ptr;
 	}
+
 
 
 	void Wake();

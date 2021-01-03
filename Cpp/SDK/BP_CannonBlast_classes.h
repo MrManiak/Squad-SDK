@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CannonBlast.BP_CannonBlast_C
-// 0x0007 (FullSize[0x00D8] - InheritedSize[0x00D1])
-// LastOffsetWithSize(0x00D1)
+// 0x0000 (FullSize[0x00D8] - InheritedSize[0x00D8])
 class UBP_CannonBlast_C : public USQShockwaveDirected
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_CannonBlast.BP_CannonBlast_C");
 		return ptr;
 	}
+
 
 
 };

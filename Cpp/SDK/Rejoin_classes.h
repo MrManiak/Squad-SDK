@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,24 +18,22 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // Class Rejoin.RejoinCheck
-// 0x0003 (FullSize[0x002B] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_00A0 - 0x0000 // Minimum to subtract -> (0000)
+// 0x00F8 (FullSize[0x0120] - InheritedSize[0x0028])
 class URejoinCheck : public UObject
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_00A0, ERejoinStatus,                                                         LastKnownStatus);                                          // 0x0028(0x0001)  (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-		DEFINE_MEMBER_NNN(0x0001 PADDING_00A0, bool,                                                                  bRejoinAfterCheck);                                        // 0x0029(0x0001)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-		DEFINE_MEMBER_NNN(0x0002 PADDING_00A0, bool,                                                                  bAttemptingRejoin);                                        // 0x002A(0x0001)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	};
+	ERejoinStatus                                      LastKnownStatus;                                           // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                               bRejoinAfterCheck;                                         // 0x0029(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                               bAttemptingRejoin;                                         // 0x002A(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	unsigned char                                      UnknownData_DR3O[0xF5];                                    // 0x002B(0x00F5) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Rejoin.RejoinCheck");
 		return ptr;
 	}
+
 
 
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,16 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function UMG_VehicleSpeedo.UMG_VehicleSpeedo_C.Update Handbrake
+struct UUMG_VehicleSpeedo_C_Update_Handbrake_Params
+{
+};
+
+// Function UMG_VehicleSpeedo.UMG_VehicleSpeedo_C.Refresh Handbrake
+struct UUMG_VehicleSpeedo_C_Refresh_Handbrake_Params
+{
+};
 
 // Function UMG_VehicleSpeedo.UMG_VehicleSpeedo_C.Refresh Data
 struct UUMG_VehicleSpeedo_C_Refresh_Data_Params

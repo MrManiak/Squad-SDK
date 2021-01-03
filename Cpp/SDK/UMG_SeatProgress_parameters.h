@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -86,6 +86,16 @@ struct UUMG_SeatProgress_C_BPOnTimerResumed_Params
 struct UUMG_SeatProgress_C_ExecuteUbergraph_UMG_SeatProgress_Params
 {
 	int                                                EntryPoint;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function UMG_SeatProgress.UMG_SeatProgress_C.ClosedSeatProgress__DelegateSignature
+struct UUMG_SeatProgress_C_ClosedSeatProgress__DelegateSignature_Params
+{
+};
+
+// Function UMG_SeatProgress.UMG_SeatProgress_C.ShowedSeatProgress__DelegateSignature
+struct UUMG_SeatProgress_C_ShowedSeatProgress__DelegateSignature_Params
+{
 };
 
 }

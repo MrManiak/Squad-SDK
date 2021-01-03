@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -18,8 +18,15 @@ namespace UFT
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function SteamInventorySettings.SteamInventorySettings_C.HideSelf
-struct USteamInventorySettings_C_HideSelf_Params
+// Function SteamInventorySettings.SteamInventorySettings_C.GetMesh
+struct USteamInventorySettings_C_GetMesh_Params
+{
+	class USQWeaponSkinData*                           InSkinData;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                      Mesh1P;                                                    // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function SteamInventorySettings.SteamInventorySettings_C.Construct
+struct USteamInventorySettings_C_Construct_Params
 {
 };
 
@@ -28,16 +35,37 @@ struct USteamInventorySettings_C_RefreshInventory_Params
 {
 };
 
-// Function SteamInventorySettings.SteamInventorySettings_C.Toggle
-struct USteamInventorySettings_C_Toggle_Params
+// Function SteamInventorySettings.SteamInventorySettings_C.UpdateItems
+struct USteamInventorySettings_C_UpdateItems_Params
 {
-	bool                                               bSelected;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	class USettingsItem_TickBox_C*                     Button;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
-// Function SteamInventorySettings.SteamInventorySettings_C.Construct
-struct USteamInventorySettings_C_Construct_Params
+// Function SteamInventorySettings.SteamInventorySettings_C.OnItemHovered
+struct USteamInventorySettings_C_OnItemHovered_Params
 {
+	class UObject*                                     Item;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                               bIsHovered;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function SteamInventorySettings.SteamInventorySettings_C.BndEvt__MainMenu_Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
+struct USteamInventorySettings_C_BndEvt__MainMenu_Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature_Params
+{
+	bool                                               bSelected;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UMainMenu_Button_C*                          Button;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function SteamInventorySettings.SteamInventorySettings_C.BndEvt__MainMenu_Button_1_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature
+struct USteamInventorySettings_C_BndEvt__MainMenu_Button_1_K2Node_ComponentBoundEvent_1_OnClicked__DelegateSignature_Params
+{
+	bool                                               bSelected;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UMainMenu_Button_C*                          Button;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function SteamInventorySettings.SteamInventorySettings_C.BndEvt__MainPatchesTab_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
+struct USteamInventorySettings_C_BndEvt__MainPatchesTab_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature_Params
+{
+	bool                                               bSelected;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UMainMenu_Button_C*                          Button;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function SteamInventorySettings.SteamInventorySettings_C.ExecuteUbergraph_SteamInventorySettings

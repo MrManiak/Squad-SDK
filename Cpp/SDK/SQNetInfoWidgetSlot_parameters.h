@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,12 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.GetHeaderURL
+struct USQNetInfoWidgetSlot_C_GetHeaderURL_Params
+{
+	struct FText                                       HeaderURL;                                                 // (Parm, OutParm)
+};
 
 // Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.GetBodyText
 struct USQNetInfoWidgetSlot_C_GetBodyText_Params
@@ -42,8 +48,13 @@ struct USQNetInfoWidgetSlot_C_OnSuccess_9D89973243B31B6470A48FB1F15C4057_Params
 	class UTexture2DDynamic*                           Texture;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
-// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.Construct
-struct USQNetInfoWidgetSlot_C_Construct_Params
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.EventHeaderChanged
+struct USQNetInfoWidgetSlot_C_EventHeaderChanged_Params
+{
+};
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.OnInitialized
+struct USQNetInfoWidgetSlot_C_OnInitialized_Params
 {
 };
 

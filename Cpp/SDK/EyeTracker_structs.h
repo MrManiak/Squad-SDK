@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,10 +20,10 @@ namespace UFT
 // Enum EyeTracker.EEyeTrackerStatus
 enum class EEyeTrackerStatus : uint8_t
 {
-	EEyeTrackerStatus__NotConnected = 0,
-	EEyeTrackerStatus__NotTracking = 1,
-	EEyeTrackerStatus__Tracking    = 2,
-	EEyeTrackerStatus__EEyeTrackerStatus_MAX = 3,
+	NotConnected                   = 0,
+	NotTracking                    = 1,
+	Tracking                       = 2,
+	MAX                            = 3,
 
 };
 
@@ -31,16 +31,6 @@ enum class EEyeTrackerStatus : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct EyeTracker.EyeTrackerGazeData
-// 0x0028
-struct FEyeTrackerGazeData
-{
-	struct FVector                                     GazeOrigin;                                                // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                     GazeDirection;                                             // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                     FixationPoint;                                             // 0x0018(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              ConfidenceValue;                                           // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-};
 // ScriptStruct EyeTracker.EyeTrackerStereoGazeData
 // 0x0040
 struct FEyeTrackerStereoGazeData
@@ -51,6 +41,16 @@ struct FEyeTrackerStereoGazeData
 	struct FVector                                     RightEyeDirection;                                         // 0x0024(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                     FixationPoint;                                             // 0x0030(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                              ConfidenceValue;                                           // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+};
+// ScriptStruct EyeTracker.EyeTrackerGazeData
+// 0x0028
+struct FEyeTrackerGazeData
+{
+	struct FVector                                     GazeOrigin;                                                // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                     GazeDirection;                                             // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                     FixationPoint;                                             // 0x0018(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              ConfidenceValue;                                           // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 };
 }

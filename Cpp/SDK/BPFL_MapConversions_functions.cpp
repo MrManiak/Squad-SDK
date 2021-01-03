@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -32,8 +32,7 @@ void UBPFL_MapConversions_C::STATIC_Get_World_Distance_to_Pixel_Distance(float I
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (Pixel != nullptr)
@@ -58,8 +57,7 @@ void UBPFL_MapConversions_C::STATIC_Get_Map_Distance_to_Pixel_Distance(float Map
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (Pixel_Distance != nullptr)
@@ -84,8 +82,7 @@ void UBPFL_MapConversions_C::STATIC_Get_Pixel_Distance_to_World_Distance(float P
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (World_Distance != nullptr)
@@ -110,8 +107,7 @@ struct FVector UBPFL_MapConversions_C::STATIC_Mouse_Position_to_World_Location(c
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -135,8 +131,7 @@ void UBPFL_MapConversions_C::STATIC_Map_Position_to_World_Location(const struct 
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (World_Location__XY_ != nullptr)
@@ -163,8 +158,7 @@ void UBPFL_MapConversions_C::STATIC_Get_Pixel_Distance_from_Relative_Origin(cons
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (Pixel_Distance != nullptr)
@@ -192,8 +186,7 @@ void UBPFL_MapConversions_C::STATIC_Get_Angle_From_Mouse_Vector(const struct FVe
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (Angle != nullptr)
@@ -222,8 +215,7 @@ void UBPFL_MapConversions_C::STATIC_Get_World_Distance_from_Relative_Origin(cons
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (World_Distance != nullptr)

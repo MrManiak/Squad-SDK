@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,10 +20,10 @@ namespace UFT
 // Enum ProceduralMeshComponent.EProcMeshSliceCapOption
 enum class EProcMeshSliceCapOption : uint8_t
 {
-	EProcMeshSliceCapOption__NoCap = 0,
-	EProcMeshSliceCapOption__CreateNewSectionForCap = 1,
-	EProcMeshSliceCapOption__UseLastSectionForCap = 2,
-	EProcMeshSliceCapOption__EProcMeshSliceCapOption_MAX = 3,
+	NoCap                          = 0,
+	CreateNewSectionForCap         = 1,
+	UseLastSectionForCap           = 2,
+	MAX                            = 3,
 
 };
 
@@ -31,12 +31,25 @@ enum class EProcMeshSliceCapOption : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct ProceduralMeshComponent.ProcMeshSection
+// 0x0040
+struct FProcMeshSection
+{
+	TArray<struct FProcMeshVertex>                     ProcVertexBuffer;                                          // 0x0000(0x0010) (ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<uint32_t>                                   ProcIndexBuffer;                                           // 0x0010(0x0010) (ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FBox                                        SectionLocalBox;                                           // 0x0020(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                               bEnableCollision;                                          // 0x003C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               bSectionVisible;                                           // 0x003D(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_75TI[0x2];                                     // 0x003E(0x0002) MISSED OFFSET (PADDING)
+
+};
 // ScriptStruct ProceduralMeshComponent.ProcMeshTangent
 // 0x0010
 struct FProcMeshTangent
 {
 	struct FVector                                     TangentX;                                                  // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                               bFlipTangentY;                                             // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_TEM1[0x3];                                     // 0x000D(0x0003) MISSED OFFSET (PADDING)
 
 };
 // ScriptStruct ProceduralMeshComponent.ProcMeshVertex
@@ -51,17 +64,6 @@ struct FProcMeshVertex
 	struct FVector2D                                   UV1;                                                       // 0x0034(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                                   UV2;                                                       // 0x003C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                                   UV3;                                                       // 0x0044(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-};
-// ScriptStruct ProceduralMeshComponent.ProcMeshSection
-// 0x0040
-struct FProcMeshSection
-{
-	TArray<struct FProcMeshVertex>                     ProcVertexBuffer;                                          // 0x0000(0x0010) (ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<uint32_t>                                   ProcIndexBuffer;                                           // 0x0010(0x0010) (ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FBox                                        SectionLocalBox;                                           // 0x0020(0x001C) (ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                               bEnableCollision;                                          // 0x003C(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               bSectionVisible;                                           // 0x003D(0x0001) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 };
 }

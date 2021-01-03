@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass Radial_VehicleBay.Radial_VehicleBay_C
 // 0x0000 (FullSize[0x0058] - InheritedSize[0x0058])
-// LastOffsetWithSize(0x0058)
 class URadial_VehicleBay_C : public UBP_RadialMenuModel_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Radial_VehicleBay.Radial_VehicleBay_C");
 		return ptr;
 	}
+
 
 
 };

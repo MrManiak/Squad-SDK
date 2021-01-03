@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SquadStateDataSquadState.BP_SquadStateDataSquadState_C
-// 0x0003 (FullSize[0x0140] - InheritedSize[0x013D])
-// LastOffsetWithSize(0x013D)
+// 0x0000 (FullSize[0x0140] - InheritedSize[0x0140])
 class UBP_SquadStateDataSquadState_C : public USQSquadStateDataSquadState
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_SquadStateDataSquadState.BP_SquadStateDataSquadState_C");
 		return ptr;
 	}
+
 
 
 };

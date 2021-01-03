@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -30,31 +30,175 @@ struct UMediaSource_GetUrl_Params
 	struct FString                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function MediaAssets.FileMediaSource.SetFilePath
-struct UFileMediaSource_SetFilePath_Params
+// Function MediaAssets.MediaTexture.SetMediaPlayer
+struct UMediaTexture_SetMediaPlayer_Params
 {
-	struct FString                                     Path;                                                      // (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaPlayer*                                NewMediaPlayer;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
-struct UMediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices_Params
+// Function MediaAssets.MediaTexture.GetWidth
+struct UMediaTexture_GetWidth_Params
 {
-	TArray<struct FMediaCaptureDevice>                 OutDevices;                                                // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int                                                Filter;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
-struct UMediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices_Params
+// Function MediaAssets.MediaTexture.GetMediaPlayer
+struct UMediaTexture_GetMediaPlayer_Params
 {
-	TArray<struct FMediaCaptureDevice>                 OutDevices;                                                // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int                                                Filter;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaPlayer*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
-struct UMediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices_Params
+// Function MediaAssets.MediaTexture.GetHeight
+struct UMediaTexture_GetHeight_Params
 {
-	TArray<struct FMediaCaptureDevice>                 OutDevices;                                                // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int                                                Filter;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaTexture.GetAspectRatio
+struct UMediaTexture_GetAspectRatio_Params
+{
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaSoundComponent.SetSpectralAnalysisSettings
+struct UMediaSoundComponent_SetSpectralAnalysisSettings_Params
+{
+	TArray<float>                                      InFrequenciesToAnalyze;                                    // (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	EMediaSoundComponentFFTSize                        InFFTSize;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
+struct UMediaSoundComponent_SetMediaPlayer_Params
+{
+	class UMediaPlayer*                                NewMediaPlayer;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaSoundComponent.SetEnvelopeFollowingsettings
+struct UMediaSoundComponent_SetEnvelopeFollowingsettings_Params
+{
+	int                                                AttackTimeMsec;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                ReleaseTimeMsec;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaSoundComponent.SetEnableSpectralAnalysis
+struct UMediaSoundComponent_SetEnableSpectralAnalysis_Params
+{
+	bool                                               bInSpectralAnalysisEnabled;                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaSoundComponent.SetEnableEnvelopeFollowing
+struct UMediaSoundComponent_SetEnableEnvelopeFollowing_Params
+{
+	bool                                               bInEnvelopeFollowing;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaSoundComponent.GetSpectralData
+struct UMediaSoundComponent_GetSpectralData_Params
+{
+	TArray<struct FMediaSoundComponentSpectralData>    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
+struct UMediaSoundComponent_GetMediaPlayer_Params
+{
+	class UMediaPlayer*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaSoundComponent.GetEnvelopeValue
+struct UMediaSoundComponent_GetEnvelopeValue_Params
+{
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
+struct UMediaSoundComponent_BP_GetAttenuationSettingsToApply_Params
+{
+	struct FSoundAttenuationSettings                   OutAttenuationSettings;                                    // (Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.Replace
+struct UMediaPlaylist_Replace_Params
+{
+	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaSource*                                Replacement;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.RemoveAt
+struct UMediaPlaylist_RemoveAt_Params
+{
+	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.Remove
+struct UMediaPlaylist_Remove_Params
+{
+	class UMediaSource*                                MediaSource;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.Num
+struct UMediaPlaylist_Num_Params
+{
+	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.Insert
+struct UMediaPlaylist_Insert_Params
+{
+	class UMediaSource*                                MediaSource;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.GetRandom
+struct UMediaPlaylist_GetRandom_Params
+{
+	int                                                OutIndex;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaSource*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.GetPrevious
+struct UMediaPlaylist_GetPrevious_Params
+{
+	int                                                InOutIndex;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaSource*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.GetNext
+struct UMediaPlaylist_GetNext_Params
+{
+	int                                                InOutIndex;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaSource*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.Get
+struct UMediaPlaylist_Get_Params
+{
+	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaSource*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.AddUrl
+struct UMediaPlaylist_AddUrl_Params
+{
+	struct FString                                     URL;                                                       // (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.AddFile
+struct UMediaPlaylist_AddFile_Params
+{
+	struct FString                                     FilePath;                                                  // (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MediaAssets.MediaPlaylist.Add
+struct UMediaPlaylist_Add_Params
+{
+	class UMediaSource*                                MediaSource;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function MediaAssets.MediaPlayer.SupportsSeeking
@@ -542,175 +686,31 @@ struct UMediaPlayer_CanPause_Params
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function MediaAssets.MediaPlaylist.Replace
-struct UMediaPlaylist_Replace_Params
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
+struct UMediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices_Params
 {
-	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMediaSource*                                Replacement;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMediaCaptureDevice>                 OutDevices;                                                // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int                                                Filter;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function MediaAssets.MediaPlaylist.RemoveAt
-struct UMediaPlaylist_RemoveAt_Params
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
+struct UMediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices_Params
 {
-	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMediaCaptureDevice>                 OutDevices;                                                // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int                                                Filter;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function MediaAssets.MediaPlaylist.Remove
-struct UMediaPlaylist_Remove_Params
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
+struct UMediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices_Params
 {
-	class UMediaSource*                                MediaSource;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMediaCaptureDevice>                 OutDevices;                                                // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int                                                Filter;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function MediaAssets.MediaPlaylist.Num
-struct UMediaPlaylist_Num_Params
+// Function MediaAssets.FileMediaSource.SetFilePath
+struct UFileMediaSource_SetFilePath_Params
 {
-	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaPlaylist.Insert
-struct UMediaPlaylist_Insert_Params
-{
-	class UMediaSource*                                MediaSource;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaPlaylist.GetRandom
-struct UMediaPlaylist_GetRandom_Params
-{
-	int                                                OutIndex;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMediaSource*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaPlaylist.GetPrevious
-struct UMediaPlaylist_GetPrevious_Params
-{
-	int                                                InOutIndex;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMediaSource*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaPlaylist.GetNext
-struct UMediaPlaylist_GetNext_Params
-{
-	int                                                InOutIndex;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMediaSource*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaPlaylist.Get
-struct UMediaPlaylist_Get_Params
-{
-	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMediaSource*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaPlaylist.AddUrl
-struct UMediaPlaylist_AddUrl_Params
-{
-	struct FString                                     URL;                                                       // (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaPlaylist.AddFile
-struct UMediaPlaylist_AddFile_Params
-{
-	struct FString                                     FilePath;                                                  // (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaPlaylist.Add
-struct UMediaPlaylist_Add_Params
-{
-	class UMediaSource*                                MediaSource;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaSoundComponent.SetSpectralAnalysisSettings
-struct UMediaSoundComponent_SetSpectralAnalysisSettings_Params
-{
-	TArray<float>                                      InFrequenciesToAnalyze;                                    // (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	EMediaSoundComponentFFTSize                        InFFTSize;                                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
-struct UMediaSoundComponent_SetMediaPlayer_Params
-{
-	class UMediaPlayer*                                NewMediaPlayer;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaSoundComponent.SetEnvelopeFollowingsettings
-struct UMediaSoundComponent_SetEnvelopeFollowingsettings_Params
-{
-	int                                                AttackTimeMsec;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                ReleaseTimeMsec;                                           // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaSoundComponent.SetEnableSpectralAnalysis
-struct UMediaSoundComponent_SetEnableSpectralAnalysis_Params
-{
-	bool                                               bInSpectralAnalysisEnabled;                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaSoundComponent.SetEnableEnvelopeFollowing
-struct UMediaSoundComponent_SetEnableEnvelopeFollowing_Params
-{
-	bool                                               bInEnvelopeFollowing;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaSoundComponent.GetSpectralData
-struct UMediaSoundComponent_GetSpectralData_Params
-{
-	TArray<struct FMediaSoundComponentSpectralData>    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
-struct UMediaSoundComponent_GetMediaPlayer_Params
-{
-	class UMediaPlayer*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaSoundComponent.GetEnvelopeValue
-struct UMediaSoundComponent_GetEnvelopeValue_Params
-{
-	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
-struct UMediaSoundComponent_BP_GetAttenuationSettingsToApply_Params
-{
-	struct FSoundAttenuationSettings                   OutAttenuationSettings;                                    // (Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaTexture.SetMediaPlayer
-struct UMediaTexture_SetMediaPlayer_Params
-{
-	class UMediaPlayer*                                NewMediaPlayer;                                            // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaTexture.GetWidth
-struct UMediaTexture_GetWidth_Params
-{
-	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaTexture.GetMediaPlayer
-struct UMediaTexture_GetMediaPlayer_Params
-{
-	class UMediaPlayer*                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaTexture.GetHeight
-struct UMediaTexture_GetHeight_Params
-{
-	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MediaAssets.MediaTexture.GetAspectRatio
-struct UMediaTexture_GetAspectRatio_Params
-{
-	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FString                                     Path;                                                      // (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,8 +20,8 @@ namespace UFT
 // Enum SquadGame.ESQSampleType
 enum class ESQSampleType : uint8_t
 {
-	ESQSampleType__Sample          = 0,
-	ESQSampleType__ESQSampleType_MAX = 1,
+	Sample                         = 0,
+	MAX                            = 1,
 
 };
 

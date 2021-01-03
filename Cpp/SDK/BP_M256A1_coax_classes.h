@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_M256A1_coax.BP_M256A1_coax_C
 // 0x0000 (FullSize[0x0A28] - InheritedSize[0x0A28])
-// LastOffsetWithSize(0x0A28)
 class ABP_M256A1_coax_C : public ABP_BTR80_RUS_PKT_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_M256A1_coax.BP_M256A1_coax_C");
 		return ptr;
 	}
+
 
 
 };

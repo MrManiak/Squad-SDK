@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,19 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C
-// 0x0070 (FullSize[0x0250] - InheritedSize[0x01E0])
-// LastOffsetWithSize(0x01E0)
-#define PADDING_0222 - 0x0000 // Minimum to subtract -> (0050)
-class USQNetInfoWidgetSlot_C : public UUserWidget
+// 0x0023 (FullSize[0x0263] - InheritedSize[0x0240])
+class USQNetInfoWidgetSlot_C : public USQAnnouncementNotifier
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0050 PADDING_0222, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x0230(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0058 PADDING_0222, class UImage*,                                                         Image);                                                    // 0x0238(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0060 PADDING_0222, class USQRichTextBlock*,                                               SQRichTextBlock_48);                                       // 0x0240(0x0008)  (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0068 PADDING_0222, class UTextBlock*,                                                     TitleText);                                                // 0x0248(0x0008)  (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0240(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                      Image;                                                     // 0x0248(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USQRichTextBlock*                            SQRichTextBlock_48;                                        // 0x0250(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                                  TitleText;                                                 // 0x0258(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                               AwaitingResponse;                                          // 0x0260(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               RequestPending;                                            // 0x0261(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                               DownloadSucceeded;                                         // 0x0262(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
 
 	static UClass* StaticClass()
 	{
@@ -39,11 +38,14 @@ public:
 	}
 
 
+
+	void GetHeaderURL(struct FText* HeaderURL);
 	struct FText GetBodyText();
 	struct FText GetTitleText();
 	void OnFail_9D89973243B31B6470A48FB1F15C4057(class UTexture2DDynamic* Texture);
 	void OnSuccess_9D89973243B31B6470A48FB1F15C4057(class UTexture2DDynamic* Texture);
-	void Construct();
+	void EventHeaderChanged();
+	void OnInitialized();
 	void ExecuteUbergraph_SQNetInfoWidgetSlot(int EntryPoint);
 };
 

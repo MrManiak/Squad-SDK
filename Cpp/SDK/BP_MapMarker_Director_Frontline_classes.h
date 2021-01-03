@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_MapMarker_Director_Frontline.BP_MapMarker_Director_Frontline_C
 // 0x0000 (FullSize[0x02AC] - InheritedSize[0x02AC])
-// LastOffsetWithSize(0x02AC)
 class ABP_MapMarker_Director_Frontline_C : public ABP_MapMarker_DirectorMaster_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_MapMarker_Director_Frontline.BP_MapMarker_Director_Frontline_C");
 		return ptr;
 	}
+
 
 
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,10 +20,10 @@ namespace UFT
 // Enum DiscordRpc.EDiscordJoinResponseCodes
 enum class EDiscordJoinResponseCodes : uint8_t
 {
-	EDiscordJoinResponseCodes__DISCORD_REPLY_NO = 0,
-	EDiscordJoinResponseCodes__DISCORD_REPLY_YES = 1,
-	EDiscordJoinResponseCodes__DISCORD_REPLY_IGNORE = 2,
-	EDiscordJoinResponseCodes__DISCORD_REPLY_MAX = 3,
+	DISCORD_REPLY_NO               = 0,
+	DISCORD_REPLY_YES              = 1,
+	DISCORD_REPLY_IGNORE           = 2,
+	DISCORD_REPLY_MAX              = 3,
 
 };
 
@@ -31,6 +31,16 @@ enum class EDiscordJoinResponseCodes : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct DiscordRpc.DiscordUserData
+// 0x0040
+struct FDiscordUserData
+{
+	struct FString                                     userId;                                                    // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FString                                     username;                                                  // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FString                                     discriminator;                                             // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FString                                     avatar;                                                    // 0x0030(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+};
 // ScriptStruct DiscordRpc.DiscordRichPresence
 // 0x00B8
 struct FDiscordRichPresence
@@ -50,16 +60,7 @@ struct FDiscordRichPresence
 	struct FString                                     joinSecret;                                                // 0x0090(0x0010) (BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FString                                     spectateSecret;                                            // 0x00A0(0x0010) (BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                               instance;                                                  // 0x00B0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-};
-// ScriptStruct DiscordRpc.DiscordUserData
-// 0x0040
-struct FDiscordUserData
-{
-	struct FString                                     userId;                                                    // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FString                                     username;                                                  // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FString                                     discriminator;                                             // 0x0020(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FString                                     avatar;                                                    // 0x0030(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_LV0H[0x7];                                     // 0x00B1(0x0007) MISSED OFFSET (PADDING)
 
 };
 }

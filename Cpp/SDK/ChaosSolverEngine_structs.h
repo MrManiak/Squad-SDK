@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,13 +20,13 @@ namespace UFT
 // Enum ChaosSolverEngine.EClusterConnectionTypeEnum
 enum class EClusterConnectionTypeEnum : uint8_t
 {
-	EClusterConnectionTypeEnum__Chaos_PointImplicit = 0,
-	EClusterConnectionTypeEnum__Chaos_DelaunayTriangulation = 1,
-	EClusterConnectionTypeEnum__Chaos_MinimalSpanningSubsetDelaunayTriangulation = 2,
-	EClusterConnectionTypeEnum__Chaos_PointImplicitAugmentedWithMinimalDelaunay = 3,
-	EClusterConnectionTypeEnum__Chaos_None = 4,
-	EClusterConnectionTypeEnum__Chaos_EClsuterCreationParameters_Max = 5,
-	EClusterConnectionTypeEnum__Chaos_MAX = 6,
+	Chaos_PointImplicit            = 0,
+	Chaos_DelaunayTriangulation    = 1,
+	Chaos_MinimalSpanningSubsetDelaunayTriangulation = 2,
+	Chaos_PointImplicitAugmentedWithMinimalDelaunay = 3,
+	Chaos_None                     = 4,
+	Chaos_EClsuterCreationParameters_Max = 5,
+	Chaos_MAX                      = 6,
 
 };
 
@@ -34,27 +34,6 @@ enum class EClusterConnectionTypeEnum : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct ChaosSolverEngine.BreakEventCallbackWrapper
-// 0x0040
-struct FBreakEventCallbackWrapper
-{
-
-};
-// ScriptStruct ChaosSolverEngine.ChaosHandlerSet
-// 0x0058
-struct FChaosHandlerSet
-{
-
-};
-// ScriptStruct ChaosSolverEngine.ChaosDebugSubstepControl
-// 0x0003
-struct FChaosDebugSubstepControl
-{
-	bool                                               bPause;                                                    // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               bSubstep;                                                  // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               bStep;                                                     // 0x0002(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-};
 // ScriptStruct ChaosSolverEngine.ChaosBreakEvent
 // 0x0030
 struct FChaosBreakEvent
@@ -81,6 +60,31 @@ struct FChaosPhysicsCollisionInfo
 	struct FVector                                     OtherAngularVelocity;                                      // 0x0058(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                              Mass;                                                      // 0x0064(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                              OtherMass;                                                 // 0x0068(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_4BJM[0x4];                                     // 0x006C(0x0004) MISSED OFFSET (PADDING)
+
+};
+// ScriptStruct ChaosSolverEngine.ChaosDebugSubstepControl
+// 0x0003
+struct FChaosDebugSubstepControl
+{
+	bool                                               bPause;                                                    // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               bSubstep;                                                  // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               bStep;                                                     // 0x0002(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+};
+// ScriptStruct ChaosSolverEngine.BreakEventCallbackWrapper
+// 0x0040
+struct FBreakEventCallbackWrapper
+{
+	unsigned char                                      UnknownData_1LUE[0x40];                                    // 0x0000(0x0040) MISSED OFFSET (PADDING)
+
+};
+// ScriptStruct ChaosSolverEngine.ChaosHandlerSet
+// 0x0058
+struct FChaosHandlerSet
+{
+	unsigned char                                      UnknownData_4F7Y[0x8];                                     // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	unsigned char                                      ChaosHandlers[0x50];                                       // 0x0008(0x0050) UNKNOWN PROPERTY: SetProperty ChaosSolverEngine.ChaosHandlerSet.ChaosHandlers
 
 };
 }

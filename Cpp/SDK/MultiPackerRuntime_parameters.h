@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,167 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function MultiPackerRuntime.MultiPackerRuntimeGraph.ValidationOnRuntime
+struct UMultiPackerRuntimeGraph_ValidationOnRuntime_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerRuntimeGraph.SetTextureRuntimeOnMaterial
+struct UMultiPackerRuntimeGraph_SetTextureRuntimeOnMaterial_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                          Material;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*                    MaterialToSet;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       Texture;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       Booleans;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       SizePadding;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerRuntimeGraph.RuntimePreProcess
+struct UMultiPackerRuntimeGraph_RuntimePreProcess_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerRuntimeGraph.RetrieveMaterialInfo
+struct UMultiPackerRuntimeGraph_RetrieveMaterialInfo_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                          Material;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                      RT_Output;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMaterialDataBinPack                        Database;                                                  // (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerRuntimeGraph.GetTileTexture
+struct UMultiPackerRuntimeGraph_GetTileTexture_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                          MaterialToGet;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                                  ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetDetailSDFThresold
+struct UMultiPackerImage_SetDetailSDFThresold_Params
+{
+	float                                              InDetailSDFThresold;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetDetailOutlineThresold
+struct UMultiPackerImage_SetDetailOutlineThresold_Params
+{
+	float                                              InDetailOutlineThresold;                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetDetailColorOutline
+struct UMultiPackerImage_SetDetailColorOutline_Params
+{
+	struct FLinearColor                                InDetailColorOutline;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetDetailColorInterior
+struct UMultiPackerImage_SetDetailColorInterior_Params
+{
+	struct FLinearColor                                InDetailColorInterior;                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetBaseSDFThresold
+struct UMultiPackerImage_SetBaseSDFThresold_Params
+{
+	float                                              InBaseSDFThresold;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetBaseOutlineThresold
+struct UMultiPackerImage_SetBaseOutlineThresold_Params
+{
+	float                                              InBaseOutlineThresold;                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetBaseColorOutline
+struct UMultiPackerImage_SetBaseColorOutline_Params
+{
+	struct FLinearColor                                InBaseColorOutline;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetBaseColorInterior
+struct UMultiPackerImage_SetBaseColorInterior_Params
+{
+	struct FLinearColor                                InBaseColorInterior;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetAdditionSDFThresold
+struct UMultiPackerImage_SetAdditionSDFThresold_Params
+{
+	float                                              InAdditionSDFThresold;                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetAdditionOutlineThresold
+struct UMultiPackerImage_SetAdditionOutlineThresold_Params
+{
+	float                                              InAdditionOutlineThresold;                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetAdditionColorOutline
+struct UMultiPackerImage_SetAdditionColorOutline_Params
+{
+	struct FLinearColor                                InAdditionColorOutline;                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerImage.SetAdditionColorInterior
+struct UMultiPackerImage_SetAdditionColorInterior_Params
+{
+	struct FLinearColor                                InAdditionColorInterior;                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerDataBase.GetTextureTile
+struct UMultiPackerDataBase_GetTextureTile_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       Key;                                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                Size;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                      ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerDataBase.GetMaterialTile
+struct UMultiPackerDataBase_GetMaterialTile_Params
+{
+	struct FName                                       Key;                                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*                    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerDataBase.GetButtonStyle
+struct UMultiPackerDataBase_GetButtonStyle_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       KeyIcon;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       KeyBase;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       KeySelected;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                Size;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                                Color_Base;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                                Color_Icon_Normal;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                                Color_Icon_Press;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                                Color_Ic_Selected;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               selected;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FButtonStyle                                ReturnValue;                                               // (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function MultiPackerRuntime.MultiPackerDataBase.GetButtonMaterialState
+struct UMultiPackerDataBase_GetButtonMaterialState_Params
+{
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       KeyIcon;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       KeyBase;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       KeySelected;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                Size;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                                Color_Base;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                                Color_Icon_Normal;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                                Color_Icon_Press;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                                Color_Ic_Selected;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EStateButton                                       EState;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               selected;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*                    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function MultiPackerRuntime.MultiPackerButton.SetPressedDetailSDFThresold
 struct UMultiPackerButton_SetPressedDetailSDFThresold_Params
@@ -304,167 +465,6 @@ struct UMultiPackerButton_SetDisabledAdditionColorOutline_Params
 struct UMultiPackerButton_SetDisabledAdditionColorInterior_Params
 {
 	struct FLinearColor                                InAdditionColorInterior;                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerDataBase.GetTextureTile
-struct UMultiPackerDataBase_GetTextureTile_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       Key;                                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                Size;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                      ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerDataBase.GetMaterialTile
-struct UMultiPackerDataBase_GetMaterialTile_Params
-{
-	struct FName                                       Key;                                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*                    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerDataBase.GetButtonStyle
-struct UMultiPackerDataBase_GetButtonStyle_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       KeyIcon;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       KeyBase;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       KeySelected;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                Size;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                                Color_Base;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                                Color_Icon_Normal;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                                Color_Icon_Press;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                                Color_Ic_Selected;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               selected;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FButtonStyle                                ReturnValue;                                               // (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerDataBase.GetButtonMaterialState
-struct UMultiPackerDataBase_GetButtonMaterialState_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       KeyIcon;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       KeyBase;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       KeySelected;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                Size;                                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                                Color_Base;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                                Color_Icon_Normal;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                                Color_Icon_Press;                                          // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                                Color_Ic_Selected;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EStateButton                                       EState;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               selected;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*                    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetDetailSDFThresold
-struct UMultiPackerImage_SetDetailSDFThresold_Params
-{
-	float                                              InDetailSDFThresold;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetDetailOutlineThresold
-struct UMultiPackerImage_SetDetailOutlineThresold_Params
-{
-	float                                              InDetailOutlineThresold;                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetDetailColorOutline
-struct UMultiPackerImage_SetDetailColorOutline_Params
-{
-	struct FLinearColor                                InDetailColorOutline;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetDetailColorInterior
-struct UMultiPackerImage_SetDetailColorInterior_Params
-{
-	struct FLinearColor                                InDetailColorInterior;                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetBaseSDFThresold
-struct UMultiPackerImage_SetBaseSDFThresold_Params
-{
-	float                                              InBaseSDFThresold;                                         // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetBaseOutlineThresold
-struct UMultiPackerImage_SetBaseOutlineThresold_Params
-{
-	float                                              InBaseOutlineThresold;                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetBaseColorOutline
-struct UMultiPackerImage_SetBaseColorOutline_Params
-{
-	struct FLinearColor                                InBaseColorOutline;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetBaseColorInterior
-struct UMultiPackerImage_SetBaseColorInterior_Params
-{
-	struct FLinearColor                                InBaseColorInterior;                                       // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetAdditionSDFThresold
-struct UMultiPackerImage_SetAdditionSDFThresold_Params
-{
-	float                                              InAdditionSDFThresold;                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetAdditionOutlineThresold
-struct UMultiPackerImage_SetAdditionOutlineThresold_Params
-{
-	float                                              InAdditionOutlineThresold;                                 // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetAdditionColorOutline
-struct UMultiPackerImage_SetAdditionColorOutline_Params
-{
-	struct FLinearColor                                InAdditionColorOutline;                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerImage.SetAdditionColorInterior
-struct UMultiPackerImage_SetAdditionColorInterior_Params
-{
-	struct FLinearColor                                InAdditionColorInterior;                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerRuntimeGraph.ValidationOnRuntime
-struct UMultiPackerRuntimeGraph_ValidationOnRuntime_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerRuntimeGraph.SetTextureRuntimeOnMaterial
-struct UMultiPackerRuntimeGraph_SetTextureRuntimeOnMaterial_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                          Material;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*                    MaterialToSet;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       Texture;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       Booleans;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       SizePadding;                                               // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerRuntimeGraph.RuntimePreProcess
-struct UMultiPackerRuntimeGraph_RuntimePreProcess_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerRuntimeGraph.RetrieveMaterialInfo
-struct UMultiPackerRuntimeGraph_RetrieveMaterialInfo_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                          Material;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                      RT_Output;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMaterialDataBinPack                        Database;                                                  // (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function MultiPackerRuntime.MultiPackerRuntimeGraph.GetTileTexture
-struct UMultiPackerRuntimeGraph_GetTileTexture_Params
-{
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                          MaterialToGet;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                                  ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

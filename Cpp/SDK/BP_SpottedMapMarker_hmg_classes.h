@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_SpottedMapMarker_hmg.BP_SpottedMapMarker_hmg_C
 // 0x0000 (FullSize[0x02A0] - InheritedSize[0x02A0])
-// LastOffsetWithSize(0x02A0)
 class ABP_SpottedMapMarker_hmg_C : public ABP_SpottedMapMarker_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_SpottedMapMarker_hmg.BP_SpottedMapMarker_hmg_C");
 		return ptr;
 	}
+
 
 
 };

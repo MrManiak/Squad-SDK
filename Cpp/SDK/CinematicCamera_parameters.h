@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,12 +17,6 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
-// Function CinematicCamera.CineCameraActor.GetCineCameraComponent
-struct ACineCameraActor_GetCineCameraComponent_Params
-{
-	class UCineCameraComponent*                        ReturnValue;                                               // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
 
 // Function CinematicCamera.CineCameraComponent.SetLensPresetByName
 struct UCineCameraComponent_SetLensPresetByName_Params
@@ -58,6 +52,12 @@ struct UCineCameraComponent_GetHorizontalFieldOfView_Params
 struct UCineCameraComponent_GetFilmbackPresetName_Params
 {
 	struct FString                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function CinematicCamera.CineCameraActor.GetCineCameraComponent
+struct ACineCameraActor_GetCineCameraComponent_Params
+{
+	class UCineCameraComponent*                        ReturnValue;                                               // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

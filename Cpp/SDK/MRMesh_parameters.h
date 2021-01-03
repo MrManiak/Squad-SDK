@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,44 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function MRMesh.MRMeshComponent.IsConnected
+struct UMRMeshComponent_IsConnected_Params
+{
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MRMesh.MRMeshComponent.ForceNavMeshUpdate
+struct UMRMeshComponent_ForceNavMeshUpdate_Params
+{
+};
+
+// Function MRMesh.MRMeshComponent.Clear
+struct UMRMeshComponent_Clear_Params
+{
+};
+
+// DelegateFunction MRMesh.MockDataMeshTrackerComponent.OnMockDataMeshTrackerUpdated__DelegateSignature
+struct UMockDataMeshTrackerComponent_OnMockDataMeshTrackerUpdated__DelegateSignature_Params
+{
+	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                             Vertices;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<int>                                        Triangles;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                             Normals;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<float>                                      Confidence;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function MRMesh.MockDataMeshTrackerComponent.DisconnectMRMesh
+struct UMockDataMeshTrackerComponent_DisconnectMRMesh_Params
+{
+	class UMRMeshComponent*                            InMRMeshPtr;                                               // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MRMesh.MockDataMeshTrackerComponent.ConnectMRMesh
+struct UMockDataMeshTrackerComponent_ConnectMRMesh_Params
+{
+	class UMRMeshComponent*                            InMRMeshPtr;                                               // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function MRMesh.MeshReconstructorBase.StopReconstruction
 struct UMeshReconstructorBase_StopReconstruction_Params
@@ -54,44 +92,6 @@ struct UMeshReconstructorBase_DisconnectMRMesh_Params
 struct UMeshReconstructorBase_ConnectMRMesh_Params
 {
 	class UMRMeshComponent*                            Mesh;                                                      // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// DelegateFunction MRMesh.MockDataMeshTrackerComponent.OnMockDataMeshTrackerUpdated__DelegateSignature
-struct UMockDataMeshTrackerComponent_OnMockDataMeshTrackerUpdated__DelegateSignature_Params
-{
-	int                                                Index;                                                     // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                             Vertices;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<int>                                        Triangles;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                             Normals;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<float>                                      Confidence;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function MRMesh.MockDataMeshTrackerComponent.DisconnectMRMesh
-struct UMockDataMeshTrackerComponent_DisconnectMRMesh_Params
-{
-	class UMRMeshComponent*                            InMRMeshPtr;                                               // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MRMesh.MockDataMeshTrackerComponent.ConnectMRMesh
-struct UMockDataMeshTrackerComponent_ConnectMRMesh_Params
-{
-	class UMRMeshComponent*                            InMRMeshPtr;                                               // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MRMesh.MRMeshComponent.IsConnected
-struct UMRMeshComponent_IsConnected_Params
-{
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MRMesh.MRMeshComponent.ForceNavMeshUpdate
-struct UMRMeshComponent_ForceNavMeshUpdate_Params
-{
-};
-
-// Function MRMesh.MRMeshComponent.Clear
-struct UMRMeshComponent_Clear_Params
-{
 };
 
 }

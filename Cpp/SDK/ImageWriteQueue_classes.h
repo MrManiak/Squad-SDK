@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,13 +19,10 @@ namespace UFT
 
 // Class ImageWriteQueue.ImageWriteBlueprintLibrary
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class UImageWriteBlueprintLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
@@ -34,7 +31,8 @@ public:
 	}
 
 
-	static void STATIC_ExportToDisk(class UTexture* Texture, const struct FString& Filename, const struct FImageWriteOptions& Options);
+
+	void STATIC_ExportToDisk(class UTexture* Texture, const struct FString& Filename, const struct FImageWriteOptions& Options);
 };
 
 }

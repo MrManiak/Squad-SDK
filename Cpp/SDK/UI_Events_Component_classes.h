@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,29 +18,28 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass UI_Events_Component.UI_Events_Component_C
-// 0x004C (FullSize[0x0114] - InheritedSize[0x00C8])
-// LastOffsetWithSize(0x00C8)
-#define PADDING_01C4 - 0x0000 // Minimum to subtract -> (0010)
+// 0x0074 (FullSize[0x014C] - InheritedSize[0x00D8])
 class UUI_Events_Component_C : public UActorComponent
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0010 PADDING_01C4, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x00D8(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-		DEFINE_MEMBER_NNN(0x0018 PADDING_01C4, class UDataTable*,                                                     Mode_Data);                                                // 0x00E0(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0048 PADDING_01C4, class UClass*,                                                         Game_Mode_Intro_Widget_Class);                             // 0x0110(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0050 PADDING_01C4, class UUserWidget*,                                                    Mode_Intro_Widget);                                        // 0x0118(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0058 PADDING_01C4, class UGraphNodeBasedBleedComponent_C*,                                Bleed_Component);                                          // 0x0120(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0060 PADDING_01C4, class ASQTeamState*,                                                   Team_State);                                               // 0x0128(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0068 PADDING_01C4, class UAudioComponent*,                                                Current_Sound);                                            // 0x0130(0x0008)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-		DEFINE_MEMBER_NNN(0x0080 PADDING_01C4, float,                                                                 Time_Between_Queued_Sounds);                               // 0x0148(0x0004)  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x00D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UDataTable*                                  Mode_Data;                                                 // 0x00E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      GameModeIntroAudio[0x28];                                  // 0x00E8(0x0028) UNKNOWN PROPERTY: SoftObjectProperty UI_Events_Component.UI_Events_Component_C.GameModeIntroAudio
+	class UClass*                                      Game_Mode_Intro_Widget_Class;                              // 0x0110(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                                 Mode_Intro_Widget;                                         // 0x0118(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGraphNodeBasedBleedComponent_C*             Bleed_Component;                                           // 0x0120(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASQTeamState*                                Team_State;                                                // 0x0128(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                             Current_Sound;                                             // 0x0130(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	unsigned char                                      QueuedSounds[0x10];                                        // 0x0138(0x0010) UNKNOWN PROPERTY: ArrayProperty UI_Events_Component.UI_Events_Component_C.QueuedSounds
+	float                                              Time_Between_Queued_Sounds;                                // 0x0148(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass UI_Events_Component.UI_Events_Component_C");
 		return ptr;
 	}
+
 
 
 	void Commander_Nomination_Sounds(int Team);

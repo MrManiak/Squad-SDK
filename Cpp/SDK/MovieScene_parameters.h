@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -88,6 +88,25 @@ struct UMovieSceneSection_GetPostRollFrames_Params
 struct UMovieSceneSection_GetOverlapPriority_Params
 {
 	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieScene.MovieSceneSubSection.SetSequence
+struct UMovieSceneSubSection_SetSequence_Params
+{
+	class UMovieSceneSequence*                         Sequence;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieScene.MovieSceneSubSection.GetSequence
+struct UMovieSceneSubSection_GetSequence_Params
+{
+	class UMovieSceneSequence*                         ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieScene.MovieSceneEasingFunction.OnEvaluate
+struct UMovieSceneEasingFunction_OnEvaluate_Params
+{
+	float                                              Interp;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function MovieScene.MovieSceneSequencePlayer.StopAtCurrentTime
@@ -359,25 +378,6 @@ struct UMovieSceneSequencePlayer_GetBoundObjects_Params
 // Function MovieScene.MovieSceneSequencePlayer.ChangePlaybackDirection
 struct UMovieSceneSequencePlayer_ChangePlaybackDirection_Params
 {
-};
-
-// Function MovieScene.MovieSceneEasingFunction.OnEvaluate
-struct UMovieSceneEasingFunction_OnEvaluate_Params
-{
-	float                                              Interp;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieScene.MovieSceneSubSection.SetSequence
-struct UMovieSceneSubSection_SetSequence_Params
-{
-	class UMovieSceneSequence*                         Sequence;                                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieScene.MovieSceneSubSection.GetSequence
-struct UMovieSceneSubSection_GetSequence_Params
-{
-	class UMovieSceneSequence*                         ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

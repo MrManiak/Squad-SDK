@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -18,37 +18,37 @@ namespace UFT
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function LevelSequence.LevelSequence.RemoveMetaDataByClass
-struct ULevelSequence_RemoveMetaDataByClass_Params
+// Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent
+struct ULevelSequencePlayer_GetActiveCameraComponent_Params
 {
-	class UClass*                                      InClass;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCameraComponent*                            ReturnValue;                                               // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass
-struct ULevelSequence_FindOrAddMetaDataByClass_Params
+// Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
+struct ULevelSequencePlayer_CreateLevelSequencePlayer_Params
 {
-	class UClass*                                      InClass;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevelSequence*                              LevelSequence;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMovieSceneSequencePlaybackSettings         Settings;                                                  // (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class ALevelSequenceActor*                         OutActor;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevelSequencePlayer*                        ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function LevelSequence.LevelSequence.FindMetaDataByClass
-struct ULevelSequence_FindMetaDataByClass_Params
+// Function LevelSequence.LevelSequenceDirector.OnCreated
+struct ULevelSequenceDirector_OnCreated_Params
 {
-	class UClass*                                      InClass;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function LevelSequence.LevelSequence.CopyMetaData
-struct ULevelSequence_CopyMetaData_Params
+// Function LevelSequence.LevelSequenceBurnIn.SetSettings
+struct ULevelSequenceBurnIn_SetSettings_Params
 {
-	class UObject*                                     InMetaData;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                     InSettings;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
-struct ULevelSequenceBurnInOptions_SetBurnIn_Params
+// Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass
+struct ULevelSequenceBurnIn_GetSettingsClass_Params
 {
-	struct FSoftClassPath                              InBurnInClass;                                             // (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                      ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function LevelSequence.LevelSequenceActor.ShowBurnin
@@ -136,37 +136,37 @@ struct ALevelSequenceActor_AddBinding_Params
 	bool                                               bAllowBindingsFromAsset;                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function LevelSequence.LevelSequenceBurnIn.SetSettings
-struct ULevelSequenceBurnIn_SetSettings_Params
+// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
+struct ULevelSequenceBurnInOptions_SetBurnIn_Params
 {
-	class UObject*                                     InSettings;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftClassPath                              InBurnInClass;                                             // (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass
-struct ULevelSequenceBurnIn_GetSettingsClass_Params
+// Function LevelSequence.LevelSequence.RemoveMetaDataByClass
+struct ULevelSequence_RemoveMetaDataByClass_Params
 {
-	class UClass*                                      ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                      InClass;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function LevelSequence.LevelSequenceDirector.OnCreated
-struct ULevelSequenceDirector_OnCreated_Params
+// Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass
+struct ULevelSequence_FindOrAddMetaDataByClass_Params
 {
+	class UClass*                                      InClass;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent
-struct ULevelSequencePlayer_GetActiveCameraComponent_Params
+// Function LevelSequence.LevelSequence.FindMetaDataByClass
+struct ULevelSequence_FindMetaDataByClass_Params
 {
-	class UCameraComponent*                            ReturnValue;                                               // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                      InClass;                                                   // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
-// Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
-struct ULevelSequencePlayer_CreateLevelSequencePlayer_Params
+// Function LevelSequence.LevelSequence.CopyMetaData
+struct ULevelSequence_CopyMetaData_Params
 {
-	class UObject*                                     WorldContextObject;                                        // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULevelSequence*                              LevelSequence;                                             // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMovieSceneSequencePlaybackSettings         Settings;                                                  // (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	class ALevelSequenceActor*                         OutActor;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULevelSequencePlayer*                        ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                     InMetaData;                                                // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

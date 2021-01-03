@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,31 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function Lobby.LobbyBeaconState.OnRep_WaitForPlayersTimeRemaining
+struct ALobbyBeaconState_OnRep_WaitForPlayersTimeRemaining_Params
+{
+};
+
+// Function Lobby.LobbyBeaconState.OnRep_LobbyStarted
+struct ALobbyBeaconState_OnRep_LobbyStarted_Params
+{
+};
+
+// Function Lobby.LobbyBeaconPlayerState.OnRep_UniqueId
+struct ALobbyBeaconPlayerState_OnRep_UniqueId_Params
+{
+};
+
+// Function Lobby.LobbyBeaconPlayerState.OnRep_PartyOwner
+struct ALobbyBeaconPlayerState_OnRep_PartyOwner_Params
+{
+};
+
+// Function Lobby.LobbyBeaconPlayerState.OnRep_InLobby
+struct ALobbyBeaconPlayerState_OnRep_InLobby_Params
+{
+};
 
 // Function Lobby.LobbyBeaconClient.ServerSetPartyOwner
 struct ALobbyBeaconClient_ServerSetPartyOwner_Params
@@ -95,31 +120,6 @@ struct ALobbyBeaconClient_ClientJoinGame_Params
 
 // Function Lobby.LobbyBeaconClient.ClientAckJoiningServer
 struct ALobbyBeaconClient_ClientAckJoiningServer_Params
-{
-};
-
-// Function Lobby.LobbyBeaconPlayerState.OnRep_UniqueId
-struct ALobbyBeaconPlayerState_OnRep_UniqueId_Params
-{
-};
-
-// Function Lobby.LobbyBeaconPlayerState.OnRep_PartyOwner
-struct ALobbyBeaconPlayerState_OnRep_PartyOwner_Params
-{
-};
-
-// Function Lobby.LobbyBeaconPlayerState.OnRep_InLobby
-struct ALobbyBeaconPlayerState_OnRep_InLobby_Params
-{
-};
-
-// Function Lobby.LobbyBeaconState.OnRep_WaitForPlayersTimeRemaining
-struct ALobbyBeaconState_OnRep_WaitForPlayersTimeRemaining_Params
-{
-};
-
-// Function Lobby.LobbyBeaconState.OnRep_LobbyStarted
-struct ALobbyBeaconState_OnRep_LobbyStarted_Params
 {
 };
 

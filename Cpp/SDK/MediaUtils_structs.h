@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,10 +20,10 @@ namespace UFT
 // Enum MediaUtils.EMediaPlayerOptionBooleanOverride
 enum class EMediaPlayerOptionBooleanOverride : uint8_t
 {
-	EMediaPlayerOptionBooleanOverride__UseMediaPlayerSetting = 0,
-	EMediaPlayerOptionBooleanOverride__Enabled = 1,
-	EMediaPlayerOptionBooleanOverride__Disabled = 2,
-	EMediaPlayerOptionBooleanOverride__EMediaPlayerOptionBooleanOverride_MAX = 3,
+	UseMediaPlayerSetting          = 0,
+	Enabled                        = 1,
+	Disabled                       = 2,
+	MAX                            = 3,
 
 };
 
@@ -49,9 +49,11 @@ struct FMediaPlayerTrackOptions
 struct FMediaPlayerOptions
 {
 	struct FMediaPlayerTrackOptions                    Tracks;                                                    // 0x0000(0x001C) (BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_U3IO[0x4];                                     // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 	struct FTimespan                                   SeekTime;                                                  // 0x0020(0x0008) (BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMediaPlayerOptionBooleanOverride                  PlayOnOpen;                                                // 0x0028(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMediaPlayerOptionBooleanOverride                  Loop;                                                      // 0x0029(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_S892[0x6];                                     // 0x002A(0x0006) MISSED OFFSET (PADDING)
 
 };
 }

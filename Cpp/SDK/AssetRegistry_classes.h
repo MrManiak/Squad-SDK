@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -17,72 +17,19 @@ namespace UFT
 // Classes
 //---------------------------------------------------------------------------
 
-// Class AssetRegistry.AssetRegistryImpl
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-class UAssetRegistryImpl : public UObject
-{
-public:
-	//union
-	//{
-	//};
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryImpl");
-		return ptr;
-	}
-
-
-};
-
-// Class AssetRegistry.AssetRegistryHelpers
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-class UAssetRegistryHelpers : public UObject
-{
-public:
-	//union
-	//{
-	//};
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryHelpers");
-		return ptr;
-	}
-
-
-	static struct FSoftObjectPath STATIC_ToSoftObjectPath(const struct FAssetData& InAssetData);
-	static struct FARFilter STATIC_SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues);
-	static bool STATIC_IsValid(const struct FAssetData& InAssetData);
-	static bool STATIC_IsUAsset(const struct FAssetData& InAssetData);
-	static bool STATIC_IsRedirector(const struct FAssetData& InAssetData);
-	static bool STATIC_IsAssetLoaded(const struct FAssetData& InAssetData);
-	static bool STATIC_GetTagValue(const struct FAssetData& InAssetData, const struct FName& InTagName, struct FString* OutTagValue);
-	static struct FString STATIC_GetFullName(const struct FAssetData& InAssetData);
-	static struct FString STATIC_GetExportTextName(const struct FAssetData& InAssetData);
-	static class UClass* STATIC_GetClass(const struct FAssetData& InAssetData);
-	static TScriptInterface<class UAssetRegistry> STATIC_GetAssetRegistry();
-	static class UObject* STATIC_GetAsset(const struct FAssetData& InAssetData);
-	static struct FAssetData STATIC_CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass);
-};
-
 // Class AssetRegistry.AssetRegistry
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class UAssetRegistry : public UInterface
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class AssetRegistry.AssetRegistry");
 		return ptr;
 	}
+
 
 
 	void UseFilterToExcludeAssets(TArray<struct FAssetData>* AssetDataList, const struct FARFilter& Filter);
@@ -104,6 +51,54 @@ public:
 	struct FAssetData GetAssetByObjectPath(const struct FName& ObjectPath, bool bIncludeOnlyOnDiskAssets);
 	void GetAllCachedPaths(TArray<struct FString>* OutPathList);
 	bool GetAllAssets(TArray<struct FAssetData>* OutAssetData, bool bIncludeOnlyOnDiskAssets);
+};
+
+// Class AssetRegistry.AssetRegistryHelpers
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UAssetRegistryHelpers : public UObject
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryHelpers");
+		return ptr;
+	}
+
+
+
+	struct FSoftObjectPath STATIC_ToSoftObjectPath(const struct FAssetData& InAssetData);
+	struct FARFilter STATIC_SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues);
+	bool STATIC_IsValid(const struct FAssetData& InAssetData);
+	bool STATIC_IsUAsset(const struct FAssetData& InAssetData);
+	bool STATIC_IsRedirector(const struct FAssetData& InAssetData);
+	bool STATIC_IsAssetLoaded(const struct FAssetData& InAssetData);
+	bool STATIC_GetTagValue(const struct FAssetData& InAssetData, const struct FName& InTagName, struct FString* OutTagValue);
+	struct FString STATIC_GetFullName(const struct FAssetData& InAssetData);
+	struct FString STATIC_GetExportTextName(const struct FAssetData& InAssetData);
+	class UClass* STATIC_GetClass(const struct FAssetData& InAssetData);
+	TScriptInterface<class UAssetRegistry> STATIC_GetAssetRegistry();
+	class UObject* STATIC_GetAsset(const struct FAssetData& InAssetData);
+	struct FAssetData STATIC_CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass);
+};
+
+// Class AssetRegistry.AssetRegistryImpl
+// 0x0750 (FullSize[0x0778] - InheritedSize[0x0028])
+class UAssetRegistryImpl : public UObject
+{
+public:
+	unsigned char                                      UnknownData_PD1S[0x750];                                   // 0x0028(0x0750) MISSED OFFSET (PADDING)
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryImpl");
+		return ptr;
+	}
+
+
+
 };
 
 }

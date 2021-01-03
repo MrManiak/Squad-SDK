@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -28,60 +28,6 @@ struct UMovieSceneCaptureProtocolBase_IsCapturing_Params
 struct UMovieSceneCaptureProtocolBase_GetState_Params
 {
 	EMovieSceneCaptureProtocolState                    ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType
-struct UMovieSceneCapture_SetImageCaptureProtocolType_Params
-{
-	class UClass*                                      ProtocolType;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieSceneCapture.MovieSceneCapture.SetAudioCaptureProtocolType
-struct UMovieSceneCapture_SetAudioCaptureProtocolType_Params
-{
-	class UClass*                                      ProtocolType;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieSceneCapture.MovieSceneCapture.GetImageCaptureProtocol
-struct UMovieSceneCapture_GetImageCaptureProtocol_Params
-{
-	class UMovieSceneCaptureProtocolBase*              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieSceneCapture.MovieSceneCapture.GetAudioCaptureProtocol
-struct UMovieSceneCapture_GetAudioCaptureProtocol_Params
-{
-	class UMovieSceneCaptureProtocolBase*              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress
-struct UMovieSceneCaptureEnvironment_IsCaptureInProgress_Params
-{
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber
-struct UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params
-{
-	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime
-struct UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params
-{
-	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol
-struct UMovieSceneCaptureEnvironment_FindImageCaptureProtocol_Params
-{
-	class UMovieSceneImageCaptureProtocolBase*         ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol
-struct UMovieSceneCaptureEnvironment_FindAudioCaptureProtocol_Params
-{
-	class UMovieSceneAudioCaptureProtocolBase*         ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.StopCapturingFinalPixels
@@ -196,6 +142,60 @@ struct UUserDefinedImageCaptureProtocol_GenerateFilenameForBuffer_Params
 	class UTexture*                                    Buffer;                                                    // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCapturedPixelsID                           StreamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FString                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress
+struct UMovieSceneCaptureEnvironment_IsCaptureInProgress_Params
+{
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber
+struct UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params
+{
+	int                                                ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime
+struct UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params
+{
+	float                                              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol
+struct UMovieSceneCaptureEnvironment_FindImageCaptureProtocol_Params
+{
+	class UMovieSceneImageCaptureProtocolBase*         ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol
+struct UMovieSceneCaptureEnvironment_FindAudioCaptureProtocol_Params
+{
+	class UMovieSceneAudioCaptureProtocolBase*         ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType
+struct UMovieSceneCapture_SetImageCaptureProtocolType_Params
+{
+	class UClass*                                      ProtocolType;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieSceneCapture.MovieSceneCapture.SetAudioCaptureProtocolType
+struct UMovieSceneCapture_SetAudioCaptureProtocolType_Params
+{
+	class UClass*                                      ProtocolType;                                              // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieSceneCapture.MovieSceneCapture.GetImageCaptureProtocol
+struct UMovieSceneCapture_GetImageCaptureProtocol_Params
+{
+	class UMovieSceneCaptureProtocolBase*              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function MovieSceneCapture.MovieSceneCapture.GetAudioCaptureProtocol
+struct UMovieSceneCapture_GetAudioCaptureProtocol_Params
+{
+	class UMovieSceneCaptureProtocolBase*              ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -22,6 +22,7 @@ namespace UFT
 struct FJsonObjectWrapper
 {
 	struct FString                                     JsonString;                                                // 0x0000(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_3EIF[0x10];                                    // 0x0010(0x0010) MISSED OFFSET (PADDING)
 
 };
 }

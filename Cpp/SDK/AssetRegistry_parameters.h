@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,100 +17,6 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
-// Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath
-struct UAssetRegistryHelpers_ToSoftObjectPath_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                             ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues
-struct UAssetRegistryHelpers_SetFilterTagsAndValues_Params
-{
-	struct FARFilter                                   InFilter;                                                  // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FTagAndValue>                        InTagsAndValues;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FARFilter                                   ReturnValue;                                               // (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.IsValid
-struct UAssetRegistryHelpers_IsValid_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.IsUAsset
-struct UAssetRegistryHelpers_IsUAsset_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.IsRedirector
-struct UAssetRegistryHelpers_IsRedirector_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded
-struct UAssetRegistryHelpers_IsAssetLoaded_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetTagValue
-struct UAssetRegistryHelpers_GetTagValue_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FName                                       InTagName;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FString                                     OutTagValue;                                               // (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetFullName
-struct UAssetRegistryHelpers_GetFullName_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FString                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetExportTextName
-struct UAssetRegistryHelpers_GetExportTextName_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FString                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetClass
-struct UAssetRegistryHelpers_GetClass_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                      ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry
-struct UAssetRegistryHelpers_GetAssetRegistry_Params
-{
-	TScriptInterface<class UAssetRegistry>             ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetAsset
-struct UAssetRegistryHelpers_GetAsset_Params
-{
-	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.CreateAssetData
-struct UAssetRegistryHelpers_CreateAssetData_Params
-{
-	class UObject*                                     InAsset;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               bAllowBlueprintClass;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAssetData                                  ReturnValue;                                               // (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
 
 // Function AssetRegistry.AssetRegistry.UseFilterToExcludeAssets
 struct UAssetRegistry_UseFilterToExcludeAssets_Params
@@ -254,6 +160,100 @@ struct UAssetRegistry_GetAllAssets_Params
 	TArray<struct FAssetData>                          OutAssetData;                                              // (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                               bIncludeOnlyOnDiskAssets;                                  // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath
+struct UAssetRegistryHelpers_ToSoftObjectPath_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                             ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues
+struct UAssetRegistryHelpers_SetFilterTagsAndValues_Params
+{
+	struct FARFilter                                   InFilter;                                                  // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FTagAndValue>                        InTagsAndValues;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FARFilter                                   ReturnValue;                                               // (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.IsValid
+struct UAssetRegistryHelpers_IsValid_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.IsUAsset
+struct UAssetRegistryHelpers_IsUAsset_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.IsRedirector
+struct UAssetRegistryHelpers_IsRedirector_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded
+struct UAssetRegistryHelpers_IsAssetLoaded_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetTagValue
+struct UAssetRegistryHelpers_GetTagValue_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FName                                       InTagName;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FString                                     OutTagValue;                                               // (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetFullName
+struct UAssetRegistryHelpers_GetFullName_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FString                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetExportTextName
+struct UAssetRegistryHelpers_GetExportTextName_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FString                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetClass
+struct UAssetRegistryHelpers_GetClass_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                      ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry
+struct UAssetRegistryHelpers_GetAssetRegistry_Params
+{
+	TScriptInterface<class UAssetRegistry>             ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetAsset
+struct UAssetRegistryHelpers_GetAsset_Params
+{
+	struct FAssetData                                  InAssetData;                                               // (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.CreateAssetData
+struct UAssetRegistryHelpers_CreateAssetData_Params
+{
+	class UObject*                                     InAsset;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               bAllowBlueprintClass;                                      // (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAssetData                                  ReturnValue;                                               // (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

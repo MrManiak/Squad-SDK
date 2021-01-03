@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,26 +20,26 @@ namespace UFT
 // Enum PrefabAsset.EPrefabVariantRuleType
 enum class EPrefabVariantRuleType : uint8_t
 {
-	EPrefabVariantRuleType__SkipProp = 0,
-	EPrefabVariantRuleType__EPrefabVariantRuleType_MAX = 1,
+	SkipProp                       = 0,
+	MAX                            = 1,
 
 };
 
 // Enum PrefabAsset.EPTUITheme
 enum class EPTUITheme : uint8_t
 {
-	EPTUITheme__Default            = 0,
-	EPTUITheme__Dark               = 1,
-	EPTUITheme__EPTUITheme_MAX     = 2,
+	Default                        = 0,
+	Dark                           = 1,
+	MAX                            = 2,
 
 };
 
 // Enum PrefabAsset.EPrefabVisualizerType
 enum class EPrefabVisualizerType : uint8_t
 {
-	EPrefabVisualizerType__WireBox = 0,
-	EPrefabVisualizerType__WireSphere = 1,
-	EPrefabVisualizerType__EPrefabVisualizerType_MAX = 2,
+	WireBox                        = 0,
+	WireSphere                     = 1,
+	MAX                            = 2,
 
 };
 
@@ -55,6 +55,7 @@ struct FPrefabVariantRule
 	struct FString                                     Rule;                                                      // 0x0008(0x0010) (Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPrefabVariantRuleType                             RuleType;                                                  // 0x0018(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                               bEnable;                                                   // 0x0019(0x0001) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_X4LA[0x6];                                     // 0x001A(0x0006) MISSED OFFSET (PADDING)
 
 };
 }

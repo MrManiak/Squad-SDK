@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,19 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // Class EasyAntiCheatCommon.EasyAntiCheatNetComponent
-// 0x0010 (FullSize[0x00D8] - InheritedSize[0x00C8])
-// LastOffsetWithSize(0x00C8)
+// 0x0008 (FullSize[0x00E0] - InheritedSize[0x00D8])
 class UEasyAntiCheatNetComponent : public UActorComponent
 {
 public:
-	//union
-	//{
-	//};
+	unsigned char                                      UnknownData_8PKF[0x8];                                     // 0x00D8(0x0008) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class EasyAntiCheatCommon.EasyAntiCheatNetComponent");
 		return ptr;
 	}
+
 
 
 	void ServerMessage(TArray<unsigned char> Message);

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,12 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture
+struct UAudioCaptureFunctionLibrary_CreateAudioCapture_Params
+{
+	class UAudioCapture*                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function AudioCapture.AudioCapture.StopCapturingAudio
 struct UAudioCapture_StopCapturingAudio_Params
@@ -39,12 +45,6 @@ struct UAudioCapture_GetAudioCaptureDeviceInfo_Params
 {
 	struct FAudioCaptureDeviceInfo                     OutInfo;                                                   // (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture
-struct UAudioCaptureFunctionLibrary_CreateAudioCapture_Params
-{
-	class UAudioCapture*                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 }

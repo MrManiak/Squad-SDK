@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass M1a2_Burned.M1a2_Burned_C
 // 0x0000 (FullSize[0x0358] - InheritedSize[0x0358])
-// LastOffsetWithSize(0x0358)
 class AM1a2_Burned_C : public AM1a2_Knockedout_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass M1a2_Burned.M1a2_Burned_C");
 		return ptr;
 	}
+
 
 
 };

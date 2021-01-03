@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -21,17 +21,18 @@ namespace UFT
 // 0x0020
 struct FWebJSCallbackBase
 {
-
-};
-// ScriptStruct WebBrowser.WebJSResponse
-// 0x0000 (0x0020 - 0x0020)
-struct FWebJSResponse : public FWebJSCallbackBase
-{
+	unsigned char                                      UnknownData_SV9A[0x20];                                    // 0x0000(0x0020) MISSED OFFSET (PADDING)
 
 };
 // ScriptStruct WebBrowser.WebJSFunction
 // 0x0000 (0x0020 - 0x0020)
 struct FWebJSFunction : public FWebJSCallbackBase
+{
+
+};
+// ScriptStruct WebBrowser.WebJSResponse
+// 0x0000 (0x0020 - 0x0020)
+struct FWebJSResponse : public FWebJSCallbackBase
 {
 
 };

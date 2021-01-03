@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,10 +20,10 @@ namespace UFT
 // UserDefinedEnum E_RoleAvailability.E_RoleAvailability
 enum class E_RoleAvailability : uint8_t
 {
-	E_RoleAvailability__NewEnumerator0 = 0,
-	E_RoleAvailability__NewEnumerator1 = 1,
-	E_RoleAvailability__NewEnumerator2 = 2,
-	E_RoleAvailability__E_MAX      = 3,
+	NewEnumerator0                 = 0,
+	NewEnumerator1                 = 1,
+	NewEnumerator2                 = 2,
+	E_MAX                          = 3,
 
 };
 

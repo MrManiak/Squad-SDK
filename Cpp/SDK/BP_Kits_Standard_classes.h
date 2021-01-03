@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_Kits_Standard.BP_Kits_Standard_C
 // 0x0000 (FullSize[0x0061] - InheritedSize[0x0061])
-// LastOffsetWithSize(0x0061)
 class UBP_Kits_Standard_C : public UBP_GenericKits_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Kits_Standard.BP_Kits_Standard_C");
 		return ptr;
 	}
+
 
 
 };

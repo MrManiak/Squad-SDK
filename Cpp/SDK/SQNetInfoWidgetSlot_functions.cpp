@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -15,6 +15,27 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.GetHeaderURL
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   HeaderURL                      (Parm, OutParm)
+void USQNetInfoWidgetSlot_C::GetHeaderURL(struct FText* HeaderURL)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.GetHeaderURL");
+
+	USQNetInfoWidgetSlot_C_GetHeaderURL_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+	if (HeaderURL != nullptr)
+		*HeaderURL = params.HeaderURL;
+
+}
+
 
 // Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.GetBodyText
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -94,13 +115,29 @@ void USQNetInfoWidgetSlot_C::OnSuccess_9D89973243B31B6470A48FB1F15C4057(class UT
 }
 
 
-// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-void USQNetInfoWidgetSlot_C::Construct()
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.EventHeaderChanged
+// (BlueprintCallable, BlueprintEvent)
+void USQNetInfoWidgetSlot_C::EventHeaderChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.Construct");
+	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.EventHeaderChanged");
 
-	USQNetInfoWidgetSlot_C_Construct_Params params;
+	USQNetInfoWidgetSlot_C_EventHeaderChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+void USQNetInfoWidgetSlot_C::OnInitialized()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.OnInitialized");
+
+	USQNetInfoWidgetSlot_C_OnInitialized_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -111,7 +148,7 @@ void USQNetInfoWidgetSlot_C::Construct()
 
 
 // Function SQNetInfoWidgetSlot.SQNetInfoWidgetSlot_C.ExecuteUbergraph_SQNetInfoWidgetSlot
-// (Final)
+// (Final, HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 void USQNetInfoWidgetSlot_C::ExecuteUbergraph_SQNetInfoWidgetSlot(int EntryPoint)

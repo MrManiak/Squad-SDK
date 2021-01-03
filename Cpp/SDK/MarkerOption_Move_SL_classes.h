@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass MarkerOption_Move_SL.MarkerOption_Move_SL_C
 // 0x0000 (FullSize[0x0070] - InheritedSize[0x0070])
-// LastOffsetWithSize(0x0070)
 class UMarkerOption_Move_SL_C : public UGridData_MarkerOption_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass MarkerOption_Move_SL.MarkerOption_Move_SL_C");
 		return ptr;
 	}
+
 
 
 };

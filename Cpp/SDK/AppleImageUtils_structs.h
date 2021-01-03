@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,23 +20,23 @@ namespace UFT
 // Enum AppleImageUtils.EAppleTextureType
 enum class EAppleTextureType : uint8_t
 {
-	EAppleTextureType__Unknown     = 0,
-	EAppleTextureType__Image       = 1,
-	EAppleTextureType__PixelBuffer = 2,
-	EAppleTextureType__Surface     = 3,
-	EAppleTextureType__MetalTexture = 4,
-	EAppleTextureType__EAppleTextureType_MAX = 5,
+	Unknown                        = 0,
+	Image                          = 1,
+	PixelBuffer                    = 2,
+	Surface                        = 3,
+	MetalTexture                   = 4,
+	MAX                            = 5,
 
 };
 
 // Enum AppleImageUtils.ETextureRotationDirection
 enum class ETextureRotationDirection : uint8_t
 {
-	ETextureRotationDirection__None = 0,
-	ETextureRotationDirection__Left = 1,
-	ETextureRotationDirection__Right = 2,
-	ETextureRotationDirection__Down = 3,
-	ETextureRotationDirection__ETextureRotationDirection_MAX = 4,
+	None                           = 0,
+	Left                           = 1,
+	Right                          = 2,
+	Down                           = 3,
+	MAX                            = 4,
 
 };
 

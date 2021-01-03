@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -15,6 +15,38 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function UMG_VehicleSpeedo.UMG_VehicleSpeedo_C.Update Handbrake
+// (Public, BlueprintCallable, BlueprintEvent)
+void UUMG_VehicleSpeedo_C::Update_Handbrake()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG_VehicleSpeedo.UMG_VehicleSpeedo_C.Update Handbrake");
+
+	UUMG_VehicleSpeedo_C_Update_Handbrake_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function UMG_VehicleSpeedo.UMG_VehicleSpeedo_C.Refresh Handbrake
+// (Public, BlueprintCallable, BlueprintEvent)
+void UUMG_VehicleSpeedo_C::Refresh_Handbrake()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG_VehicleSpeedo.UMG_VehicleSpeedo_C.Refresh Handbrake");
+
+	UUMG_VehicleSpeedo_C_Refresh_Handbrake_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
 
 // Function UMG_VehicleSpeedo.UMG_VehicleSpeedo_C.Refresh Data
 // (Public, BlueprintCallable, BlueprintEvent)

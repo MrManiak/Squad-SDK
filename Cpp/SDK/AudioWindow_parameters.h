@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,72 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function AudioWindow.AudioWindow_C.Get_ToggleLeaderOnlyBias_ToolTipWidget_1
+struct UAudioWindow_C_Get_ToggleLeaderOnlyBias_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_ToggleRADIOFILTER_ToolTipWidget_1
+struct UAudioWindow_C_Get_ToggleRADIOFILTER_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_PrioritySpeakerDucking_ToolTipWidget_1
+struct UAudioWindow_C_Get_PrioritySpeakerDucking_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_LOCALVOICEVOLUME_ToolTipWidget_1
+struct UAudioWindow_C_Get_LOCALVOICEVOLUME_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_SQUADVOICEBALANCE_ToolTipWidget_1
+struct UAudioWindow_C_Get_SQUADVOICEBALANCE_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_SQUADVOICEVOLUME_ToolTipWidget_1
+struct UAudioWindow_C_Get_SQUADVOICEVOLUME_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_COMMANDVOICEBALANCE_ToolTipWidget_1
+struct UAudioWindow_C_Get_COMMANDVOICEBALANCE_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_COMMANDVOICEVOLUME_ToolTipWidget_1
+struct UAudioWindow_C_Get_COMMANDVOICEVOLUME_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_AUDIOINPUTDEVICE_ToolTipWidget_1
+struct UAudioWindow_C_Get_AUDIOINPUTDEVICE_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_AUDIOOUTPUTDEVICE_ToolTipWidget_1
+struct UAudioWindow_C_Get_AUDIOOUTPUTDEVICE_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AudioWindow.AudioWindow_C.Get_AUDIOQUALITY_ToolTipWidget_1
+struct UAudioWindow_C_Get_AUDIOQUALITY_ToolTipWidget_1_Params
+{
+	class UWidget*                                     ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 // Function AudioWindow.AudioWindow_C.UpdateSoundDevices
 struct UAudioWindow_C_UpdateSoundDevices_Params

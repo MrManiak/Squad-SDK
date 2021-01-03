@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,13 +19,10 @@ namespace UFT
 
 // Class Spectral.SpectralBPLibrary
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class USpectralBPLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
@@ -34,16 +31,17 @@ public:
 	}
 
 
-	static void STATIC_Shutdown();
-	static bool STATIC_SetColorForLeds(TArray<ESpectralLedName> ledNames, const struct FColor& Color);
-	static bool STATIC_SetColorForLed(ESpectralLedName ledName, const struct FColor& Color);
-	static bool STATIC_SetColorForDevice(ESpectralDeviceType DeviceType, const struct FColor& Color);
-	static bool STATIC_SetColor(const struct FColor& Color);
-	static bool STATIC_RazerIsEnabled();
-	static bool STATIC_LogitechIsEnabled();
-	static bool STATIC_IsInitialized();
-	static bool STATIC_Initialize();
-	static bool STATIC_CorsairIsEnabled();
+
+	void STATIC_Shutdown();
+	bool STATIC_SetColorForLeds(TArray<ESpectralLedName> ledNames, const struct FColor& Color);
+	bool STATIC_SetColorForLed(ESpectralLedName ledName, const struct FColor& Color);
+	bool STATIC_SetColorForDevice(ESpectralDeviceType DeviceType, const struct FColor& Color);
+	bool STATIC_SetColor(const struct FColor& Color);
+	bool STATIC_RazerIsEnabled();
+	bool STATIC_LogitechIsEnabled();
+	bool STATIC_IsInitialized();
+	bool STATIC_Initialize();
+	bool STATIC_CorsairIsEnabled();
 };
 
 }

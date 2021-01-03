@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -26,6 +26,8 @@ struct FS_ModeInfo
 	struct FText                                       ModeText_24_EFC4AEFA47A8DD0A2A9AF9A67640A27F;              // 0x0020(0x0018) (Edit, BlueprintVisible)
 	struct FText                                       AttackText_21_A3020B964FE89E69047A16BE3CE7F3BA;            // 0x0038(0x0018) (Edit, BlueprintVisible)
 	struct FText                                       DefendText_25_002E774248EF17F1493E939861D9890D;            // 0x0050(0x0018) (Edit, BlueprintVisible)
+	unsigned char                                      AttackerCue_28_24323ED54A2D94370B48988505EB7A90[0x10];     // 0x0068(0x0010) UNKNOWN PROPERTY: ArrayProperty S_ModeInfo.S_ModeInfo.AttackerCue_28_24323ED54A2D94370B48988505EB7A90
+	unsigned char                                      DefenderCue_29_BA14A01249E27FFC62EA4B85A7FFF4D6[0x10];     // 0x0078(0x0010) UNKNOWN PROPERTY: ArrayProperty S_ModeInfo.S_ModeInfo.DefenderCue_29_BA14A01249E27FFC62EA4B85A7FFF4D6
 
 };
 }

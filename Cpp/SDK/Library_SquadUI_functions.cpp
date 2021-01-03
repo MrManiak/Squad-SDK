@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -33,8 +33,7 @@ void ULibrary_SquadUI_C::STATIC_Add_Notification(const struct FText& Text, ESQNo
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 }
@@ -54,8 +53,7 @@ void ULibrary_SquadUI_C::STATIC_Get_SQHUD_Colors(class UObject* __WorldContext, 
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (ColorsDataAsset != nullptr)
@@ -79,8 +77,7 @@ void ULibrary_SquadUI_C::STATIC_Save_UI_Save_Data(class USaveData_UI_C* SaveGame
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 }
@@ -100,8 +97,7 @@ void ULibrary_SquadUI_C::STATIC_Get_UI_Save_Data(class UObject* __WorldContext, 
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (UI_Save_Data != nullptr)

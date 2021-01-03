@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,13 +19,10 @@ namespace UFT
 
 // Class EditableMesh.EditableMeshAdapter
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class UEditableMeshAdapter : public UObject
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
@@ -34,51 +31,69 @@ public:
 	}
 
 
+
 };
 
-// Class EditableMesh.EditableGeometryCollectionAdapter
-// 0x0014 (FullSize[0x003C] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_03DD - 0x0000 // Minimum to subtract -> (0000)
-class UEditableGeometryCollectionAdapter : public UEditableMeshAdapter
+// Class EditableMesh.EditableStaticMeshAdapter
+// 0x00B8 (FullSize[0x00E0] - InheritedSize[0x0028])
+class UEditableStaticMeshAdapter : public UEditableMeshAdapter
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_03DD, class UGeometryCollection*,                                            GeometryCollection);                                       // 0x0028(0x0008)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-		DEFINE_MEMBER_NNN(0x0008 PADDING_03DD, class UGeometryCollection*,                                            OriginalGeometryCollection);                               // 0x0030(0x0008)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-		DEFINE_MEMBER_NNN(0x0010 PADDING_03DD, int,                                                                   GeometryCollectionLODIndex);                               // 0x0038(0x0004)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	};
+	class UStaticMesh*                                 StaticMesh;                                                // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UStaticMesh*                                 OriginalStaticMesh;                                        // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int                                                StaticMeshLODIndex;                                        // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	unsigned char                                      UnknownData_4124[0xA4];                                    // 0x003C(0x00A4) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EditableMesh.EditableGeometryCollectionAdapter");
+		static auto ptr = UObject::FindClass("Class EditableMesh.EditableStaticMeshAdapter");
 		return ptr;
 	}
 
 
+
+};
+
+// Class EditableMesh.EditableMeshFactory
+// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+class UEditableMeshFactory : public UObject
+{
+public:
+
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class EditableMesh.EditableMeshFactory");
+		return ptr;
+	}
+
+
+
+	class UEditableMesh* STATIC_MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int LODIndex);
 };
 
 // Class EditableMesh.EditableMesh
-// 0x046C (FullSize[0x0494] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_03DF - 0x0000 // Minimum to subtract -> (0300)
+// 0x0650 (FullSize[0x0678] - InheritedSize[0x0028])
 class UEditableMesh : public UObject
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_NNN(0x0300 PADDING_03DF, TArray<class UEditableMeshAdapter*>,                                   Adapters);                                                 // 0x0328(0x0010)  (ZeroConstructor, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0318 PADDING_03DF, int,                                                                   TextureCoordinateCount);                                   // 0x0340(0x0004)  (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0464 PADDING_03DF, int,                                                                   PendingCompactCounter);                                    // 0x048C(0x0004)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-		DEFINE_MEMBER_NNN(0x0468 PADDING_03DF, int,                                                                   SubdivisionCount);                                         // 0x0490(0x0004)  (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	};
+	unsigned char                                      UnknownData_5HTI[0x300];                                   // 0x0028(0x0300) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	TArray<class UEditableMeshAdapter*>                Adapters;                                                  // 0x0328(0x0010) (ZeroConstructor, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_AM4X[0x8];                                     // 0x0338(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	int                                                TextureCoordinateCount;                                    // 0x0340(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_OBNG[0x148];                                   // 0x0344(0x0148) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	int                                                PendingCompactCounter;                                     // 0x048C(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                SubdivisionCount;                                          // 0x0490(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_5X3K[0x1E4];                                   // 0x0494(0x01E4) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class EditableMesh.EditableMesh");
 		return ptr;
 	}
+
 
 
 	void WeldVertices(TArray<struct FVertexID> VertexIDs, struct FVertexID* OutNewVertexID);
@@ -114,10 +129,10 @@ public:
 	void QuadrangulateMesh(TArray<struct FPolygonID>* OutNewPolygonIDs);
 	void PropagateInstanceChanges();
 	void MoveVertices(TArray<struct FVertexToMove> VerticesToMove);
-	static struct FVertexID STATIC_MakeVertexID(int VertexIndex);
-	static struct FPolygonID STATIC_MakePolygonID(int PolygonIndex);
-	static struct FPolygonGroupID STATIC_MakePolygonGroupID(int PolygonGroupIndex);
-	static struct FEdgeID STATIC_MakeEdgeID(int EdgeIndex);
+	struct FVertexID STATIC_MakeVertexID(int VertexIndex);
+	struct FPolygonID STATIC_MakePolygonID(int PolygonIndex);
+	struct FPolygonGroupID STATIC_MakePolygonGroupID(int PolygonGroupIndex);
+	struct FEdgeID STATIC_MakeEdgeID(int EdgeIndex);
 	bool IsValidVertex(const struct FVertexID& VertexID);
 	bool IsValidPolygonGroup(const struct FPolygonGroupID& PolygonGroupID);
 	bool IsValidPolygon(const struct FPolygonID& PolygonID);
@@ -130,10 +145,10 @@ public:
 	bool IsCommittedAsInstance();
 	bool IsCommitted();
 	bool IsBeingModified();
-	static struct FVertexID STATIC_InvalidVertexID();
-	static struct FPolygonID STATIC_InvalidPolygonID();
-	static struct FPolygonGroupID STATIC_InvalidPolygonGroupID();
-	static struct FEdgeID STATIC_InvalidEdgeID();
+	struct FVertexID STATIC_InvalidVertexID();
+	struct FPolygonID STATIC_InvalidPolygonID();
+	struct FPolygonGroupID STATIC_InvalidPolygonGroupID();
+	struct FEdgeID STATIC_InvalidEdgeID();
 	void InsetPolygons(TArray<struct FPolygonID> PolygonIDs, float InsetFixedDistance, float InsetProgressTowardCenter, EInsetPolygonsMode Mode, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs);
 	void InsertPolygonPerimeterVertices(const struct FPolygonID& PolygonID, int InsertBeforeVertexNumber, TArray<struct FVertexAndAttributes> VerticesToInsert);
 	void InsertEdgeLoop(const struct FEdgeID& EdgeID, TArray<float> Splits, TArray<struct FEdgeID>* OutNewEdgeIDs);
@@ -217,45 +232,23 @@ public:
 	bool AnyChangesToUndo();
 };
 
-// Class EditableMesh.EditableMeshFactory
-// 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-class UEditableMeshFactory : public UObject
+// Class EditableMesh.EditableGeometryCollectionAdapter
+// 0x00B0 (FullSize[0x00D8] - InheritedSize[0x0028])
+class UEditableGeometryCollectionAdapter : public UEditableMeshAdapter
 {
 public:
-	//union
-	//{
-	//};
+	class UGeometryCollection*                         GeometryCollection;                                        // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UGeometryCollection*                         OriginalGeometryCollection;                                // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int                                                GeometryCollectionLODIndex;                                // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	unsigned char                                      UnknownData_NCGA[0x9C];                                    // 0x003C(0x009C) MISSED OFFSET (PADDING)
+
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EditableMesh.EditableMeshFactory");
+		static auto ptr = UObject::FindClass("Class EditableMesh.EditableGeometryCollectionAdapter");
 		return ptr;
 	}
 
-
-	static class UEditableMesh* STATIC_MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int LODIndex);
-};
-
-// Class EditableMesh.EditableStaticMeshAdapter
-// 0x0014 (FullSize[0x003C] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
-#define PADDING_03E5 - 0x0000 // Minimum to subtract -> (0000)
-class UEditableStaticMeshAdapter : public UEditableMeshAdapter
-{
-public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_03E5, class UStaticMesh*,                                                    StaticMesh);                                               // 0x0028(0x0008)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-		DEFINE_MEMBER_NNN(0x0008 PADDING_03E5, class UStaticMesh*,                                                    OriginalStaticMesh);                                       // 0x0030(0x0008)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-		DEFINE_MEMBER_NNN(0x0010 PADDING_03E5, int,                                                                   StaticMeshLODIndex);                                       // 0x0038(0x0004)  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	};
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EditableMesh.EditableStaticMeshAdapter");
-		return ptr;
-	}
 
 
 };

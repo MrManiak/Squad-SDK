@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_Melee.BP_Melee_C
 // 0x0000 (FullSize[0x0040] - InheritedSize[0x0040])
-// LastOffsetWithSize(0x003C)
 class UBP_Melee_C : public USQDamageType
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Melee.BP_Melee_C");
 		return ptr;
 	}
+
 
 
 };

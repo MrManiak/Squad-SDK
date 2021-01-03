@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -16,60 +16,15 @@ namespace UFT
 // Functions
 //---------------------------------------------------------------------------
 
-// Function LevelSequence.LevelSequence.RemoveMetaDataByClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void ULevelSequence::RemoveMetaDataByClass(class UClass* InClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.RemoveMetaDataByClass");
-
-	ULevelSequence_RemoveMetaDataByClass_Params params;
-	params.InClass = InClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class UObject* ULevelSequence::FindOrAddMetaDataByClass(class UClass* InClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass");
-
-	ULevelSequence_FindOrAddMetaDataByClass_Params params;
-	params.InClass = InClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function LevelSequence.LevelSequence.FindMetaDataByClass
+// Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class UObject* ULevelSequence::FindMetaDataByClass(class UClass* InClass)
+// class UCameraComponent*        ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class UCameraComponent* ULevelSequencePlayer::GetActiveCameraComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.FindMetaDataByClass");
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent");
 
-	ULevelSequence_FindMetaDataByClass_Params params;
-	params.InClass = InClass;
+	ULevelSequencePlayer_GetActiveCameraComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -82,17 +37,81 @@ class UObject* ULevelSequence::FindMetaDataByClass(class UClass* InClass)
 }
 
 
-// Function LevelSequence.LevelSequence.CopyMetaData
-// (Final, Native, Public, BlueprintCallable)
+// Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 InMetaData                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class UObject* ULevelSequence::CopyMetaData(class UObject* InMetaData)
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULevelSequence*          LevelSequence                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMovieSceneSequencePlaybackSettings Settings                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// class ALevelSequenceActor*     OutActor                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULevelSequencePlayer*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class ULevelSequencePlayer* ULevelSequencePlayer::STATIC_CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.CopyMetaData");
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer");
 
-	ULevelSequence_CopyMetaData_Params params;
-	params.InMetaData = InMetaData;
+	ULevelSequencePlayer_CreateLevelSequencePlayer_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.LevelSequence = LevelSequence;
+	params.Settings = Settings;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+	if (OutActor != nullptr)
+		*OutActor = params.OutActor;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceDirector.OnCreated
+// (Event, Public, BlueprintEvent)
+void ULevelSequenceDirector::OnCreated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceDirector.OnCreated");
+
+	ULevelSequenceDirector_OnCreated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function LevelSequence.LevelSequenceBurnIn.SetSettings
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UObject*                 InSettings                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void ULevelSequenceBurnIn::SetSettings(class UObject* InSettings)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.SetSettings");
+
+	ULevelSequenceBurnIn_SetSettings_Params params;
+	params.InSettings = InSettings;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class UClass* ULevelSequenceBurnIn::GetSettingsClass()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass");
+
+	ULevelSequenceBurnIn_GetSettingsClass_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -102,26 +121,6 @@ class UObject* ULevelSequence::CopyMetaData(class UObject* InMetaData)
 
 
 	return params.ReturnValue;
-}
-
-
-// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FSoftClassPath          InBurnInClass                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void ULevelSequenceBurnInOptions::SetBurnIn(const struct FSoftClassPath& InBurnInClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn");
-
-	ULevelSequenceBurnInOptions_SetBurnIn_Params params;
-	params.InBurnInClass = InBurnInClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
 }
 
 
@@ -405,18 +404,19 @@ void ALevelSequenceActor::AddBinding(const struct FMovieSceneObjectBindingID& Bi
 }
 
 
-// Function LevelSequence.LevelSequenceBurnIn.SetSettings
-// (Event, Public, BlueprintEvent)
+// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 InSettings                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void ULevelSequenceBurnIn::SetSettings(class UObject* InSettings)
+// struct FSoftClassPath          InBurnInClass                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void ULevelSequenceBurnInOptions::SetBurnIn(const struct FSoftClassPath& InBurnInClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.SetSettings");
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn");
 
-	ULevelSequenceBurnIn_SetSettings_Params params;
-	params.InSettings = InSettings;
+	ULevelSequenceBurnInOptions_SetBurnIn_Params params;
+	params.InBurnInClass = InBurnInClass;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
 
 	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
@@ -424,15 +424,37 @@ void ULevelSequenceBurnIn::SetSettings(class UObject* InSettings)
 }
 
 
-// Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass
-// (Native, Event, Public, BlueprintEvent, Const)
+// Function LevelSequence.LevelSequence.RemoveMetaDataByClass
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class UClass* ULevelSequenceBurnIn::GetSettingsClass()
+// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void ULevelSequence::RemoveMetaDataByClass(class UClass* InClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass");
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.RemoveMetaDataByClass");
 
-	ULevelSequenceBurnIn_GetSettingsClass_Params params;
+	ULevelSequence_RemoveMetaDataByClass_Params params;
+	params.InClass = InClass;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class UObject* ULevelSequence::FindOrAddMetaDataByClass(class UClass* InClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass");
+
+	ULevelSequence_FindOrAddMetaDataByClass_Params params;
+	params.InClass = InClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -445,31 +467,17 @@ class UClass* ULevelSequenceBurnIn::GetSettingsClass()
 }
 
 
-// Function LevelSequence.LevelSequenceDirector.OnCreated
-// (Event, Public, BlueprintEvent)
-void ULevelSequenceDirector::OnCreated()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceDirector.OnCreated");
-
-	ULevelSequenceDirector_OnCreated_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent
+// Function LevelSequence.LevelSequence.FindMetaDataByClass
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UCameraComponent*        ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class UCameraComponent* ULevelSequencePlayer::GetActiveCameraComponent()
+// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class UObject* ULevelSequence::FindMetaDataByClass(class UClass* InClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent");
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.FindMetaDataByClass");
 
-	ULevelSequencePlayer_GetActiveCameraComponent_Params params;
+	ULevelSequence_FindMetaDataByClass_Params params;
+	params.InClass = InClass;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -482,32 +490,23 @@ class UCameraComponent* ULevelSequencePlayer::GetActiveCameraComponent()
 }
 
 
-// Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Function LevelSequence.LevelSequence.CopyMetaData
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULevelSequence*          LevelSequence                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMovieSceneSequencePlaybackSettings Settings                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// class ALevelSequenceActor*     OutActor                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULevelSequencePlayer*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class ULevelSequencePlayer* ULevelSequencePlayer::STATIC_CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor)
+// class UObject*                 InMetaData                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class UObject* ULevelSequence::CopyMetaData(class UObject* InMetaData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer");
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequence.CopyMetaData");
 
-	ULevelSequencePlayer_CreateLevelSequencePlayer_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.LevelSequence = LevelSequence;
-	params.Settings = Settings;
+	ULevelSequence_CopyMetaData_Params params;
+	params.InMetaData = InMetaData;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
-
-	if (OutActor != nullptr)
-		*OutActor = params.OutActor;
 
 
 	return params.ReturnValue;

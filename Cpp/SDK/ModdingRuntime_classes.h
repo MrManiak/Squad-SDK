@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,13 +19,10 @@ namespace UFT
 
 // Class ModdingRuntime.ModdingRuntimeBlueprintLibrary
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class UModdingRuntimeBlueprintLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
@@ -34,11 +31,12 @@ public:
 	}
 
 
-	static bool STATIC_VerifyModIntegrity(const struct FSQModLoadProgress& ServerModProgress);
-	static struct FString STATIC_ToIDString(const struct FSQModInfo& ModInfo);
-	static void STATIC_GetModInfo(const struct FSQModLoadProgress& MissingModData, struct FSQModInfo* OutModInfo);
-	static void STATIC_DownloadMissingMods(TArray<struct FSQModLoadProgress>* MissingModData);
-	static void STATIC_CancelDownloads();
+
+	bool STATIC_VerifyModIntegrity(const struct FSQModLoadProgress& ServerModProgress);
+	struct FString STATIC_ToIDString(const struct FSQModInfo& ModInfo);
+	void STATIC_GetModInfo(const struct FSQModLoadProgress& MissingModData, struct FSQModInfo* OutModInfo);
+	void STATIC_DownloadMissingMods(TArray<struct FSQModLoadProgress>* MissingModData);
+	void STATIC_CancelDownloads();
 };
 
 }

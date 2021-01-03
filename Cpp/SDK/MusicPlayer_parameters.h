@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -74,6 +74,11 @@ struct UMusicPlayer_C_OnLoaded_64894CBD4CB9747691437E9B69432F5B_Params
 	class UObject*                                     Loaded;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
+// Function MusicPlayer.MusicPlayer_C.Construct
+struct UMusicPlayer_C_Construct_Params
+{
+};
+
 // Function MusicPlayer.MusicPlayer_C.BndEvt__ButtonPlayPause_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature
 struct UMusicPlayer_C_BndEvt__ButtonPlayPause_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature_Params
 {
@@ -105,11 +110,6 @@ struct UMusicPlayer_C_BndEvt__MainMenu_Button_K2Node_ComponentBoundEvent_133_OnC
 {
 	bool                                               bSelected;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UMainMenu_Button_C*                          Button;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function MusicPlayer.MusicPlayer_C.Construct
-struct UMusicPlayer_C_Construct_Params
-{
 };
 
 // Function MusicPlayer.MusicPlayer_C.BndEvt__Slider_Time_K2Node_ComponentBoundEvent_146_OnMouseCaptureEndEvent__DelegateSignature

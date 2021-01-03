@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -41,8 +41,7 @@ void UBP_GameplayFunctionLibrary_C::STATIC_Show_Hide_Mouse(class UUserWidget* Fo
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 }
@@ -62,8 +61,7 @@ void UBP_GameplayFunctionLibrary_C::STATIC_GetSquadGameMode(class UObject* __Wor
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (Return_Value != nullptr)
@@ -86,8 +84,7 @@ void UBP_GameplayFunctionLibrary_C::STATIC_GetSquadGameState(class UObject* __Wo
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (Return_Value != nullptr)
@@ -112,8 +109,7 @@ void UBP_GameplayFunctionLibrary_C::STATIC_GetSquadPlayerController(int Player_I
 
 	auto flags = fn->FunctionFlags;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (Return_Value != nullptr)

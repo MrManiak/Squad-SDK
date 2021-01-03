@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass DirectorAction_Frontline.DirectorAction_Frontline_C
 // 0x0000 (FullSize[0x0080] - InheritedSize[0x0080])
-// LastOffsetWithSize(0x0080)
 class UDirectorAction_Frontline_C : public UGridData_DirectorOption_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass DirectorAction_Frontline.DirectorAction_Frontline_C");
 		return ptr;
 	}
+
 
 
 };

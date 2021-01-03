@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -15,6 +15,27 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UAudioCapture*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+class UAudioCapture* UAudioCaptureFunctionLibrary::STATIC_CreateAudioCapture()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture");
+
+	UAudioCaptureFunctionLibrary_CreateAudioCapture_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
 
 // Function AudioCapture.AudioCapture.StopCapturingAudio
 // (Final, Native, Public, BlueprintCallable)
@@ -90,28 +111,6 @@ bool UAudioCapture::GetAudioCaptureDeviceInfo(struct FAudioCaptureDeviceInfo* Ou
 
 	if (OutInfo != nullptr)
 		*OutInfo = params.OutInfo;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAudioCapture*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-class UAudioCapture* UAudioCaptureFunctionLibrary::STATIC_CreateAudioCapture()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture");
-
-	UAudioCaptureFunctionLibrary_CreateAudioCapture_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
 
 
 	return params.ReturnValue;

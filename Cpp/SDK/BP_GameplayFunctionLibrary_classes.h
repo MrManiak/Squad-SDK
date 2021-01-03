@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,13 +19,10 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_GameplayFunctionLibrary.BP_GameplayFunctionLibrary_C
 // 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-// LastOffsetWithSize(0x0028)
 class UBP_GameplayFunctionLibrary_C : public UBlueprintFunctionLibrary
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
@@ -34,10 +31,11 @@ public:
 	}
 
 
-	static void STATIC_Show_Hide_Mouse(class UUserWidget* Focus, bool Game_Input, bool Display_Input, bool UI_Input, bool New_Input_State, const struct FString& Reason, class UObject* __WorldContext);
-	static void STATIC_GetSquadGameMode(class UObject* __WorldContext, class ASQGameMode** Return_Value);
-	static void STATIC_GetSquadGameState(class UObject* __WorldContext, class ASQGameState** Return_Value);
-	static void STATIC_GetSquadPlayerController(int Player_Index, class UObject* __WorldContext, class ASQPlayerController** Return_Value);
+
+	void STATIC_Show_Hide_Mouse(class UUserWidget* Focus, bool Game_Input, bool Display_Input, bool UI_Input, bool New_Input_State, const struct FString& Reason, class UObject* __WorldContext);
+	void STATIC_GetSquadGameMode(class UObject* __WorldContext, class ASQGameMode** Return_Value);
+	void STATIC_GetSquadGameState(class UObject* __WorldContext, class ASQGameState** Return_Value);
+	void STATIC_GetSquadPlayerController(int Player_Index, class UObject* __WorldContext, class ASQPlayerController** Return_Value);
 };
 
 }

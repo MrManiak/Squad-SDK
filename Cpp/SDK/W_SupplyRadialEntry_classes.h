@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,21 +19,18 @@ namespace UFT
 
 // WidgetBlueprintGeneratedClass W_SupplyRadialEntry.W_SupplyRadialEntry_C
 // 0x0008 (FullSize[0x0448] - InheritedSize[0x0440])
-// LastOffsetWithSize(0x0440)
-#define PADDING_022A - 0x0000 // Minimum to subtract -> (0000)
 class UW_SupplyRadialEntry_C : public UIconRadialEntry_C
 {
 public:
-	union
-	{
-		DEFINE_MEMBER_000(0x0000 PADDING_022A, struct FPointerToUberGraphFrame,                                       UberGraphFrame);                                           // 0x0440(0x0008)  (ZeroConstructor, Transient, DuplicateTransient)
-	};
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                            // 0x0440(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_SupplyRadialEntry.W_SupplyRadialEntry_C");
 		return ptr;
 	}
+
 
 
 	void Is_Faded(bool* Faded);

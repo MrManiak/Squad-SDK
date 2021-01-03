@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -17,6 +17,33 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
+struct UGameplayTagAssetInterface_HasMatchingGameplayTag_Params
+{
+	struct FGameplayTag                                TagToCheck;                                                // (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function GameplayTags.GameplayTagAssetInterface.HasAnyMatchingGameplayTags
+struct UGameplayTagAssetInterface_HasAnyMatchingGameplayTags_Params
+{
+	struct FGameplayTagContainer                       TagContainer;                                              // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function GameplayTags.GameplayTagAssetInterface.HasAllMatchingGameplayTags
+struct UGameplayTagAssetInterface_HasAllMatchingGameplayTags_Params
+{
+	struct FGameplayTagContainer                       TagContainer;                                              // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function GameplayTags.GameplayTagAssetInterface.GetOwnedGameplayTags
+struct UGameplayTagAssetInterface_GetOwnedGameplayTags_Params
+{
+	struct FGameplayTagContainer                       TagContainer;                                              // (Parm, OutParm, NativeAccessSpecifierPublic)
+};
 
 // Function GameplayTags.BlueprintGameplayTagLibrary.RemoveGameplayTag
 struct UBlueprintGameplayTagLibrary_RemoveGameplayTag_Params
@@ -248,33 +275,6 @@ struct UBlueprintGameplayTagLibrary_AddGameplayTag_Params
 {
 	struct FGameplayTagContainer                       TagContainer;                                              // (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGameplayTag                                Tag;                                                       // (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
-struct UGameplayTagAssetInterface_HasMatchingGameplayTag_Params
-{
-	struct FGameplayTag                                TagToCheck;                                                // (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameplayTags.GameplayTagAssetInterface.HasAnyMatchingGameplayTags
-struct UGameplayTagAssetInterface_HasAnyMatchingGameplayTags_Params
-{
-	struct FGameplayTagContainer                       TagContainer;                                              // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameplayTags.GameplayTagAssetInterface.HasAllMatchingGameplayTags
-struct UGameplayTagAssetInterface_HasAllMatchingGameplayTags_Params
-{
-	struct FGameplayTagContainer                       TagContainer;                                              // (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                               ReturnValue;                                               // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameplayTags.GameplayTagAssetInterface.GetOwnedGameplayTags
-struct UGameplayTagAssetInterface_GetOwnedGameplayTags_Params
-{
-	struct FGameplayTagContainer                       TagContainer;                                              // (Parm, OutParm, NativeAccessSpecifierPublic)
 };
 
 }

@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -15,6 +15,26 @@ namespace UFT
 //---------------------------------------------------------------------------
 // Functions
 //---------------------------------------------------------------------------
+
+// Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*          SequenceToPlay                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void ADatasmithImportedSequencesActor::PlayLevelSequence(class ULevelSequence* SequenceToPlay)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence");
+
+	ADatasmithImportedSequencesActor_PlayLevelSequence_Params params;
+	params.SequenceToPlay = SequenceToPlay;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
 
 // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -33,8 +53,7 @@ struct FString UDatasmithContentBlueprintLibrary::STATIC_GetDatasmithUserDataVal
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
@@ -60,8 +79,7 @@ void UDatasmithContentBlueprintLibrary::STATIC_GetDatasmithUserDataKeysAndValues
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 	if (OutKeys != nullptr)
@@ -87,32 +105,11 @@ class UDatasmithAssetUserData* UDatasmithContentBlueprintLibrary::STATIC_GetData
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
 
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
+	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;
 
 
 	return params.ReturnValue;
-}
-
-
-// Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class ULevelSequence*          SequenceToPlay                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void ADatasmithImportedSequencesActor::PlayLevelSequence(class ULevelSequence* SequenceToPlay)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence");
-
-	ADatasmithImportedSequencesActor_PlayLevelSequence_Params params;
-	params.SequenceToPlay = SequenceToPlay;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
 }
 
 

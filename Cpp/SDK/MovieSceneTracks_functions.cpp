@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -16,36 +16,16 @@ namespace UFT
 // Functions
 //---------------------------------------------------------------------------
 
-// Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetVisibility
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-struct FTransform UMovieSceneTransformOrigin::BP_GetTransformOrigin()
+// ELevelVisibility               InVisibility                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void UMovieSceneLevelVisibilitySection::SetVisibility(ELevelVisibility InVisibility)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin");
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetVisibility");
 
-	UMovieSceneTransformOrigin_BP_GetTransformOrigin_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FMovieSceneObjectBindingID InConstraintBindingID          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void UMovieScene3DConstraintSection::SetConstraintBindingID(const struct FMovieSceneObjectBindingID& InConstraintBindingID)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID");
-
-	UMovieScene3DConstraintSection_SetConstraintBindingID_Params params;
-	params.InConstraintBindingID = InConstraintBindingID;
+	UMovieSceneLevelVisibilitySection_SetVisibility_Params params;
+	params.InVisibility = InVisibility;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -56,15 +36,138 @@ void UMovieScene3DConstraintSection::SetConstraintBindingID(const struct FMovieS
 }
 
 
-// Function MovieSceneTracks.MovieScene3DConstraintSection.GetConstraintBindingID
+// Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetLevelNames
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<struct FName>           InLevelNames                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+void UMovieSceneLevelVisibilitySection::SetLevelNames(TArray<struct FName> InLevelNames)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetLevelNames");
+
+	UMovieSceneLevelVisibilitySection_SetLevelNames_Params params;
+	params.InLevelNames = InLevelNames;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetVisibility
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ELevelVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+ELevelVisibility UMovieSceneLevelVisibilitySection::GetVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetVisibility");
+
+	UMovieSceneLevelVisibilitySection_GetVisibility_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetLevelNames
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FName>           ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+TArray<struct FName> UMovieSceneLevelVisibilitySection::GetLevelNames()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetLevelNames");
+
+	UMovieSceneLevelVisibilitySection_GetLevelNames_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function MovieSceneTracks.MovieSceneCinematicShotSection.SetShotDisplayName
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString                 InShotDisplayName              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void UMovieSceneCinematicShotSection::SetShotDisplayName(const struct FString& InShotDisplayName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneCinematicShotSection.SetShotDisplayName");
+
+	UMovieSceneCinematicShotSection_SetShotDisplayName_Params params;
+	params.InShotDisplayName = InShotDisplayName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function MovieSceneTracks.MovieSceneCinematicShotSection.GetShotDisplayName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+struct FString UMovieSceneCinematicShotSection::GetShotDisplayName()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneCinematicShotSection.GetShotDisplayName");
+
+	UMovieSceneCinematicShotSection_GetShotDisplayName_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+
+	return params.ReturnValue;
+}
+
+
+// Function MovieSceneTracks.MovieSceneCameraCutSection.SetCameraBindingID
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FMovieSceneObjectBindingID InCameraBindingID              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void UMovieSceneCameraCutSection::SetCameraBindingID(const struct FMovieSceneObjectBindingID& InCameraBindingID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneCameraCutSection.SetCameraBindingID");
+
+	UMovieSceneCameraCutSection_SetCameraBindingID_Params params;
+	params.InCameraBindingID = InCameraBindingID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x00000400;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function MovieSceneTracks.MovieSceneCameraCutSection.GetCameraBindingID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FMovieSceneObjectBindingID ReturnValue                    (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-struct FMovieSceneObjectBindingID UMovieScene3DConstraintSection::GetConstraintBindingID()
+struct FMovieSceneObjectBindingID UMovieSceneCameraCutSection::GetCameraBindingID()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieScene3DConstraintSection.GetConstraintBindingID");
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneCameraCutSection.GetCameraBindingID");
 
-	UMovieScene3DConstraintSection_GetConstraintBindingID_Params params;
+	UMovieSceneCameraCutSection_GetCameraBindingID_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -159,16 +262,16 @@ class USoundBase* UMovieSceneAudioSection::GetSound()
 }
 
 
-// Function MovieSceneTracks.MovieSceneCameraCutSection.SetCameraBindingID
+// Function MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FMovieSceneObjectBindingID InCameraBindingID              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void UMovieSceneCameraCutSection::SetCameraBindingID(const struct FMovieSceneObjectBindingID& InCameraBindingID)
+// struct FMovieSceneObjectBindingID InConstraintBindingID          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+void UMovieScene3DConstraintSection::SetConstraintBindingID(const struct FMovieSceneObjectBindingID& InConstraintBindingID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneCameraCutSection.SetCameraBindingID");
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID");
 
-	UMovieSceneCameraCutSection_SetCameraBindingID_Params params;
-	params.InCameraBindingID = InCameraBindingID;
+	UMovieScene3DConstraintSection_SetConstraintBindingID_Params params;
+	params.InConstraintBindingID = InConstraintBindingID;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -179,15 +282,15 @@ void UMovieSceneCameraCutSection::SetCameraBindingID(const struct FMovieSceneObj
 }
 
 
-// Function MovieSceneTracks.MovieSceneCameraCutSection.GetCameraBindingID
+// Function MovieSceneTracks.MovieScene3DConstraintSection.GetConstraintBindingID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FMovieSceneObjectBindingID ReturnValue                    (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-struct FMovieSceneObjectBindingID UMovieSceneCameraCutSection::GetCameraBindingID()
+struct FMovieSceneObjectBindingID UMovieScene3DConstraintSection::GetConstraintBindingID()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneCameraCutSection.GetCameraBindingID");
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieScene3DConstraintSection.GetConstraintBindingID");
 
-	UMovieSceneCameraCutSection_GetCameraBindingID_Params params;
+	UMovieScene3DConstraintSection_GetConstraintBindingID_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x00000400;
@@ -200,120 +303,17 @@ struct FMovieSceneObjectBindingID UMovieSceneCameraCutSection::GetCameraBindingI
 }
 
 
-// Function MovieSceneTracks.MovieSceneCinematicShotSection.SetShotDisplayName
-// (Final, Native, Public, BlueprintCallable)
+// Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin
+// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// struct FString                 InShotDisplayName              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void UMovieSceneCinematicShotSection::SetShotDisplayName(const struct FString& InShotDisplayName)
+// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+struct FTransform UMovieSceneTransformOrigin::BP_GetTransformOrigin()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneCinematicShotSection.SetShotDisplayName");
+	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin");
 
-	UMovieSceneCinematicShotSection_SetShotDisplayName_Params params;
-	params.InShotDisplayName = InShotDisplayName;
+	UMovieSceneTransformOrigin_BP_GetTransformOrigin_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function MovieSceneTracks.MovieSceneCinematicShotSection.GetShotDisplayName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-struct FString UMovieSceneCinematicShotSection::GetShotDisplayName()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneCinematicShotSection.GetShotDisplayName");
-
-	UMovieSceneCinematicShotSection_GetShotDisplayName_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetVisibility
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// ELevelVisibility               InVisibility                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-void UMovieSceneLevelVisibilitySection::SetVisibility(ELevelVisibility InVisibility)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetVisibility");
-
-	UMovieSceneLevelVisibilitySection_SetVisibility_Params params;
-	params.InVisibility = InVisibility;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetLevelNames
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<struct FName>           InLevelNames                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-void UMovieSceneLevelVisibilitySection::SetLevelNames(TArray<struct FName> InLevelNames)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetLevelNames");
-
-	UMovieSceneLevelVisibilitySection_SetLevelNames_Params params;
-	params.InLevelNames = InLevelNames;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-}
-
-
-// Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetVisibility
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// ELevelVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-ELevelVisibility UMovieSceneLevelVisibilitySection::GetVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetVisibility");
-
-	UMovieSceneLevelVisibilitySection_GetVisibility_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
-
-	UObject::ProcessEvent(fn, &params);
-	fn->FunctionFlags = flags;
-
-
-	return params.ReturnValue;
-}
-
-
-// Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetLevelNames
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FName>           ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-TArray<struct FName> UMovieSceneLevelVisibilitySection::GetLevelNames()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetLevelNames");
-
-	UMovieSceneLevelVisibilitySection_GetLevelNames_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x00000400;
 
 	UObject::ProcessEvent(fn, &params);
 	fn->FunctionFlags = flags;

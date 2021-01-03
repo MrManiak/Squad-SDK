@@ -1,4 +1,4 @@
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -231,6 +231,38 @@ void UUMG_SeatProgress_C::ExecuteUbergraph_UMG_SeatProgress(int EntryPoint)
 
 	UUMG_SeatProgress_C_ExecuteUbergraph_UMG_SeatProgress_Params params;
 	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function UMG_SeatProgress.UMG_SeatProgress_C.ClosedSeatProgress__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+void UUMG_SeatProgress_C::ClosedSeatProgress__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG_SeatProgress.UMG_SeatProgress_C.ClosedSeatProgress__DelegateSignature");
+
+	UUMG_SeatProgress_C_ClosedSeatProgress__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+	fn->FunctionFlags = flags;
+
+}
+
+
+// Function UMG_SeatProgress.UMG_SeatProgress_C.ShowedSeatProgress__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+void UUMG_SeatProgress_C::ShowedSeatProgress__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG_SeatProgress.UMG_SeatProgress_C.ShowedSeatProgress__DelegateSignature");
+
+	UUMG_SeatProgress_C_ShowedSeatProgress__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

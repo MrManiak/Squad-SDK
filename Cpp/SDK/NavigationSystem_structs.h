@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -20,31 +20,31 @@ namespace UFT
 // Enum NavigationSystem.ERuntimeGenerationType
 enum class ERuntimeGenerationType : uint8_t
 {
-	ERuntimeGenerationType__Static = 0,
-	ERuntimeGenerationType__DynamicModifiersOnly = 1,
-	ERuntimeGenerationType__Dynamic = 2,
-	ERuntimeGenerationType__LegacyGeneration = 3,
-	ERuntimeGenerationType__ERuntimeGenerationType_MAX = 4,
+	Static                         = 0,
+	DynamicModifiersOnly           = 1,
+	Dynamic                        = 2,
+	LegacyGeneration               = 3,
+	MAX                            = 4,
 
 };
 
 // Enum NavigationSystem.ENavCostDisplay
 enum class ENavCostDisplay : uint8_t
 {
-	ENavCostDisplay__TotalCost     = 0,
-	ENavCostDisplay__HeuristicOnly = 1,
-	ENavCostDisplay__RealCostOnly  = 2,
-	ENavCostDisplay__ENavCostDisplay_MAX = 3,
+	TotalCost                      = 0,
+	HeuristicOnly                  = 1,
+	RealCostOnly                   = 2,
+	MAX                            = 3,
 
 };
 
 // Enum NavigationSystem.ERecastPartitioning
 enum class ERecastPartitioning : uint8_t
 {
-	ERecastPartitioning__Monotone  = 0,
-	ERecastPartitioning__Watershed = 1,
-	ERecastPartitioning__ChunkyMonotone = 2,
-	ERecastPartitioning__ERecastPartitioning_MAX = 3,
+	Monotone                       = 0,
+	Watershed                      = 1,
+	ChunkyMonotone                 = 2,
+	MAX                            = 3,
 
 };
 
@@ -52,25 +52,50 @@ enum class ERecastPartitioning : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct NavigationSystem.NavigationFilterArea
+// ScriptStruct NavigationSystem.NavGraphEdge
 // 0x0018
-struct FNavigationFilterArea
+struct FNavGraphEdge
 {
-	class UClass*                                      AreaClass;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              TravelCostOverride;                                        // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                              EnteringCostOverride;                                      // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bIsExcluded;                                               // 0x0010(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bOverrideTravelCost;                                       // 0x0010(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bOverrideEnteringCost;                                     // 0x0010(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_6YU5[0x18];                                    // 0x0000(0x0018) MISSED OFFSET (PADDING)
 
 };
-// ScriptStruct NavigationSystem.SupportedAreaData
-// 0x0020
-struct FSupportedAreaData
+// ScriptStruct NavigationSystem.NavigationFilterFlags
+// 0x0004
+struct FNavigationFilterFlags
 {
-	struct FString                                     AreaClassName;                                             // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int                                                AreaID;                                                    // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                      AreaClass;                                                 // 0x0018(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag0 : 1;                                             // 0x0000(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag1 : 1;                                             // 0x0000(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag2 : 1;                                             // 0x0000(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag3 : 1;                                             // 0x0000(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag4 : 1;                                             // 0x0000(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag5 : 1;                                             // 0x0000(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag6 : 1;                                             // 0x0000(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag7 : 1;                                             // 0x0000(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag8 : 1;                                             // 0x0001(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag9 : 1;                                             // 0x0001(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag10 : 1;                                            // 0x0001(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag11 : 1;                                            // 0x0001(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag12 : 1;                                            // 0x0001(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag13 : 1;                                            // 0x0001(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag14 : 1;                                            // 0x0001(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bNavFlag15 : 1;                                            // 0x0001(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_2F4M[0x2];                                     // 0x0002(0x0002) MISSED OFFSET (PADDING)
+
+};
+// ScriptStruct NavigationSystem.NavGraphNode
+// 0x0018
+struct FNavGraphNode
+{
+	class UObject*                                     Owner;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_BPI2[0x10];                                    // 0x0008(0x0010) MISSED OFFSET (PADDING)
+
+};
+// ScriptStruct NavigationSystem.NavCollisionBox
+// 0x0018
+struct FNavCollisionBox
+{
+	struct FVector                                     Offset;                                                    // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                     Extent;                                                    // 0x000C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 };
 // ScriptStruct NavigationSystem.NavCollisionCylinder
@@ -82,47 +107,27 @@ struct FNavCollisionCylinder
 	float                                              Height;                                                    // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 };
-// ScriptStruct NavigationSystem.NavCollisionBox
-// 0x0018
-struct FNavCollisionBox
+// ScriptStruct NavigationSystem.SupportedAreaData
+// 0x0020
+struct FSupportedAreaData
 {
-	struct FVector                                     Offset;                                                    // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                     Extent;                                                    // 0x000C(0x000C) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FString                                     AreaClassName;                                             // 0x0000(0x0010) (ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int                                                AreaID;                                                    // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_99J8[0x4];                                     // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+	class UClass*                                      AreaClass;                                                 // 0x0018(0x0008) (ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 };
-// ScriptStruct NavigationSystem.NavGraphNode
+// ScriptStruct NavigationSystem.NavigationFilterArea
 // 0x0018
-struct FNavGraphNode
+struct FNavigationFilterArea
 {
-	class UObject*                                     Owner;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-};
-// ScriptStruct NavigationSystem.NavigationFilterFlags
-// 0x0004
-struct FNavigationFilterFlags
-{
-	unsigned char                                      bNavFlag0;                                                 // 0x0000(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag1;                                                 // 0x0000(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag2;                                                 // 0x0000(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag3;                                                 // 0x0000(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag4;                                                 // 0x0000(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag5;                                                 // 0x0000(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag6;                                                 // 0x0000(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag7;                                                 // 0x0000(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag8;                                                 // 0x0001(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag9;                                                 // 0x0001(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag10;                                                // 0x0001(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag11;                                                // 0x0001(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag12;                                                // 0x0001(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag13;                                                // 0x0001(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag14;                                                // 0x0001(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	unsigned char                                      bNavFlag15;                                                // 0x0001(0x0001) BIT_FIELD (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-};
-// ScriptStruct NavigationSystem.NavGraphEdge
-// 0x0018
-struct FNavGraphEdge
-{
+	class UClass*                                      AreaClass;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              TravelCostOverride;                                        // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                              EnteringCostOverride;                                      // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bIsExcluded : 1;                                           // 0x0010(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bOverrideTravelCost : 1;                                   // 0x0010(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      bOverrideEnteringCost : 1;                                 // 0x0010(0x0001) BIT_FIELD  (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	unsigned char                                      UnknownData_UF9H[0x7];                                     // 0x0011(0x0007) MISSED OFFSET (PADDING)
 
 };
 }

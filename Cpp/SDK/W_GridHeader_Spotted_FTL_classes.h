@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // WidgetBlueprintGeneratedClass W_GridHeader_Spotted_FTL.W_GridHeader_Spotted_FTL_C
 // 0x0000 (FullSize[0x0298] - InheritedSize[0x0298])
-// LastOffsetWithSize(0x0298)
 class UW_GridHeader_Spotted_FTL_C : public UW_GridHeader_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_GridHeader_Spotted_FTL.W_GridHeader_Spotted_FTL_C");
 		return ptr;
 	}
+
 
 
 	void Get_Fireteam_ID(int* ID);

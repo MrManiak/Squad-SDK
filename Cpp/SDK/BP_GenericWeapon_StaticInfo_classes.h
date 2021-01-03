@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GenericWeapon_StaticInfo.BP_GenericWeapon_StaticInfo_C
-// 0x0007 (FullSize[0x0930] - InheritedSize[0x0929])
-// LastOffsetWithSize(0x0929)
+// 0x0000 (FullSize[0x0930] - InheritedSize[0x0930])
 class UBP_GenericWeapon_StaticInfo_C : public USQWeaponStaticInfo
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_GenericWeapon_StaticInfo.BP_GenericWeapon_StaticInfo_C");
 		return ptr;
 	}
+
 
 
 };

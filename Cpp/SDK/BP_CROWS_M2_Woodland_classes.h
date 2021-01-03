@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_CROWS_M2_Woodland.BP_CROWS_M2_Woodland_C
 // 0x0000 (FullSize[0x0A38] - InheritedSize[0x0A38])
-// LastOffsetWithSize(0x0A38)
 class ABP_CROWS_M2_Woodland_C : public ABP_CROWS_M2_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_CROWS_M2_Woodland.BP_CROWS_M2_Woodland_C");
 		return ptr;
 	}
+
 
 
 };

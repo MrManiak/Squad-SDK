@@ -1,5 +1,6 @@
 {
   "engine_version": "4.23.1",
+  "base_config": "EngineBase",
   "game_name": "Squad",
   "game_ver": "b21.0.1",
   "structs": [
@@ -38,7 +39,6 @@
       "name": "UStruct",
       "super": [ "UField", "FStructBaseChain" ],
       "vars": [
-        { "pad": "4" },
         { "SuperField": "UStruct*" },
         { "Children": "UField*" },
         { "PropertySize": "int" },

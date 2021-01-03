@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // WidgetBlueprintGeneratedClass W_GridButton_FTOrders.W_GridButton_FTOrders_C
 // 0x0000 (FullSize[0x02D8] - InheritedSize[0x02D8])
-// LastOffsetWithSize(0x02D8)
 class UW_GridButton_FTOrders_C : public UW_GridButton_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass W_GridButton_FTOrders.W_GridButton_FTOrders_C");
 		return ptr;
 	}
+
 
 
 	void Get_Fireteam_ID(int* ID);

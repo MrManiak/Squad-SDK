@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_Knife_Reversegrip_StaticInfo.BP_Knife_Reversegrip_StaticInfo_C
 // 0x0000 (FullSize[0x0960] - InheritedSize[0x0960])
-// LastOffsetWithSize(0x0960)
 class UBP_Knife_Reversegrip_StaticInfo_C : public UBP_GenericMelee_StaticInfo_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Knife_Reversegrip_StaticInfo.BP_Knife_Reversegrip_StaticInfo_C");
 		return ptr;
 	}
+
 
 
 };

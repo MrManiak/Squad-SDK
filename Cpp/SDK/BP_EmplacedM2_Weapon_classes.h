@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -19,19 +19,17 @@ namespace UFT
 
 // BlueprintGeneratedClass BP_EmplacedM2_Weapon.BP_EmplacedM2_Weapon_C
 // 0x0000 (FullSize[0x0B14] - InheritedSize[0x0B14])
-// LastOffsetWithSize(0x0B14)
 class ABP_EmplacedM2_Weapon_C : public ABP_GenericDeployableWeapon_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_EmplacedM2_Weapon.BP_EmplacedM2_Weapon_C");
 		return ptr;
 	}
+
 
 
 };

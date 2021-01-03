@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 #include "../SDK.h"
 
@@ -547,6 +547,12 @@ struct ABP_PlayerController_C_Server_Remove_Map_Marker_Params
 struct ABP_PlayerController_C_Remove_Map_Marker_New_Params
 {
 	unsigned char                                      MapMarkerID;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function BP_PlayerController.BP_PlayerController_C.PickUpRally
+struct ABP_PlayerController_C_PickUpRally_Params
+{
+	class ABP_SquadRallyPoint_C*                       Rally;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function BP_PlayerController.BP_PlayerController_C.ExecuteUbergraph_BP_PlayerController

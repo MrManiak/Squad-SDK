@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_7_62mm_Coax.BP_Projectile_7_62mm_Coax_C
-// 0x0000 (FullSize[0x0490] - InheritedSize[0x0490])
-// LastOffsetWithSize(0x0490)
+// 0x0000 (FullSize[0x04A0] - InheritedSize[0x04A0])
 class ABP_Projectile_7_62mm_Coax_C : public ABP_Projectile_7_62mm_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Projectile_7_62mm_Coax.BP_Projectile_7_62mm_Coax_C");
 		return ptr;
 	}
+
 
 
 };

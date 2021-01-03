@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Sq, Version: b21
+// Name: S, Version: b
 
 
 #ifdef _MSC_VER
@@ -18,20 +18,18 @@ namespace UFT
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RadialActionModel_SpawnVehicle_UH60.RadialActionModel_SpawnVehicle_UH60_C
-// 0x0028 (FullSize[0x00E8] - InheritedSize[0x00C0])
-// LastOffsetWithSize(0x00BC)
+// 0x0000 (FullSize[0x00E8] - InheritedSize[0x00E8])
 class URadialActionModel_SpawnVehicle_UH60_C : public URadial_ActionModel_SpawnVehicle_C
 {
 public:
-	//union
-	//{
-	//};
+
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("BlueprintGeneratedClass RadialActionModel_SpawnVehicle_UH60.RadialActionModel_SpawnVehicle_UH60_C");
 		return ptr;
 	}
+
 
 
 };
